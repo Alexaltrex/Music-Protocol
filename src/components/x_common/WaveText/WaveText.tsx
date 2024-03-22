@@ -33,8 +33,8 @@ export const WaveText: FC<IWaveText> = ({
             scrollTrigger: {
                 trigger: ".text",
                 //markers: true,
-                start: "top bottom-=15%",
-                end: "top bottom-=15%",
+                start: "top bottom-=10%",
+                end: "top bottom-=10%",
                 toggleActions: "play none reverse none",
             }
         })

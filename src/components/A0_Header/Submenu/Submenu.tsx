@@ -13,10 +13,12 @@ export enum RouteEnum {
 
 interface ISubmenu {
     route: RouteEnum
+    onClick: () => void
 }
 
 export const Submenu: FC<ISubmenu> = ({
-                                          route
+                                          route,
+                                          onClick,
                                       }) => {
     return (
         <div className={clsx({
@@ -29,6 +31,7 @@ export const Submenu: FC<ISubmenu> = ({
                         <Link key={key}
                               href={href}
                               className={style.item}
+                              onClick={() => onClick()}
                         >
                             <img src="/jpeg/header/submenuItem.jpg" alt="" className={style.back}/>
                             <div className={style.item_inner}>

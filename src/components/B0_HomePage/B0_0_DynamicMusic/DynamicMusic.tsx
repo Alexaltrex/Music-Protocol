@@ -24,12 +24,12 @@ export const DynamicMusic = () => {
                 <WaveText label="Dynamic Music IP"
                           className={style.titleDesktop}
                           textClassName={style.title}
-                          size={62}
+                          size={64}
                 />
                 <WaveText label="for Web3"
                           className={style.titleDesktop}
                           textClassName={style.title}
-                          size={62}
+                          size={64}
                 />
 
                 <div className={style.descriptionMobile}>

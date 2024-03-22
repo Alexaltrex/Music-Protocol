@@ -51,18 +51,10 @@ export const DropDown: FC<IDropDown> = ({
             </button>
 
             <div className={clsx(style.modal, "modal")}>
-                <Submenu route={route}/>
+                <Submenu route={route}
+                         onClick={() => setOpen(false)}
+                />
             </div>
-
-            {/*{*/}
-            {/*    open && (*/}
-            {/*        <div className={clsx(style.modal, "modal")}>*/}
-            {/*            <Submenu route={route}/>*/}
-            {/*        </div>*/}
-
-            {/*    )*/}
-
-            {/*}*/}
 
         </div>
     )

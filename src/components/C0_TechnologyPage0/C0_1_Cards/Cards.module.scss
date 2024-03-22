@@ -1,0 +1,19 @@
+@import "../../../assets/styles/app";
+
+.cards {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 56px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+
+  }
+
+}
