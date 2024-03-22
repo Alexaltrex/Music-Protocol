@@ -33,7 +33,8 @@ export const Screen: FC<IScreen> = ({
 
                 {
                     title.mobile.map((text, key) => (
-                        <WaveText label={text}
+                        <WaveText key={key}
+                                  label={text}
                                   className={style.titleMobile}
                                   textClassName={style.title}
                                   size={40}
@@ -43,7 +44,8 @@ export const Screen: FC<IScreen> = ({
 
                 {
                     title.mobile.map((text, key) => (
-                        <WaveText label={text}
+                        <WaveText key={key}
+                                  label={text}
                                   className={style.titleDesktop}
                                   textClassName={style.title}
                                   size={64}
@@ -53,15 +55,15 @@ export const Screen: FC<IScreen> = ({
 
                 {
                     description && (
-                            <div className={style.descriptionWrapper}>
-                                {
-                                    description.map((text, key) => (
-                                        <TextUp key={key}>
-                                            <p className={style.description}>{text}</p>
-                                        </TextUp>
-                                    ))
-                                }
-                            </div>
+                        <div className={style.descriptionWrapper}>
+                            {
+                                description.map((text, key) => (
+                                    <TextUp key={key}>
+                                        <p className={style.description}>{text}</p>
+                                    </TextUp>
+                                ))
+                            }
+                        </div>
                     )
                 }
 
