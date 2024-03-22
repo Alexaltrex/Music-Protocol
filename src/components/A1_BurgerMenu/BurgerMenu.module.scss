@@ -1,0 +1,119 @@
+@import "../../assets/styles/app";
+
+.burgerMenu {
+  @include onlyMobile();
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  transform: translateX(101%);
+  transition: 0.3s;
+
+  &_open {
+    transform: translateX(0);
+  }
+
+  .inner {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 112px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 86px;
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+
+    }
+
+    .links {
+
+      .link {
+        display: block;
+        text-decoration: none;
+        padding-left: 16px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 135%;
+        color: var(--Main-White, #FFF);
+
+        &:last-child {
+          margin-top: 32px;
+        }
+      }
+    }
+
+    .bottom {
+      margin-top: 32px;
+      //background: red;
+
+      .socialLinks {
+        display: flex;
+        justify-content: center;
+
+        a {
+          width: 24px;
+          height: 24px;
+
+          &:last-child {
+            margin-left: 16px;
+          }
+
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .bottom_links {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        .link {
+          text-decoration: none;
+          color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 135%;
+
+          &:not(:first-child) {
+            margin-left: 32px;
+          }
+        }
+      }
+
+      .policy {
+        margin-top: 16px;
+        color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        text-align: center;
+      }
+
+
+    }
+
+
+  }
+
+
+}

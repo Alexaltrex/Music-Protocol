@@ -1,0 +1,110 @@
+@import "../../../assets/styles/app";
+
+.elevatingMusic {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    .titleMobile {
+      @include onlyMobile();
+    }
+
+    .titleDesktop {
+      @include onlyDesktop();
+    }
+
+
+    .title {
+      @include h2;
+    }
+
+    .descriptionWrapper {
+      margin-top: 32px;
+    }
+
+    .description {
+      color: var(--Additional-Main-White, #FFF);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+
+      @include desktop {
+        font-size: 18px;
+      }
+    }
+
+    .cardsMobile {
+      @include onlyMobile();
+      margin-top: 32px;
+    }
+
+    .cardsDesktop {
+      @include onlyDesktop(flex);
+      margin-top: 36px;
+      justify-content: space-between;
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .right {
+
+      }
+
+    }
+
+    .card {
+      @include rotate;
+      border-radius: 10px;
+      border: 1px solid var(--additional-lines-15, rgba(255, 255, 255, 0.15));
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 24px;
+      height: 304px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include desktop {
+        width: 304px;
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .step {
+          color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 135%;
+        }
+
+        .label {
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 135%;
+        }
+      }
+
+
+    }
+
+
+  }
+}

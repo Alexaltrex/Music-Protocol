@@ -1,0 +1,98 @@
+//========= BREAK POINTS =========//
+@mixin desktop {
+  @media all and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+@mixin onlyDesktop($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+//========= TEXTS =========//
+@mixin h1 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #FFF;
+
+  @include desktop {
+    font-size: 64px;
+  }
+}
+
+@mixin h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  color: #FFF;
+
+  @include desktop {
+    font-size: 48px;
+  }
+}
+
+//========= OTHER =========//
+@mixin container {
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin inner() {
+  @include desktop() {
+    width: 1316px;
+    margin: 0 auto;
+  }
+}
+
+@mixin centerRow() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerColumn() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button() {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@mixin rotate {
+  transition: 0.5s;
+  perspective-origin: center;
+
+  &:hover {
+    @include desktop {
+      transform: perspective(600px) rotateY(-10deg);
+    }
+  }
+}
