@@ -11,7 +11,7 @@ import {SubLinksEnum, subLinksHeader} from "../../../const/links";
 
 interface ILinksItem {
     route: SubLinksEnum
-    openedRoutes: RouteEnum | null
+    openedRoutes: SubLinksEnum | null
     onClick: () => void
 }
 
