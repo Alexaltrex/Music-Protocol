@@ -4,8 +4,13 @@ import {IGroup, routes} from "./routes";
 import Link from "next/link";
 import React, {FC} from "react";
 import {clsx} from "clsx";
+import {gilroy} from "../../assets/fonts/fonts";
+import defaultLoader from "next/dist/shared/lib/image-loader";
+import __next_img_default = defaultLoader.__next_img_default;
+import {socialLinks} from "../../const/socialLinks";
 
 export const Footer = () => {
+
     return (
         <footer className={style.footer}>
             <div className={style.inner}>
@@ -13,13 +18,17 @@ export const Footer = () => {
                 <div className={style.logo}>{svgIcons.logo}</div>
 
                 <div className={style.top}>
-                    <p className={style.title}>
-                        The Web3 world
+                    <p className={clsx(style.title, gilroy.className)}>
+                        Dynamic Music IP for Web3
                     </p>
-                    <p className={style.description}>
-                        Music protocol is the decentralized music IP repository for legal access to music in the digital
-                        space
-                    </p>
+
+                    <div className={style.right}>
+                        <p className={style.description}>
+                            The Web3 Music Association is the main contributor to the Music Protocol, working with the music industry to onboard them to advanced technologies. Find out more about the association.
+                        </p>
+                        {svgIcons.logo_footer}
+                    </div>
+
                 </div>
 
                 <div className={clsx(style.linksMobile)}>
@@ -52,29 +61,31 @@ export const Footer = () => {
 
                     <div className={style.socialLinks}>
                         {
-                            [
-                                {
-                                    href: "#",
-                                    icon: svgIcons.twitter
-                                },
-                                {
-                                    href: "#",
-                                    icon: svgIcons.instagram
-                                },
-                            ].map(({href, icon}, key) => (
+                            socialLinks.map(({href, icon}, key) => (
                                 <a key={key}
                                    href={href}
                                    target="_blank"
                                    rel="nofollow noreferrer noopener"
                                 >
-                                    {icon}
+
+                                    <>
+                                    {
+                                        key === 1 ? (
+                                            // @ts-ignore
+                                            <img src="/png/in.png" alt=""/>
+                                        ) : (
+                                            <>{icon}</>
+                                        )
+                                    }
+                                    </>
+
                                 </a>
                             ))
                         }
                     </div>
 
                     <p className={style.designed}>
-                        Designed by <span>Demyanchuk Art </span>
+                        Designed by <a href="https://demyanchukart.com/" target="_blank" rel="nofollow noreferrer noopener">Demyanchuk Art </a>
                     </p>
                 </div>
 

@@ -25,8 +25,6 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                                                     variant = ButtonVariantEnum.orange,
                                                     href,
                                                 }) => {
-    console.log(ButtonVariantEnum.orange)
-
     return (
         <>
             {
@@ -38,7 +36,7 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                            [style.buttonCustom]: true,
                            [style.buttonCustom_orange]: variant === ButtonVariantEnum.orange,
                            [style.buttonCustom_outlined]: variant === ButtonVariantEnum.outlined,
-
+                           [style.buttonCustom_black]: variant === ButtonVariantEnum.black,
                        }, Boolean(className) && className)}
                        onClick={() => {
                            if (onClick) {
@@ -53,6 +51,7 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                         [style.buttonCustom]: true,
                         [style.buttonCustom_orange]: variant === ButtonVariantEnum.orange,
                         [style.buttonCustom_outlined]: variant === ButtonVariantEnum.outlined,
+                        [style.buttonCustom_black]: variant === ButtonVariantEnum.black,
 
                     }, Boolean(className) && className)}
                             onClick={() => {

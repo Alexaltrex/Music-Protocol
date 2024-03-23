@@ -43,7 +43,7 @@ export const Screen: FC<IScreen> = ({
                 }
 
                 {
-                    title.mobile.map((text, key) => (
+                    title.desktop.map((text, key) => (
                         <WaveText key={key}
                                   label={text}
                                   className={style.titleDesktop}

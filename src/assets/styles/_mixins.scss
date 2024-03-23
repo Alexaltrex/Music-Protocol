@@ -86,7 +86,7 @@
   outline: none;
 }
 
-@mixin rotate {
+@mixin rotateOnHover {
   transition: 0.5s;
   perspective-origin: center;
 

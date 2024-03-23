@@ -1,32 +1,20 @@
 import {Screen} from "../../components/x_common/Screen/Screen";
-
+import {Cards} from "../../components/C0_TechnologyPage0/C0_1_Cards/Cards";
+import {screen} from "./screen";
+import {Editor} from "../../components/x_common/Editor/Editor";
 
 const TechnologyPage0 = () => {
     return (
         <div>
-            <Screen title={{
-                mobile: [
-                    "Advancing Music",
-                    "Rights and",
-                    "Ownership"
-                ],
-                desktop: [
-                    "Advancing Music",
-                    "Rights and Ownership",
-                ]
-            }}
-                    description={[
-                        "We are advancing the music rights",
-                        "landscape. This transforms the music",
-                        "industry's foundational infrastructure. We",
-                        "harnessing the power of blockchain to",
-                        "provide a secure, streamline and",
-                        "transparent model.",
-                    ]}
-                    button={{
-                        label: "Learn more"
-                    }}
-            />
+            <Screen {...screen}/>
+            <Cards/>
+
+            {/*<div style={{*/}
+            {/*    padding: "40px 100px",*/}
+            {/*    background: "#FFF",*/}
+            {/*}}>*/}
+            {/*    <Editor/>*/}
+            {/*</div>*/}
         </div>
     )
 }

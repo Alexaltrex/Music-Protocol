@@ -40,4 +40,13 @@
     }
 
   }
+
+  &_black {
+    background: #000;
+    backdrop-filter: blur(5px);
+
+    &:hover {
+      background: #212121;
+    }
+  }
 }

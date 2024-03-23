@@ -1,0 +1,169 @@
+@import "../../../assets/styles/app";
+
+.editor {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--additional-lines-15, rgba(255, 255, 255, 0.15));
+  background: var(--Additional-Main-Black, #000);
+  backdrop-filter: blur(10px);
+  width: 312px;
+
+  @include desktop {
+    width: 636px;
+  }
+
+  .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 12px;
+
+    @include desktop {
+      padding: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .dots {
+      display: flex;
+
+      & div {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.15);
+
+        @include desktop {
+          width: 16px;
+          height: 16px;
+        }
+
+        &:not(:first-child) {
+          margin-left: 5px;
+
+          @include desktop {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+
+    .menu {
+      margin-top: 8px;
+      display: flex;
+
+      @include desktop {
+        margin-top: 0;
+        margin-left: 48px;
+      }
+
+      p {
+        color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+
+        @include desktop {
+          font-size: 18px;
+        }
+
+        &:not(:first-child) {
+          margin-left: 20px;
+
+          @include desktop {
+            margin-left: 48px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .sectionTop {
+    padding: 16px 12px;
+    height: 135px;
+
+    @include desktop {
+      padding: 32px 24px;
+      height: 232px;
+    }
+
+
+  }
+
+  .middleMenu {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 12px;
+
+    @include desktop {
+      padding: 24px;
+    }
+
+    p:nth-child(1) {
+      color: var(--Additional-Main-White, #FFF);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+
+      @include desktop {
+        font-size: 18px;
+      }
+    }
+
+    p:nth-child(2) {
+      margin-left: 16px;
+      color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+
+      @include desktop {
+        margin-left: 24px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .sectionBottom {
+    height: 313px;
+
+    @include desktop {
+      height: 476px;
+    }
+  }
+
+  .text {
+    position: relative;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+
+    @include desktop {
+      font-size: 18px;
+    }
+
+   .empty {
+     display: inline-block;
+     //width: 8.41px;
+   }
+
+    .pointer {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 9px;
+      background: #FFF;
+
+      @include desktop {
+        width: 11px;
+      }
+    }
+
+  }
+}

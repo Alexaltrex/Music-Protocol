@@ -46,12 +46,14 @@
 
     .btn {
       margin-top: 32px;
+      align-self: flex-start;
       padding-left: 24px;
       padding-right: 24px;
+      width: auto;
 
       @include desktop {
-        align-self: flex-start;
-        width: 220px;
+        padding-left: 40px;
+        padding-right: 40px;
       }
     }
 

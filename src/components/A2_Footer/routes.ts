@@ -34,24 +34,24 @@ export const routes = [
         icon: true,
         subRoutes: [
             {
-                label: "Music Protocol Technology",
-                href: "/",
+                label: "Advancing Music Rights and Ownership",
+                href: "/technology0",
             },
             {
-                label: "The IP Building Blocks",
-                href: "/",
+                label: "IP Core Asset Library",
+                href: "/technology1",
             },
             {
-                label: "The IP Licensing Stream",
-                href: "/",
+                label: "IP Licencing Core Engine",
+                href: "/technology2",
             },
             {
-                label: "The IP Market Bridge",
-                href: "/",
+                label: "IP Settlement Gateway",
+                href: "/technology3",
             },
             {
-                label: "The IP Multi-Chain Protocol",
-                href: "/",
+                label: "IP Inter-Chain Distribution Gateway",
+                href: "/technology4",
             },
         ]
     },
@@ -61,19 +61,19 @@ export const routes = [
         subRoutes: [
             {
                 label: "Real-world assets",
-                href: "/",
+                href: "/use0",
             },
             {
                 label: "AI",
-                href: "/",
+                href: "/use1",
             },
             {
-                label: "MusicTech Innovation",
-                href: "/",
+                label: "Traditional music Distribution Gateway",
+                href: "/use2",
             },
             {
                 label: "Gaming and Metaverse",
-                href: "/",
+                href: "/use3",
             },
         ]
     },
