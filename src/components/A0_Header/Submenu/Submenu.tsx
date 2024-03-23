@@ -24,25 +24,29 @@ export const Submenu: FC<ISubmenu> = ({
             {
                 // @ts-ignore
                 (subLinksHeader[subLinks] as ISubLinks[])?.map(({label, href, description}, key) => (
-                        <Link key={key}
-                              href={href}
-                              className={style.item}
-                              onClick={() => onClick()}
-                        >
-                            <img src="/jpeg/header/submenuItem.jpg" alt="" className={style.back}/>
-                            <div className={style.item_inner}>
-                                <div className={style.top}>
-                                    <p className={style.label}>{label}</p>
-                                    <div className={style.icon}>
-                                        {svgIcons.arrow_right}
-                                    </div>
+                    <Link key={key}
+                          href={href}
+                          className={style.item}
+                          onClick={() => {
+                              onClick()
+                          }}
+                    >
+                        <img src="/jpeg/header/submenuItem_mobile.jpg" alt="" className={clsx(style.back, style.back_mobile)}/>
+                        <img src="/jpeg/header/submenuItem.jpg" alt="" className={clsx(style.back, style.back_desktop)}/>
+
+                        <div className={style.item_inner}>
+                            <div className={style.top}>
+                                <p className={style.label}>{label}</p>
+                                <div className={style.icon}>
+                                    {svgIcons.arrow_right}
                                 </div>
-                                <p className={clsx(style.description, gilroy.className)}>
-                                    {description}
-                                </p>
                             </div>
-                        </Link>
-                    ))
+                            <p className={clsx(style.description, gilroy.className)}>
+                                {description}
+                            </p>
+                        </div>
+                    </Link>
+                ))
             }
         </div>
     )

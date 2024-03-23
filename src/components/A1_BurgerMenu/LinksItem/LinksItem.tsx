@@ -8,6 +8,8 @@ import {Collapse} from "@mui/material";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {SubLinksEnum, subLinksHeader} from "../../../const/links";
+import {observer} from "mobx-react-lite";
+import {useStore} from "../../../store/useStore";
 
 interface ILinksItem {
     route: SubLinksEnum
@@ -15,11 +17,17 @@ interface ILinksItem {
     onClick: () => void
 }
 
-export const LinksItem: FC<ILinksItem> = ({
+export const LinksItem: FC<ILinksItem> = observer(({
                                               route,
                                               openedRoutes,
                                               onClick,
                                           }) => {
+    const {
+        appStore: {
+            setBurgerMenu
+        }
+    } = useStore();
+
 
     const subMenu = subLinksHeader[route];
 
@@ -51,6 +59,7 @@ export const LinksItem: FC<ILinksItem> = ({
                                   [style.item_secected]: false//pathname === href,
                               })}
                               href={href}
+                              onClick={() => setBurgerMenu(false)}
                         >
                             <img src="/jpeg/header/submenuItem.jpg" alt=""/>
                             <div className={style.itemContent}>
@@ -70,4 +79,4 @@ export const LinksItem: FC<ILinksItem> = ({
 
         </div>
     )
-}
+})

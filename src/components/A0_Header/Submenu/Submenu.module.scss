@@ -33,7 +33,16 @@
       opacity: 0;
       transition: 0.3s;
       filter: blur(4px);
+
+      &_mobile {
+        @include onlyMobile();
+      }
+
+      &_desktop {
+        @include onlyDesktop();
+      }
     }
+
 
     .item_inner {
       position: relative;
