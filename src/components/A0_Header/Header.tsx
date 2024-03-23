@@ -7,10 +7,9 @@ import React from "react";
 import {mulish} from "../../assets/fonts/fonts";
 import {ButtonCustom} from "../x_common/ButtonCustom/ButtonCustom";
 import {DropDown} from "./DropDown/DropDown";
-import {RouteEnum} from "./Submenu/Submenu";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
-import {subLinks, SubLinksEnum} from "../../const/links";
+import {SubLinksEnum} from "../../const/links";
 
 export const Header = observer(() => {
     const {
