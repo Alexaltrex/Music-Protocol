@@ -1,11 +1,12 @@
 import style from "./HomePage.module.scss";
-import {DynamicMusic} from "../components/B0_HomePage/B0_0_DynamicMusic/DynamicMusic";
 import {ElevatingMusic} from "../components/B0_HomePage/B0_2_ElevatingMusic/ElevatingMusic";
+import {screen} from "./screen";
+import {Screen} from "../components/x_common/Screen/Screen";
 
 const HomePage = () => {
     return (
         <div className={style.homePage}>
-            <DynamicMusic/>
+            <Screen {...screen}/>
             <ElevatingMusic/>
         </div>
     )

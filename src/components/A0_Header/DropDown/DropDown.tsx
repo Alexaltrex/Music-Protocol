@@ -4,20 +4,21 @@ import {svgIcons} from "../../../assets/svgIcons";
 import React, {FC, useRef, useState} from "react";
 import style from "./DropDown.module.scss";
 import {clsx} from "clsx";
-import {RouteEnum, Submenu} from "../Submenu/Submenu";
+import {Submenu} from "../Submenu/Submenu";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
+import {SubLinksEnum} from "../../../const/links";
 
 interface IDropDown {
     label: string
     className?: string
-    route: RouteEnum
+    subLinks: SubLinksEnum
 }
 
 export const DropDown: FC<IDropDown> = ({
                                             label,
                                             className,
-                                            route
+                                            subLinks
                                         }) => {
     const [open, setOpen] = useState(false);
 
@@ -51,7 +52,7 @@ export const DropDown: FC<IDropDown> = ({
             </button>
 
             <div className={clsx(style.modal, "modal")}>
-                <Submenu route={route}
+                <Submenu subLinks={subLinks}
                          onClick={() => setOpen(false)}
                 />
             </div>

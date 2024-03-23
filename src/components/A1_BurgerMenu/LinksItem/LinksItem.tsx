@@ -1,17 +1,16 @@
 "use client";
 
 import style from "./LinksItem.module.scss"
-import {RouteEnum} from "../../A0_Header/Submenu/Submenu";
 import {FC} from "react";
 import {clsx} from "clsx";
-import {subMenus} from "../../A0_Header/subMenus";
 import {svgIcons} from "../../../assets/svgIcons";
 import {Collapse} from "@mui/material";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import {SubLinksEnum, subLinksHeader} from "../../../const/links";
 
 interface ILinksItem {
-    route: RouteEnum
+    route: SubLinksEnum
     openedRoutes: RouteEnum | null
     onClick: () => void
 }
@@ -21,10 +20,10 @@ export const LinksItem: FC<ILinksItem> = ({
                                               openedRoutes,
                                               onClick,
                                           }) => {
-    const subMenu = subMenus[route === RouteEnum.Technology ? 0 : 1];
+
+    const subMenu = subLinksHeader[route];
 
     const pathname  = usePathname();
-    //console.log(pathname)
 
     return (
         <div className={clsx({
@@ -35,7 +34,8 @@ export const LinksItem: FC<ILinksItem> = ({
                  onClick={onClick}
             >
                 <p className={style.title}>
-                    {route === RouteEnum.Technology ? "Technology" : "Industry use case"}
+                    {route}
+                    {/*{route === RouteEnum.Technology ? "Technology" : "Industry use case"}*/}
                 </p>
 
                 {svgIcons.link_arrow}

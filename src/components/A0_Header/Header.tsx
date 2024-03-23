@@ -10,6 +10,7 @@ import {DropDown} from "./DropDown/DropDown";
 import {RouteEnum} from "./Submenu/Submenu";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
+import {subLinks, SubLinksEnum} from "../../const/links";
 
 export const Header = observer(() => {
     const {
@@ -38,35 +39,43 @@ export const Header = observer(() => {
                                 [
                                     {
                                         label: "Home",
-                                        href: "/"
+                                        href: "/",
+                                        subLinks: null
                                     },
                                     {
                                         label: "Technology",
-                                        href: ""
+                                        href: "",
+                                        subLinks: SubLinksEnum.Technology
                                     },
                                     {
                                         label: "Industry use case",
-                                        href: ""
+                                        href: "",
+                                        subLinks: SubLinksEnum.Industry
                                     },
                                     {
                                         label: "Token",
-                                        href: "/token"
-                                    }
-
-                                ].map(({label, href}, key) => (
+                                        href: "/token",
+                                        subLinks: null
+                                    },
+                                    {
+                                        label: "Resources",
+                                        href: "",
+                                        subLinks: SubLinksEnum.Resources
+                                    },
+                                ].map(({label, href, subLinks}, key) => (
                                     <React.Fragment key={key}>
                                         {
-                                            (key === 0 || key === 3) ? (
+                                            (subLinks) ? (
+                                                <DropDown label={label}
+                                                          className={style.dropDown}
+                                                          subLinks={subLinks as SubLinksEnum}
+                                                />
+                                            ) : (
                                                 <Link href={href}
                                                       className={style.link}
                                                 >
                                                     <span className={mulish.className}>{label}</span>
                                                 </Link>
-                                            ) : (
-                                                <DropDown label={label}
-                                                          className={style.dropDown}
-                                                          route={label as RouteEnum}
-                                                />
                                             )
                                         }
                                     </React.Fragment>

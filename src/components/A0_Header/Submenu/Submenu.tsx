@@ -4,30 +4,26 @@ import {clsx} from "clsx";
 import Link from "next/link";
 import {svgIcons} from "../../../assets/svgIcons";
 import {gilroy} from "../../../assets/fonts/fonts";
-import {subMenus} from "../subMenus";
-
-export enum RouteEnum {
-    Technology = "Technology",
-    Industry_use_case = "Industry use case"
-}
+import {ISubLinks, SubLinksEnum, subLinksHeader} from "../../../const/links";
 
 interface ISubmenu {
-    route: RouteEnum
+    subLinks: SubLinksEnum
     onClick: () => void
 }
 
 export const Submenu: FC<ISubmenu> = ({
-                                          route,
+                                          subLinks,
                                           onClick,
                                       }) => {
+
     return (
         <div className={clsx({
             [style.submenu]: true,
-            [style.submenu_twoRow]: route === RouteEnum.Technology,
+            [style.submenu_twoRow]: subLinks === SubLinksEnum.Technology,
         })}>
             {
-                (route === RouteEnum.Technology ? subMenus[0] : subMenus[1])
-                    .map(({label, href, description}, key) => (
+                // @ts-ignore
+                (subLinksHeader[subLinks] as ISubLinks[])?.map(({label, href, description}, key) => (
                         <Link key={key}
                               href={href}
                               className={style.item}
@@ -45,7 +41,6 @@ export const Submenu: FC<ISubmenu> = ({
                                     {description}
                                 </p>
                             </div>
-
                         </Link>
                     ))
             }

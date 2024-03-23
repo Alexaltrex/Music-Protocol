@@ -1,13 +1,11 @@
 import style from "./Footer.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
-import {IGroup, routes} from "./routes";
 import Link from "next/link";
 import React, {FC} from "react";
 import {clsx} from "clsx";
 import {gilroy} from "../../assets/fonts/fonts";
-import defaultLoader from "next/dist/shared/lib/image-loader";
-import __next_img_default = defaultLoader.__next_img_default;
 import {socialLinks} from "../../const/socialLinks";
+import {linksFooter} from "../../const/links";
 
 export const Footer = () => {
 
@@ -24,7 +22,9 @@ export const Footer = () => {
 
                     <div className={style.right}>
                         <p className={style.description}>
-                            The Web3 Music Association is the main contributor to the Music Protocol, working with the music industry to onboard them to advanced technologies. Find out more about the association.
+                            The Web3 Music Association is the main contributor to the Music Protocol, working with the
+                            music industry to onboard them to advanced technologies. Find out more about the
+                            association.
                         </p>
                         {svgIcons.logo_footer}
                     </div>
@@ -32,26 +32,38 @@ export const Footer = () => {
                 </div>
 
                 <div className={clsx(style.linksMobile)}>
-                    {
-                        [
-                            [routes[0], routes[1]],
-                            [routes[2], routes[3]]
-                        ].map((row, key) => (
-                            <div className={style.row} key={key}>
-                                {
-                                    row.map((group, key) => (
-                                        <Group key={key} {...group}/>
-                                    ))
-                                }
-                            </div>
-                        ))
-                    }
+                    <div className={style.row}>
+                        <Group {...linksFooter[0]}/>
+                        <Group {...linksFooter[1]}/>
+                    </div>
+                    <div className={style.row}>
+                        <Group {...linksFooter[2]}/>
+                        <div className={style.column}>
+                            <Group {...linksFooter[3]}/>
+                            <Group {...linksFooter[4]}/>
+                        </div>
+
+                    </div>
+                    {/*{*/}
+                    {/*    [*/}
+                    {/*        [routes[0], routes[1]],*/}
+                    {/*        [routes[2], routes[3]]*/}
+                    {/*    ].map((row, key) => (*/}
+                    {/*        <div className={style.row} key={key}>*/}
+                    {/*            {*/}
+                    {/*                row.map((group, key) => (*/}
+                    {/*                    <Group key={key} {...group}/>*/}
+                    {/*                ))*/}
+                    {/*            }*/}
+                    {/*        </div>*/}
+                    {/*    ))*/}
+                    {/*}*/}
                 </div>
 
 
                 <div className={clsx(style.linksDesktop)}>
                     {
-                        routes.map((group, key) => (
+                        linksFooter.map((group, key) => (
                             <Group key={key} {...group}/>
                         ))
                     }
@@ -67,26 +79,25 @@ export const Footer = () => {
                                    target="_blank"
                                    rel="nofollow noreferrer noopener"
                                 >
-
                                     <>
-                                    {
-                                        key === 1 ? (
-                                            // @ts-ignore
-                                            <img src="/png/in.png" alt=""/>
-                                        ) : (
-                                            <>{icon}</>
-                                        )
-                                    }
+                                        {
+                                            key === 1 ? (
+                                                // @ts-ignore
+                                                <img src="/png/in.png" alt=""/>
+                                            ) : (
+                                                <>{icon}</>
+                                            )
+                                        }
                                     </>
-
                                 </a>
                             ))
                         }
                     </div>
 
-                    <p className={style.designed}>
-                        Designed by <a href="https://demyanchukart.com/" target="_blank" rel="nofollow noreferrer noopener">Demyanchuk Art </a>
-                    </p>
+                    {/*<p className={style.designed}>*/}
+                    {/*    Designed by <a href="https://demyanchukart.com/" target="_blank"*/}
+                    {/*                   rel="nofollow noreferrer noopener">Demyanchuk Art </a>*/}
+                    {/*</p>*/}
                 </div>
 
                 <div className={style.bottom}>
@@ -124,6 +135,15 @@ export const Footer = () => {
 }
 
 //========= GROUP =========//
+export interface IGroup {
+    title: string
+    icon: boolean
+    subRoutes: {
+        label: string
+        href: string
+    }[]
+}
+
 const Group: FC<IGroup> = ({
                                icon,
                                title,

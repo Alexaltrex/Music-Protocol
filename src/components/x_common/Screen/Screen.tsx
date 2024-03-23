@@ -7,28 +7,46 @@ import {WaveText} from "../WaveText/WaveText";
 import {TextUp} from "../TextUp/TextUp";
 import {ButtonCustom, ButtonVariantEnum} from "../ButtonCustom/ButtonCustom";
 
-interface IScreen {
+export interface IScreen {
     className?: string
     title: {
         mobile: string[]
         desktop: string[]
     }
     description?: string[]
+    orangeButton?: boolean
     button: {
         label: string
         onClick?: () => void
         href?: string
     }
+    videoUrl?: string
 }
 
 export const Screen: FC<IScreen> = ({
                                         className,
                                         title,
                                         description,
+                                        orangeButton = false,
                                         button,
+    videoUrl
                                     }) => {
     return (
         <div className={clsx(style.screen, Boolean(className) && className)}>
+
+            {
+                videoUrl && (
+                    <div className={style.videoWrapper}>
+                        <video src={videoUrl}
+                               loop={true}
+                               autoPlay={true}
+                               muted={true}
+                               //controls={true}
+                        ></video>
+                    </div>
+                )
+            }
+
             <div className={style.inner}>
 
                 {
@@ -67,8 +85,20 @@ export const Screen: FC<IScreen> = ({
                     )
                 }
 
+                {
+                    orangeButton && (
+                        <ButtonCustom label="Get started"
+                                      className={style.orangeButton}
+                        />
+                    )
+
+                }
+
                 <ButtonCustom {...button}
-                              className={style.btn}
+                              className={clsx({
+                                  [style.btn]: true,
+                                  [style.btn_withOrangeButton]: true,
+                              })}
                               variant={ButtonVariantEnum.outlined}
                 />
 

@@ -57,13 +57,12 @@ export const ElevatingMusic = () => {
                 <div className={style.descriptionWrapper}>
                     {
                         [
-                            "Our modular layer 1 transforms music IP",
-                            "from a static to a dynamic asset. We",
-                            "designed the protocol through blockchain",
-                            "technology to propel the music industry",
-                            "forward through a digital licensing",
-                            "framework that mirrors the Internet's needs",
-                            "and developments.",
+                            "Our sovereign layer 1 transforms music IP",
+                            "from a static asset into a dynamic asset.",
+                            "Blockchain will drive the music industry",
+                            "forward through our digital licensing",
+                            "framework that mirrors the evolving",
+                            "digital landscape.",
                         ].map((text, key) => (
                             <TextUp key={key}>
                                 <p className={style.description}>
@@ -75,23 +74,23 @@ export const ElevatingMusic = () => {
                 </div>
 
 
-                <div className={style.cardsMobile}>
-                    {
-                        cards.map((card, key) => (
-                            <Card key={key} {...card}/>
-                        ))
-                    }
-                </div>
+                {/*<div className={style.cardsMobile}>*/}
+                {/*    {*/}
+                {/*        cards.map((card, key) => (*/}
+                {/*            <Card key={key} {...card}/>*/}
+                {/*        ))*/}
+                {/*    }*/}
+                {/*</div>*/}
 
-                <div className={style.cardsDesktop}>
-                    <div className={style.left}>
-                        <Card {...cards[0]}/>
-                    </div>
-                    <div className={style.right}>
-                        <Card {...cards[1]}/>
-                        <Card {...cards[2]}/>
-                    </div>
-                </div>
+                {/*<div className={style.cardsDesktop}>*/}
+                {/*    <div className={style.left}>*/}
+                {/*        <Card {...cards[0]}/>*/}
+                {/*    </div>*/}
+                {/*    <div className={style.right}>*/}
+                {/*        <Card {...cards[1]}/>*/}
+                {/*        <Card {...cards[2]}/>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
 
             </div>

@@ -198,7 +198,7 @@ export const svgIcons = {
     ),
     black_white: (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <g clip-path="url(#clip0_944_699)">
+            <g clipPath="url(#clip0_944_699)">
                 <path
                     d="M4.21053 0.84375H19.7895V23.1595H17.5027V12.9375H17.4802C17.2275 10.1123 14.8704 7.8984 12 7.8984C9.1296 7.8984 6.77252 10.1123 6.51976 12.9375H6.49734V23.1595H4.21053V0.84375Z"
                     fill="white"/>

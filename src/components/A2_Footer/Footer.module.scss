@@ -108,13 +108,21 @@
         &:not(:first-child) {
           margin-top: 48px;
         }
+
+        .column {
+          & > div {
+            &:last-child {
+              margin-top: 20px;
+            }
+          }
+        }
       }
 
     }
 
     .linksDesktop {
       @include onlyDesktop(flex);
-      margin-top: -30px;
+      margin-top: 58px;
     }
 
     .group {
@@ -184,22 +192,29 @@
       display: flex;
       //align-items: center;
       justify-content: space-between;
-      margin-top: 60px;
+      margin-top: 30px;
+
+      @include desktop {
+        margin-top: 16px;
+      }
 
       .socialLinks {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-gap: 16px;
-        width: 92px;
-        height: 56px;
+        padding-left: 30px;
+        //width: 92px;
+        //height: 56px;
 
         @include desktop {
+          padding-left: 0;
           display: flex;
           justify-content: center;
         }
 
         a {
+          display: block;
           width: 20px;
           height: 20px;
 
@@ -233,6 +248,7 @@
 
         @include desktop {
           width: auto;
+
         }
 
         a {

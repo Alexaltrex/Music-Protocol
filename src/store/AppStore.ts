@@ -3,12 +3,13 @@ import {action, makeObservable, observable} from "mobx";
 export class AppStore {
     burgerMenu: boolean = false
 
+
     constructor() {
         makeObservable(this,
             {
-            burgerMenu: observable,
+                burgerMenu: observable,
 
-            setBurgerMenu: action.bound,
+                setBurgerMenu: action.bound,
             }
         )
     }
