@@ -6,9 +6,9 @@ import {svgIcons} from "./svgIcons";
 
 const cards = [
     {
-       title: "IP Core Asset Library",
-       text: "The core of Music Protocol is a data repository for music IP. The architecture was built to accommodate all intellectual property and licensing structures within the industry. We actively encourage all ecosystem involvement. Find out more about contributing towards new IP standards and licensing frameworks.",
-       href: "#",
+        title: "IP Core Asset Library",
+        text: "The core of Music Protocol is a data repository for music IP. The architecture was built to accommodate all intellectual property and licensing structures within the industry. We actively encourage all ecosystem involvement. Find out more about contributing towards new IP standards and licensing frameworks.",
+        href: "#",
     },
     {
         title: "IP Licensing Core Engine",
@@ -44,7 +44,7 @@ export const Cards = () => {
                                         <div className={style.blackCard}>
                                             <p className={style.step}>{`0${key + 1}`}</p>
                                             <p className={style.title}>{title}</p>
-                                            {svgIcons[key]}
+                                            {/*{svgIcons[key]}*/}
                                         </div>
                                     </div>
 
