@@ -1,4 +1,6 @@
-export const screen = {
+import {IScreen} from "../../components/x_common/Screen/Screen";
+
+export const screen: IScreen = {
     title: {
         mobile: [
             "Advancing Music",
@@ -10,14 +12,24 @@ export const screen = {
             "Rights and Ownership",
         ]
     },
-    description: [
-        "We are advancing the music rights",
-        "landscape. This transforms the music",
-        "industry's foundational infrastructure. We",
-        "harnessing the power of blockchain to",
-        "provide a secure, streamline and",
-        "transparent model.",
-    ],
+    description: {
+        mobile: [
+           "We are progressing the rights landscape",
+            "by introducing an IP Management",
+            "Protocol to transform the industry's",
+            "foundational infrastructure. We utilise",
+            "advanced technologies to provide a",
+            "secure and streamlined model.",
+        ],
+        desktop: [
+            "We are progressing the rights landscape by",
+            "introducing an IP Management Protocol to",
+            "transform the industry's foundational",
+            "infrastructure. We utilise advanced",
+            "technologies to provide a secure and",
+            "streamlined model.",
+        ],
+    },
     button: {
         label: "Learn more"
     }

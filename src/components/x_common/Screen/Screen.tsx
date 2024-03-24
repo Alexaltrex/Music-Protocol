@@ -13,7 +13,10 @@ export interface IScreen {
         mobile: string[]
         desktop: string[]
     }
-    description?: string[]
+    description?: {
+        mobile: string[]
+        desktop: string[]
+    },
     orangeButton?: boolean
     button: {
         label: string
@@ -73,15 +76,27 @@ export const Screen: FC<IScreen> = ({
 
                 {
                     description && (
-                        <div className={style.descriptionWrapper}>
-                            {
-                                description.map((text, key) => (
-                                    <TextUp key={key}>
-                                        <p className={style.description}>{text}</p>
-                                    </TextUp>
-                                ))
-                            }
-                        </div>
+                        <>
+                            <div className={style.descriptionMobile}>
+                                {
+                                    description.mobile.map((text, key) => (
+                                        <TextUp key={key}>
+                                            <p className={style.description}>{text}</p>
+                                        </TextUp>
+                                    ))
+                                }
+                            </div>
+                            <div className={style.descriptionDesktop}>
+                                {
+                                    description.desktop.map((text, key) => (
+                                        <TextUp key={key}>
+                                            <p className={style.description}>{text}</p>
+                                        </TextUp>
+                                    ))
+                                }
+                            </div>
+                        </>
+
                     )
                 }
 

@@ -1,4 +1,6 @@
-export const screen = {
+import {IScreen} from "../../components/x_common/Screen/Screen";
+
+export const screen: IScreen = {
     title: {
         mobile: [
             "Connecting",
@@ -12,4 +14,5 @@ export const screen = {
     button: {
         label: "Registration for early access"
     },
+    videoUrl: "/mp4/technology3.mp4",
 }

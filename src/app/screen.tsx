@@ -12,10 +12,16 @@ export const screen: IScreen = {
             "for Web3",
         ]
     },
-    description: [
-       "Transforming licensing for the full digital",
-        "landscape.",
-    ],
+    description: {
+        mobile: [
+            "Transforming licensing for the full digital",
+            "landscape.",
+        ],
+        desktop: [
+            "Transforming licensing for the",
+            "full digital landscape.",
+        ],
+    },
     orangeButton: true,
     button: {
         label: "Resources",

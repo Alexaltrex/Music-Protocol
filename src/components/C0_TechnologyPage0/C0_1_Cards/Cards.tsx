@@ -2,72 +2,131 @@
 
 import style from "./Cards.module.scss"
 import {ButtonCustom, ButtonVariantEnum} from "../../x_common/ButtonCustom/ButtonCustom";
-import {svgIcons} from "./svgIcons";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import {Swiper as SwiperClass} from "swiper/types";
+import {FC, useState} from "react";
+import {svgIcons} from "../../../assets/svgIcons";
+import {clsx} from "clsx";
 
-const cards = [
+interface ICard {
+    step: string
+    title: string
+    text: string
+    href: string
+}
+
+const cards: ICard[] = [
     {
-        title: "IP Core Asset Library",
-        text: "The core of Music Protocol is a data repository for music IP. The architecture was built to accommodate all intellectual property and licensing structures within the industry. We actively encourage all ecosystem involvement. Find out more about contributing towards new IP standards and licensing frameworks.",
-        href: "#",
-    },
-    {
-        title: "IP Licensing Core Engine",
-        text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licensing Protocol facilitates a seamless data flow between Music Protocol and ecosystem applications, ensuring the music IP permissions are managed efficiently across our network.",
-        href: "#",
-    },
-    {
-        title: "IP Settlement Gateway",
-        text: "Music Protocol is a pivotal link to the current technological and regulatory landscape. By connecting through key content distribution and management networks, we bridge the gap between music IP and the music industry's extensive counterparties, streamlining financial and licensing transactions.",
-        href: "#",
-    },
-    {
+        step: "01",
         title: "IP Inter-Chain Distribution Gateway",
-        text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape. This enhances application versatility and fosters a wide array of creative and commercial opportunities.",
+        text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape, strengthening application adaptability and promoting various creative and commercial opportunities.",
+        href: "#",
+    },
+    {
+        step: "02",
+        title: "IP Core Asset Library",
+        text: "The Music Protocol's core is a data repository for IP. The architecture has been built to accommodate intellectual property and licensing structures. Find out more about how to contribute towards these new frameworks.",
+        href: "#",
+    },
+    {
+        step: "03",
+        title: "IP Licencing Core Engine",
+        text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licencing Core Engine expedites a seamless data flow between Music Protocol and ecosystem applications, ensuring our network efficiently manages all music IP permissions.",
+        href: "#",
+    },
+    {
+        step: "04",
+        title: "IP Settlement Gateway",
+        text: "Music Protocol creates the link between the technological and regulatory landscapes. We bridge the gap between music IP and the industry's extensive counterparties by connecting key content distributors and management networks, simplifying financial and licensing transactions.",
         href: "#",
     },
 ]
 
 export const Cards = () => {
+    const [swiper, setSwiper] = useState<SwiperClass | null>(null)
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+
     return (
         <div className={style.cards}>
             <div className={style.inner}>
 
-                <div className={style.cards}>
+                <div className={style.control}>
+                    <div className={style.controlInner}>
+                        <button onClick={() => swiper?.slidePrev()}
+                                disabled={currentIndex === 0}
+                        >
+                            {svgIcons.slider_arrow}
+                        </button>
+                        <button onClick={() => swiper?.slideNext()}
+                                disabled={currentIndex === cards.length - 1}
+                        >
+                            {svgIcons.slider_arrow}
+                        </button>
+                    </div>
+                </div>
+
+                <Swiper onSwiper={swiper => {
+                    setSwiper(swiper)
+                }}
+                        className={style.cardsMobile}
+                        onSlideChange={swiper => {
+                            setCurrentIndex(swiper.realIndex)
+                        }}
+                        slidesPerView={1}
+                >
                     {
-                        cards.map(({title, text, href}, key) => (
-                            <div key={key}
-                                 className={style.card}
+                        cards.map((card, key) => (
+                            <SwiperSlide key={key}
+                                         className={style.slide}
                             >
-                                <div className={style.topWrapper}>
+                                <Card {...card}/>
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
 
-                                    <div className={style.topWrapper}>
-                                        <div className={style.blackCard}>
-                                            <p className={style.step}>{`0${key + 1}`}</p>
-                                            <p className={style.title}>{title}</p>
-                                            {/*{svgIcons[key]}*/}
-                                        </div>
-                                    </div>
-
-                                    <p className={style.text}>
-                                        {text}
-                                    </p>
-
-                                </div>
-
-                                <div className={style.btnWrapper}>
-                                    <ButtonCustom label="Read More"
-                                                  href={href}
-                                                  className={style.btn}
-                                                  variant={ButtonVariantEnum.black}
-                                    />
-                                </div>
-
-                            </div>
+                <div className={style.cardsDesktop}>
+                    {
+                        cards.map((card, key) => (
+                            <Card key={key} {...card}/>
                         ))
                     }
                 </div>
 
             </div>
+        </div>
+    )
+}
+
+const Card: FC<ICard> = ({step, title, text, href}) => {
+    return (
+        <div className={style.card}>
+            <div className={style.topWrapper}>
+
+                <div className={style.topWrapper}>
+                    <div className={style.blackCard}>
+                        <p className={style.step}>{step}</p>
+                        <p className={style.title}>{title}</p>
+                        {/*{svgIcons[key]}*/}
+                    </div>
+                </div>
+
+                <p className={style.text}>
+                    {text}
+                </p>
+
+            </div>
+
+            <div className={style.btnWrapper}>
+                <ButtonCustom label="Read More"
+                              href={href}
+                              className={style.btn}
+                              variant={ButtonVariantEnum.black}
+                />
+            </div>
+
         </div>
     )
 }

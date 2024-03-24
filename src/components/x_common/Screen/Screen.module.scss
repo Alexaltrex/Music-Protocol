@@ -48,7 +48,14 @@
       @include h1;
     }
 
-    .descriptionWrapper {
+
+    .descriptionMobile {
+      @include onlyMobile();
+      margin-top: 24px;
+    }
+
+    .descriptionDesktop {
+      @include onlyDesktop();
       margin-top: 24px;
     }
 
