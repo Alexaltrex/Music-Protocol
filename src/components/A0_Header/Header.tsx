@@ -3,13 +3,14 @@
 import style from "./Header.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
 import Link from "next/link";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {mulish} from "../../assets/fonts/fonts";
 import {ButtonCustom} from "../x_common/ButtonCustom/ButtonCustom";
 import {DropDown} from "./DropDown/DropDown";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../store/useStore";
 import {SubLinksEnum} from "../../const/links";
+import {clsx} from "clsx";
 
 export const Header = observer(() => {
     const {
@@ -18,8 +19,24 @@ export const Header = observer(() => {
         }
     } = useStore();
 
+    const [position, setPosition] = useState(window.scrollY)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            let moving = window.scrollY;
+            setPosition(moving);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return (() => {
+            window.removeEventListener("scroll", handleScroll);
+        })
+    })
+
     return (
-        <header className={style.header}>
+        <header className={clsx({
+            [style.header]: true,
+            [style.header_scroll]: position > 0 && !burgerMenu,
+        })}>
 
             <div className={style.inner}>
 

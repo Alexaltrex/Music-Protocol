@@ -2,7 +2,7 @@ import {screen} from "./screen";
 import {Screen} from "../../components/x_common/Screen/Screen";
 import {Slider} from "../../components/x_common/Slider/Slider";
 import {slides} from "./slides";
-import {screenWithCircles} from "../technology2/screenWithCircles";
+import {screenWithCircles} from "./screenWithCircles";
 import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/ScreenWithCircles";
 
 const TechnologyPage3 = () => {

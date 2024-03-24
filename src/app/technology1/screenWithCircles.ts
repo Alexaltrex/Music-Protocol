@@ -3,12 +3,12 @@ import {IScreenWithCircles} from "../../components/x_common/ScreenWithCircles/Sc
 export const screenWithCircles: IScreenWithCircles = {
     title: {
         mobile: [
-            "Advancing Music",
+            "Promoting Music",
             "Rights and",
             "Ownership",
         ],
         desktop: [
-            "Advancing Music Rights and",
+            "Promoting Music Rights and",
             "Ownership",
         ],
     },
@@ -31,37 +31,26 @@ export const screenWithCircles: IScreenWithCircles = {
         },
         {
             mobile: [
-                "The architecture is built to encourage",
-                "ecosystem participation, enabling",
-                "developers to grow the protocol by",
-                "contributing new standards for IP objects",
-                "and licensing",
+                "The architecture uses two key elements:",
+                "the IP Core, which records intellectual",
+                "property identity with immutable",
+                "information, and limitless attributes that",
+                "can be combined to add any property to",
+                "the IP Core, such as creating a licensing",
+                "contract or notarising aspects of",
+                "intellectual property.",
             ],
             desktop: [
-                "The architecture is built to encourage",
-                "ecosystem participation, enabling",
-                "developers to grow the protocol by",
-                "contributing new standards for IP objects",
-                "and licensing",
+                "The architecture uses two key elements: the",
+                "IP Core, which records intellectual property",
+                "identity",
+                "with immutable information, and limitless",
+                "attributes that can be combined to add any",
+                "property to",
+                "the IP Core, such as creating a licensing",
+                "contract or notarising aspects of intellectual",
+                "property.",
             ],
-        },
-    ],
-    cards: [
-        {
-            cardTitle: "To the articole blog",
-            step: "01",
-            button: {
-                label: "Learn more",
-                href: "#",
-            },
-        },
-        {
-            cardTitle: 'The "Docs"',
-            step: "02",
-            button: {
-                label: "Technical docs",
-                href: "#",
-            },
         },
     ],
     circleLabels: [
@@ -92,5 +81,9 @@ export const screenWithCircles: IScreenWithCircles = {
                 "monetization",
             ]
         },
-    ]
+    ],
+    button: {
+        label: "Learn more",
+        href: "#"
+    },
 }

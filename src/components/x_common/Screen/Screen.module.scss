@@ -35,13 +35,46 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
 
-    .titleMobile {
+    @include desktop {
+      align-items: flex-start;
+    }
+
+    .titleMobile, {
       @include onlyMobile();
     }
 
     .titleDesktop {
       @include onlyDesktop();
+    }
+
+    .wrapper {
+      position: relative;
+
+      &_desktop {
+        @include onlyDesktop();
+      }
+
+      &_mobile {
+        @include onlyMobile();
+      }
+
+      .blur {
+        position: absolute;
+        top: -40px;
+        bottom: -40px;
+        left: -40px;
+        right: -40px;
+        background: rgba(0, 0, 0, 0.5);
+        filter: blur(20px);
+      }
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .title {
@@ -75,14 +108,14 @@
       @include onlyMobile();
       margin-top: 32px;
       width: auto;
-      align-self: flex-start;
+      //align-self: flex-start;
       padding-left: 24px;
       padding-right: 24px;
     }
 
     .btn {
       margin-top: 32px;
-      align-self: flex-start;
+      //align-self: flex-start;
       padding-left: 24px;
       padding-right: 24px;
       width: auto;

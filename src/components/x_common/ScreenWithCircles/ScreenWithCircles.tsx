@@ -4,7 +4,7 @@ import style from "./ScreenWithCircles.module.scss"
 import {WaveText} from "../WaveText/WaveText";
 import {TextUp} from "../TextUp/TextUp";
 import {clsx} from "clsx";
-import {ButtonCustom} from "../ButtonCustom/ButtonCustom";
+import {ButtonCustom, ButtonVariantEnum} from "../ButtonCustom/ButtonCustom";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import TweenTarget = gsap.TweenTarget;
@@ -28,11 +28,15 @@ export interface IScreenWithCircles {
         mobile: string[]
         desktop: string[]
     }[]
-    cards: ICard[],
     circleLabels: {
         mobile: string[],
         desktop: string[]
-    }[]
+    }[],
+    button: {
+        label: string
+        onClick?: () => void
+        href?: string
+    }
 }
 
 const ballColors = [
@@ -46,8 +50,8 @@ const duration = 3;
 export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                                                               title,
                                                               texts,
-                                                              cards,
-                                                              circleLabels
+                                                              circleLabels,
+                                                              button,
                                                           }) => {
     const appRef = useRef<HTMLDivElement>(null!);
 
@@ -67,8 +71,6 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
         })
 
 
-
-
     }, {scope: appRef})
 
     return (
@@ -77,55 +79,65 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
         >
             <div className={style.inner}>
 
-                {
-                    title.mobile.map((text, key) => (
-                        <WaveText key={key}
-                                  label={text}
-                                  className={style.titleMobile}
-                                  textClassName={style.title}
-                                  size={40}
-                        />
-                    ))
-                }
+                <div className={style.top}>
 
-                {
-                    title.desktop.map((text, key) => (
-                        <WaveText key={key}
-                                  label={text}
-                                  className={style.titleDesktop}
-                                  textClassName={style.title}
-                                  size={64}
-                        />
-                    ))
-                }
-
-                <div className={style.textBlocks}>
                     {
-                        texts.map((block, key) => (
-                            <Fragment key={key}>
-                                <div className={clsx(style.block, style.block_mobile)}>
-                                    {
-                                        block.mobile.map((text, key) => (
-                                            <TextUp key={key}>
-                                                <p className={style.description}>{text}</p>
-                                            </TextUp>
-                                        ))
-                                    }
-                                </div>
-                                <div className={clsx(style.block, style.block_desktop)}>
-                                    {
-                                        block.desktop.map((text, key) => (
-                                            <TextUp key={key}>
-                                                <p className={style.description}>{text}</p>
-                                            </TextUp>
-                                        ))
-                                    }
-                                </div>
-                            </Fragment>
-
+                        title.mobile.map((text, key) => (
+                            <WaveText key={key}
+                                      label={text}
+                                      className={style.titleMobile}
+                                      textClassName={style.title}
+                                      size={40}
+                            />
                         ))
                     }
+
+                    {
+                        title.desktop.map((text, key) => (
+                            <WaveText key={key}
+                                      label={text}
+                                      className={style.titleDesktop}
+                                      textClassName={style.title}
+                                      size={64}
+                            />
+                        ))
+                    }
+
+                    <div className={style.textBlocks}>
+                        {
+                            texts.map((block, key) => (
+                                <Fragment key={key}>
+                                    <div className={clsx(style.block, style.block_mobile)}>
+                                        {
+                                            block.mobile.map((text, key) => (
+                                                <TextUp key={key}>
+                                                    <p className={style.description}>{text}</p>
+                                                </TextUp>
+                                            ))
+                                        }
+                                    </div>
+                                    <div className={clsx(style.block, style.block_desktop)}>
+                                        {
+                                            block.desktop.map((text, key) => (
+                                                <TextUp key={key}>
+                                                    <p className={style.description}>{text}</p>
+                                                </TextUp>
+                                            ))
+                                        }
+                                    </div>
+                                </Fragment>
+
+                            ))
+                        }
+                    </div>
+
+                    <ButtonCustom {...button}
+                                  variant={ButtonVariantEnum.outlined}
+                                  className={style.btnDesktop}
+                    />
+
                 </div>
+
 
                 <div className={style.bottom}>
 
@@ -204,33 +216,10 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
 
                     </div>
 
-                    <div className={style.cardsMobile}>
-                        {
-                            cards.map((card, key) => (
-                                <Card key={key} {...card}/>
-                            ))
-                        }
-                    </div>
-
-                    <div className={style.cardsDesktop}>
-                        {
-                            cards.length === 3 ? (
-                                <>
-                                    <Card {...cards[0]}/>
-                                    <div className={style.cardsRow}>
-                                        <Card {...cards[1]}/>
-                                        <Card {...cards[2]}/>
-                                    </div>
-                                </>
-                            ) : (
-                                <div className={style.cardsRow}>
-                                    <Card {...cards[0]}/>
-                                    <Card {...cards[1]}/>
-                                </div>
-                            )
-                        }
-                    </div>
-
+                    <ButtonCustom {...button}
+                                  variant={ButtonVariantEnum.outlined}
+                                  className={style.btnMobile}
+                    />
                 </div>
 
 

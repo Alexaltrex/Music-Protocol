@@ -52,30 +52,42 @@ export const Screen: FC<IScreen> = ({
 
             <div className={style.inner}>
 
-                {
-                    title.mobile.map((text, key) => (
-                        <WaveText key={key}
-                                  label={text}
-                                  className={style.titleMobile}
-                                  textClassName={style.title}
-                                  size={40}
-                        />
-                    ))
-                }
+                <div className={clsx(style.wrapper, style.wrapper_mobile)}>
+                    <div className={style.blur}/>
+                    <div className={style.content}>
+                        {
+                            title.mobile.map((text, key) => (
+                                <WaveText key={key}
+                                          label={text}
+                                          className={style.titleMobile}
+                                          textClassName={style.title}
+                                          size={40}
+                                />
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <div className={clsx(style.wrapper, style.wrapper_desktop)}>
+                    <div className={style.blur}/>
+                    <div className={style.content}>
+                        {
+                            title.desktop.map((text, key) => (
+                                <WaveText key={key}
+                                          label={text}
+                                          className={style.titleDesktop}
+                                          textClassName={style.title}
+                                          size={64}
+                                />
+                            ))
+                        }
+                    </div>
+
+                </div>
+
 
                 {
-                    title.desktop.map((text, key) => (
-                        <WaveText key={key}
-                                  label={text}
-                                  className={style.titleDesktop}
-                                  textClassName={style.title}
-                                  size={64}
-                        />
-                    ))
-                }
-
-                {
-                    description && (
+                description && (
                         <>
                             <div className={style.descriptionMobile}>
                                 {

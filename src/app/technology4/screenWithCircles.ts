@@ -3,15 +3,13 @@ import {IScreenWithCircles} from "../../components/x_common/ScreenWithCircles/Sc
 export const screenWithCircles: IScreenWithCircles = {
     title: {
         mobile: [
-            "Music Protocol: A",
-            "Unified, Verifiable",
-            "Source of Music IP for",
+            "A unified, verifiable",
+            "source of music IP for",
             "Web3",
         ],
         desktop: [
-            "Music Protocol: A Unified,",
-            "Verifiable Source of Music IP",
-            "for Web3",
+            "A unified, verifiable source of",
+            "music IP for Web3",
         ],
     },
     texts: [
@@ -34,32 +32,6 @@ export const screenWithCircles: IScreenWithCircles = {
                 "environments, enhancing the accessibility",
                 "and functionality of music IP.",
             ]
-        },
-    ],
-    cards: [
-        {
-            cardTitle: "To the articole blog",
-            step: "01",
-            button: {
-                label: "Learn more",
-                href: "#",
-            },
-        },
-        {
-            cardTitle: 'The "Docs"',
-            step: "02",
-            button: {
-                label: "Technical docs",
-                href: "#",
-            },
-        },
-        {
-            cardTitle: 'Grant Program Page',
-            step: "03",
-            button: {
-                label: "Grant Program",
-                href: "#",
-            },
         },
     ],
     circleLabels: [
@@ -93,5 +65,9 @@ export const screenWithCircles: IScreenWithCircles = {
                 "circulation",
             ]
         },
-    ]
+    ],
+    button: {
+        label: "Learn more",
+        href: "#"
+    },
 }

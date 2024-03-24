@@ -10,70 +10,88 @@
 
   .inner {
     @include inner;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .titleMobile {
-      @include onlyMobile();
+    @include desktop {
+      align-items: normal;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-    .titleDesktop {
-      @include onlyDesktop();
-    }
+    .top {
 
-    .title {
-      @include h2;
-    }
-
-    .textBlocks {
-      margin-top: 24px;
-
-      @include desktop {
-        margin-top: 52px;
-        display: flex;
-        justify-content: space-between;
+      .titleMobile {
+        @include onlyMobile();
       }
 
-      .block {
+      .titleDesktop {
+        @include onlyDesktop();
+      }
 
-        &:not(:first-child) {
-          margin-top: 24px;
+      .title {
+        @include h2;
+      }
 
-          @include desktop {
-            margin-top: 0;
+      .textBlocks {
+        margin-top: 24px;
+
+        @include desktop {
+          margin-top: 52px;
+        }
+
+        .block {
+
+          &:not(:first-child) {
+            margin-top: 24px;
+
+            @include desktop {
+              margin-top: 16px;
+            }
           }
+
+          &_mobile {
+            @include onlyMobile();
+          }
+
+          &_desktop {
+            @include onlyDesktop();
+          }
+
+          .description {
+            color: var(--Additional-Main-White, #FFF);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 115%;
+
+            @include desktop {
+              font-size: 18px;
+            }
+          }
+
         }
 
-        &_mobile {
-          @include onlyMobile();
-        }
+      }
 
-        &_desktop {
-          @include onlyDesktop();
-        }
-
-        .description {
-
-        }
-
+      .btnDesktop {
+        @include onlyDesktop(flex);
+        margin-top: 32px;
+        width: 256px;
       }
 
     }
 
 
     .bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       margin-top: 32px;
 
       @include desktop {
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-top: 76px;
+        margin-top: 106px;
       }
 
       .circlesWrapper {
-        //background: rgba(0,255,0,0.1);
         position: relative;
         width: 312px;
         height: 312px;
@@ -135,7 +153,7 @@
             border-radius: 50%;
             width: 12px;
             height: 12px;
-            background: rgba(255,255,255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
 
             @include desktop {
               width: 24px;
@@ -147,31 +165,16 @@
         }
 
 
-
       }
 
-
-
-
-      .cardsMobile {
+      .btnMobile {
         @include onlyMobile(flex);
-        flex-direction: column;
-        align-items: center;
-        margin-top: 32px;
-      }
-
-      .cardsDesktop {
-        @include onlyDesktop();
-
-        .cardsRow {
-          display: flex;
-        }
+        margin-top: 48px;
+        width: 312px;
       }
 
 
     }
-
-
 
 
   }

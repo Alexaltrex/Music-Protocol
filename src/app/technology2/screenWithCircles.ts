@@ -3,94 +3,71 @@ import {IScreenWithCircles} from "../../components/x_common/ScreenWithCircles/Sc
 export const screenWithCircles: IScreenWithCircles = {
     title: {
         mobile: [
-            "Streamlining Music",
-            "Rights and Bridging",
-            "Industry Gaps",
+            "Updating the",
+            "framework of music",
+            "rights and licensing",
         ],
         desktop: [
-            "Streamlining Music Rights",
-            "and Bridging Industry Gaps",
+            "Updating the framework of",
+            "music rights and licensing",
         ],
     },
     texts: [
         {
             mobile: [
-                "Music Protocol is designed to clarify and",
-                "streamline the intricate world of music. By",
-                "forming direct links with key",
-                "infrastructures of content distribution and",
-                "the oversight of financial and licensing",
-                "activities, we can facilitate more efficient",
-                "transactions and a unified management",
-                "framework.",
+                "The IP Licencing Core Engine is an",
+                "advanced toolkit that enables our",
+                "ecosystem to build direct data",
+                "connections between the Music Protocol",
+                "and the various applications that need",
+                "music IP. This integration ensures the",
+                "simplified management and usage of IP",
+                "rights across many platforms and",
+                "projects."
             ],
             desktop: [
-                "Music Protocol is designed to clarify and",
-                "streamline the intricate world of music. By",
-                "forming direct links with key infrastructures",
-                "of content distribution and the oversight of",
-                "financial and licensing activities, we can",
-                "facilitate more efficient transactions and a",
-                "unified management framework.",
-            ]
-        },
-    ],
-    cards: [
-        {
-            cardTitle: "To the articole blog",
-            step: "01",
-            button: {
-                label: "Learn more",
-                href: "#",
-            },
-        },
-        {
-            cardTitle: 'The "Docs"',
-            step: "02",
-            button: {
-                label: "Technical docs",
-                href: "#",
-            },
-        },
-        {
-            cardTitle: 'Grant Program Page',
-            step: "03",
-            button: {
-                label: "Grant Program",
-                href: "#",
-            },
+                "The IP Licencing Core Engine is an",
+                "advanced toolkit that enables our",
+                "ecosystem to build direct data connections",
+                "between the Music Protocol and the various",
+                "applications that need music IP. This",
+                "integration ensures the simplified",
+                "management and usage of IP rights across",
+                "many platforms and projects.",
+            ],
         },
     ],
     circleLabels: [
         {
             mobile: [
-                "Royalties",
-                "collection",
+                "Integration",
             ],
             desktop: [
-                "Royalties",
-                "collection",
+                "Integration",
             ]
         },
         {
             mobile: [
-                "Payment",
-                "gateway",
+                "Browse and",
+                "Select",
             ],
             desktop: [
-                "Payment gateway",
+                "Browse and Select",
             ]
         },
         {
             mobile: [
-                "Music",
-                "Protocol",
-                "Distribution",
+                "License with",
+                "Confidence",
             ],
             desktop: [
-                "Music Protocol",
-                "Distribution",
+                "License with",
+                "Confidence",
             ]
         },
-    ]
+    ],
+    button: {
+        label: "Learn more",
+        href: "#",
+    },
 }
