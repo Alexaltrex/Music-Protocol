@@ -4,8 +4,8 @@ import {Slider} from "../../components/x_common/Slider/Slider";
 import {slides} from "./slides";
 import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/ScreenWithCircles";
 import {screenWithCircles} from "./screenWithCircles";
-import {screenWithEditor} from "./screenWithEditor";
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
+import {screenWithEditor} from "../technology1/screenWithEditor";
 
 const TechnologyPage2 = () => {
     return (

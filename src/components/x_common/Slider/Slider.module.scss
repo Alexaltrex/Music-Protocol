@@ -10,6 +10,7 @@
   }
 
   .control {
+    @include onlyMobile();
     @include container;
 
     .controlInner {
@@ -58,6 +59,7 @@
   }
 
   .swiper {
+    @include onlyMobile();
     margin-top: 16px;
 
     @include desktop {
@@ -67,103 +69,111 @@
     }
 
     .slide {
-      padding-left: 24px;
-      padding-right: 24px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      //padding-left: 24px;
+      //padding-right: 24px;
+      //padding-top: 10px;
+      //padding-bottom: 10px;
 
       @include desktop {
-        padding-left: 0;
-        padding-right:0;
+        //padding-left: 0;
+        //padding-right:0;
         width: 427px;
-      }
-
-      .slide_inner {
-        @include rotateOnHover;
-        position: relative;
-        border-radius: 10px;
-        border: 1px solid var(--additional-black-15, rgba(0, 0, 0, 0.15));
-        background: var(--Additional-Main-White, #FFF);
-        //backdrop-filter: blur(10px);
-        height: 310px;
-        width: 312px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        padding: 136px 24px 24px;
-
-        @include desktop {
-          height: 353px;
-          width: 427px;
-          margin-left: 0;
-          margin-right: 0;
-          padding: 185px 24px 24px;
-        }
-
-        .dots {
-          display: flex;
-          position: absolute;
-          left: 24px;
-          top: 31px;
-
-          .dot {
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-
-            &:not(:first-child) {
-              margin-left: 7px;
-            }
-          }
-        }
-
-        .slideTitle {
-          position: absolute;
-          top: 24px;
-          right: 24px;
-          align-self: flex-end;
-
-          &_mobile {
-            @include onlyMobile();
-          }
-
-          &_desktop {
-            @include onlyDesktop();
-          }
-
-          p {
-            color: var(--Additional-Main-Black, #000);
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 135%;
-
-            @include desktop {
-              font-size: 20px;
-            }
-          }
-        }
-
-
-
-
-
-        .slideText {
-          color: var(--additional-black-70, rgba(0, 0, 0, 0.70));
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 115%;
-
-          @include desktop {
-            font-size: 18px;
-          }
-        }
       }
 
     }
   }
 
+  .cardsDesktop {
+    @include container;
+    @include onlyDesktop(grid);
 
+    .inner {
+      @include inner;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 16px;
+    }
+  }
+}
+
+.card {
+  @include rotateOnHover;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--additional-black-15, rgba(0, 0, 0, 0.15));
+  background: var(--Additional-Main-White, #FFF);
+  //backdrop-filter: blur(10px);
+  height: 310px;
+  width: 312px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 136px 24px 24px;
+
+  @include desktop {
+    height: auto;
+    //height: 353px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 185px 24px 24px;
+  }
+
+  .dots {
+    display: flex;
+    position: absolute;
+    left: 24px;
+    top: 31px;
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+
+      &:not(:first-child) {
+        margin-left: 7px;
+      }
+    }
+  }
+
+  .slideTitle {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    align-self: flex-end;
+
+    &_mobile {
+      @include onlyMobile();
+    }
+
+    &_desktop {
+      @include onlyDesktop();
+    }
+
+    p {
+      color: var(--Additional-Main-Black, #000);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 135%;
+
+      @include desktop {
+        font-size: 20px;
+      }
+    }
+  }
+
+
+  .slideText {
+    color: var(--additional-black-70, rgba(0, 0, 0, 0.70));
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
 }

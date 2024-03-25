@@ -19,7 +19,7 @@ export const slides = [
                 "Collection Societies",
             ]
         },
-        text: "We dismantle the traditional obstacles, ensuring a seamless transition between music IP rights management and market accessibility, enhancing the flow and utility of music intellectual property.",
+        text: "We remove the obstacles, ensuring a seamless transition between music IP rights management and market accessibility, enhancing the flow and utility of music intellectual property.",
     },
     {
         title: {

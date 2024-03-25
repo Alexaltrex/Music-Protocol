@@ -35,7 +35,7 @@ export const Slider: FC<ISlider> = ({slides}) => {
                         {svgIcons.slider_arrow}
                     </button>
                     <button onClick={() => swiper?.slideNext()}
-                            disabled={currentIndex === slides.length}
+                            disabled={currentIndex === slides.length - 1}
                     >
                         {svgIcons.slider_arrow}
                     </button>
@@ -63,52 +63,71 @@ export const Slider: FC<ISlider> = ({slides}) => {
                     }}
             >
                 {
-                    slides.map(({title, text}, key) => (
+                    slides.map((card, key) => (
                         <SwiperSlide key={key}
                                      className={style.slide}
                         >
-                            <div className={style.slide_inner}>
-
-                                <div className={style.dots}>
-                                    {
-                                        ["#F0B6BF", "#C397E6", "#EAB563"]
-                                            .map((background, key) => (
-                                                <div key={key}
-                                                     className={style.dot}
-                                                     style={{background}}
-                                                />
-
-                                            ))
-                                    }
-                                </div>
-
-                                <div className={clsx(style.slideTitle, style.slideTitle_mobile)}>
-                                    {
-                                        title.mobile.map((el, key) => (
-                                            <p key={key}>{el}</p>
-                                        ))
-                                    }
-                                </div>
-
-                                <div className={clsx(style.slideTitle, style.slideTitle_desktop)}>
-                                    {
-                                        title.desktop.map((el, key) => (
-                                            <p key={key}>{el}</p>
-                                        ))
-                                    }
-                                </div>
-
-                                <p className={style.slideText}>
-                                    {text}
-                                </p>
-
-
-                            </div>
+                            <Card key={key} {...card}/>
                         </SwiperSlide>
                     ))
                 }
             </Swiper>
 
+            <div className={clsx(style.cardsDesktop)}>
+                <div className={style.inner}
+                     style={{
+                         gridTemplateRows: `repeat(${slides.length % 3 + 1}, 1fr)`
+                     }}
+                >
+                    {
+                        slides.map((card, key) => (
+                            <Card key={key} {...card}/>
+                        ))
+                    }
+                </div>
+
+
+            </div>
+
+        </div>
+    )
+}
+
+//========= CARD =========//
+const Card: FC<ISlide> = ({title, text}) => {
+    return (
+        <div className={style.card}>
+            <div className={style.dots}>
+                {
+                    ["#F0B6BF", "#C397E6", "#EAB563"]
+                        .map((background, key) => (
+                            <div key={key}
+                                 className={style.dot}
+                                 style={{background}}
+                            />
+
+                        ))
+                }
+            </div>
+            <div className={clsx(style.slideTitle, style.slideTitle_mobile)}>
+                {
+                    title.mobile.map((el, key) => (
+                        <p key={key}>{el}</p>
+                    ))
+                }
+            </div>
+
+            <div className={clsx(style.slideTitle, style.slideTitle_desktop)}>
+                {
+                    title.desktop.map((el, key) => (
+                        <p key={key}>{el}</p>
+                    ))
+                }
+            </div>
+
+            <p className={style.slideText}>
+                {text}
+            </p>
         </div>
     )
 }

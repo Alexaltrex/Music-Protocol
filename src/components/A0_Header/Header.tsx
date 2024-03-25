@@ -19,23 +19,23 @@ export const Header = observer(() => {
         }
     } = useStore();
 
-    const [position, setPosition] = useState(window.scrollY)
+    //const [position, setPosition] = useState(window.scrollY)
 
-    useEffect(() => {
-        const handleScroll = () => {
-            let moving = window.scrollY;
-            setPosition(moving);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return (() => {
-            window.removeEventListener("scroll", handleScroll);
-        })
-    })
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         let moving = window.scrollY;
+    //         setPosition(moving);
+    //     };
+    //     window.addEventListener("scroll", handleScroll);
+    //     return (() => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     })
+    // })
 
     return (
         <header className={clsx({
             [style.header]: true,
-            [style.header_scroll]: position > 0 && !burgerMenu,
+            //[style.header_scroll]: position > 0 && !burgerMenu,
         })}>
 
             <div className={style.inner}>

@@ -4,12 +4,10 @@ import {IScreenWithEditor} from "../../components/x_common/ScreenWithEditor/Scre
 export const screenWithEditor: IScreenWithEditor = {
     title: {
         mobile: [
-            "Start Building with",
-            "Music Protocol",
+            "Join the Ecosystem",
         ],
         desktop: [
-            "Start Building with Music",
-            "Protocol",
+            "Join the Ecosystem",
         ],
     },
     cards: [
@@ -22,10 +20,10 @@ export const screenWithEditor: IScreenWithEditor = {
             },
         },
         {
-            cardTitle: "Devs",
+            cardTitle: "Startup",
             step: "02",
             button: {
-                label: "Startup",
+                label: "Apply to join",
                 href: "#",
             },
         },

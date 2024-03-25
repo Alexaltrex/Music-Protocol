@@ -38,16 +38,19 @@ export const ScreenWithEditor: FC<IScreenWithEditor> = ({
         <div className={style.screenWithEditor}>
             <div className={style.inner}>
 
-                {
-                    title.mobile.map((text, key) => (
-                        <WaveText key={key}
-                                  label={text}
-                                  className={style.titleMobile}
-                                  textClassName={style.title}
-                                  size={40}
-                        />
-                    ))
-                }
+                <div className={style.titleMobileWrapper}>
+                    {
+                        title.mobile.map((text, key) => (
+                            <WaveText key={key}
+                                      label={text}
+                                      className={style.titleMobile}
+                                      textClassName={style.title}
+                                      size={40}
+                            />
+                        ))
+                    }
+                </div>
+
 
                 {
                     title.desktop.map((text, key) => (

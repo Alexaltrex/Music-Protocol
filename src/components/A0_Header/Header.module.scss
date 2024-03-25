@@ -8,13 +8,11 @@
   top: 0;
   right: 0;
   transition: 0.3s;
-  background: rgba(0,0,0,0);
+  background: rgba(0,0,0,1);
 
   &_scroll {
     background: rgba(0,0,0,0.8);
   }
-
-
 
   .inner {
     @include inner;
