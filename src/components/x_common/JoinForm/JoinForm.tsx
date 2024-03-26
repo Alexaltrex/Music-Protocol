@@ -5,6 +5,10 @@ import {Form, Formik, FormikErrors, FormikHelpers, FormikProps} from "formik";
 import {FieldText} from "./FieldText/FieldText";
 import {FieldTextarea} from "./FieldTextarea/FieldTextarea";
 import {FieldTimezone} from "./FieldTimezone/FieldTimezone";
+import {useState} from "react";
+import timezones from 'timezones-list';
+import {FieldPhone} from "./FieldPhone/FieldPhone";
+import codes from 'country-calling-code';
 
 export interface IValues {
     name: string
@@ -54,19 +58,23 @@ const validate = ({name, email, phone, link, message,}: IValues): FormikErrors<I
     return errors
 }
 
-
+//========== JOIN FORM ==========//
 export const JoinForm = () => {
 
     const onSubmit = async (values: IValues, formikHelpers: FormikHelpers<IValues>) => {
         try {
             console.log(values);
-
+            console.log(timezones[timeZoneIndex]);
+            console.log(codes[phoneIndex])
         } catch (e) {
             console.log(e)
         } finally {
             formikHelpers.resetForm();
         }
     }
+
+    const [timeZoneIndex, setTimeZoneIndex] = useState(0);
+    const [phoneIndex, setPhoneIndex] = useState(0);
 
 
     return (
@@ -85,9 +93,17 @@ export const JoinForm = () => {
                             <FieldText name="name" label="Name, Surname" className={style.field} placeholder="Enter"/>
                             <FieldText name="email" label="Email" className={style.field} placeholder="Enter"/>
 
-                            <FieldTimezone/>
+                            <FieldPhone name="phone"
+                                        phoneIndex={phoneIndex}
+                                        onSelectHandler={(index: number) => setPhoneIndex(index)}
+                            />
+
+                            <FieldTimezone timeZoneIndex={timeZoneIndex}
+                                           onSelectHandler={(index: number) => setTimeZoneIndex(index)}
+                            />
 
                             <FieldText name="link" label="GitHub" className={style.field} placeholder="Link"/>
+
                             <FieldTextarea name="message" label="Enter your message" className={style.field}
                                            placeholder="Enter"
 

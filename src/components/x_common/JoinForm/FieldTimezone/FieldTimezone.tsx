@@ -3,10 +3,9 @@
 import style from "./FieldTimezone.module.scss";
 import timezones from 'timezones-list';
 import {SelectProps} from "@mui/material";
-import {useEffect, useRef, useState} from "react";
+import {FC, useEffect, useRef, useState} from "react";
 import {clsx} from "clsx";
 import {svgIcons} from "../../../../assets/svgIcons";
-import {useOutsideClick} from "../../../../hooks/useOutsideClick";
 import {useOutsideButNotOnTargetClick} from "../../../../hooks/useOutsideButNotOnTargetClick";
 
 // label: "Pacific/Midway (GMT-11:00)"
@@ -14,14 +13,21 @@ import {useOutsideButNotOnTargetClick} from "../../../../hooks/useOutsideButNotO
 // tzCode: "Pacific/Midway"
 // utc: "-11:00"
 
+type FieldTimezoneProps = {
+    timeZoneIndex: number
+    onSelectHandler: (index: number) => void
+} & SelectProps
 
-export const FieldTimezone = (props: SelectProps) => {
+export const FieldTimezone: FC<FieldTimezoneProps> = ({
+                                                          timeZoneIndex,
+                                                          onSelectHandler,
+                                                          ...props
+}) => {
     const ref = useRef<HTMLDivElement>(null!);
     const targetRef = useRef<HTMLDivElement>(null!);
     const dropdownRef = useRef<HTMLDivElement>(null!);
 
     const [open, setOpen] = useState(false);
-    const [selectedIndex, setSelectedIndex] = useState(0);
 
     const [bottom, setBottom] = useState(0);
     useEffect(() => {
@@ -80,7 +86,7 @@ export const FieldTimezone = (props: SelectProps) => {
                 >
                     <p className={style.utc}>
                         {
-                            `(GMT ${timezones[selectedIndex].utc.slice(0,3)})`
+                            `(GMT ${timezones[timeZoneIndex].utc.slice(0,3)})`
                         }
                     </p>
                     {svgIcons.slider_arrow}
@@ -88,7 +94,7 @@ export const FieldTimezone = (props: SelectProps) => {
 
                 <div className={style.right}>
                     <p className={style.tzCode}>
-                        {timezones[selectedIndex].tzCode}
+                        {timezones[timeZoneIndex].tzCode}
                     </p>
                 </div>
 
@@ -106,7 +112,7 @@ export const FieldTimezone = (props: SelectProps) => {
                                         <p key={key}
                                            className={style.dropdownItem}
                                            onClick={() => {
-                                               setSelectedIndex(key);
+                                               onSelectHandler(key);
                                                setOpen(false);
                                            }}
                                         >
@@ -118,13 +124,8 @@ export const FieldTimezone = (props: SelectProps) => {
 
                         </div>
                     )
-
                 }
-
-
             </div>
-
-
         </div>
     )
 }

@@ -1,0 +1,143 @@
+@import "../../../assets/styles/app";
+
+.cards {
+  @include container;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .inner {
+    @include inner;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .titleMobile {
+        @include onlyMobile();
+      }
+
+      .titleDesktop {
+        @include onlyDesktop();
+      }
+
+      .title {
+        @include h2;
+      }
+
+      .block {
+        margin-top: 24px;
+
+        @include desktop {
+          margin-top: 32px;
+        }
+
+        &_mobile {
+          @include onlyMobile();
+        }
+
+        &_desktop {
+          @include onlyDesktop();
+        }
+
+        .description {
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 115%;
+
+          @include desktop {
+            font-size: 18px;
+          }
+        }
+
+      }
+    }
+
+    .cardItems {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include desktop {
+        margin-top: 32px;
+      }
+
+      @include desktop {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: normal;
+        grid-column-gap: 32px;
+      }
+
+      .cardItem {
+        position: relative;
+        width: 312px;
+        border-radius: 10px;
+        border: 1px solid var(--additional-lines-15, rgba(255, 255, 255, 0.15));
+        backdrop-filter: blur(10px);
+        padding: 16px;
+
+        @include desktop {
+          width: auto;
+          //height: 640px;
+          padding: 40px;
+        }
+
+        .label {
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 135%;
+
+          @include desktop {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            right: 40px;
+            font-size: 20px;
+          }
+        }
+
+        img {
+          display: block;
+          height: 225px;
+          width: auto;
+          margin: 24px auto 0;
+
+          @include desktop {
+            height: 270px;
+            margin: 124px auto 0;
+
+          }
+        }
+
+        .text {
+          margin-top: 32px;
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 115%;
+
+          @include desktop {
+            margin-top: 40px;
+            font-size: 18px;
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+}

@@ -14,6 +14,8 @@
     "@gsap/react": "^2.1.0",
     "@mui/material": "^5.15.14",
     "clsx": "^2.1.0",
+    "country-calling-code": "^0.0.3",
+    "country-flag-icons": "^1.5.10",
     "formik": "^2.4.5",
     "gsap": "^3.12.5",
     "mobx": "^6.12.0",
