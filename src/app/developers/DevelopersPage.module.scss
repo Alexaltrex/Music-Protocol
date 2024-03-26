@@ -1,0 +1,99 @@
+@import "../../assets/styles/app";
+
+.developersPage {
+  @include container;
+  padding-top: 160px;
+  border-top: 64px;
+
+  @include desktop {
+    padding-top: 188px;
+    border-top: 0;
+  }
+
+  .inner {
+    @include inner;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .top {
+      .titleMobile {
+        @include onlyMobile();
+      }
+
+      .titleDesktop {
+        @include onlyDesktop();
+      }
+
+      .title {
+        @include h2;
+      }
+
+      .items {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include desktop {
+          margin-top: 165px;
+        }
+
+        .item {
+          display: flex;
+          position: relative;
+
+          &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: -16px;
+            left: -24px;
+            right: -24px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+
+            @include desktop {
+              bottom: -48px;
+              left: calc(-0.5 * (100vw - 1316px));
+              right: -124px;
+            }
+          }
+
+          &:not(:first-child) {
+            margin-top: 24px;
+
+            @include desktop {
+              margin-top: 96px;
+            }
+          }
+
+          .dot {
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+          }
+
+          .text {
+            color: var(--Additional-Main-White, #FFF);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 135%;
+            margin-left: 16px;
+
+            @include desktop {
+              width: 284px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

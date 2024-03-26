@@ -7,6 +7,7 @@ import {FC, useState} from "react";
 import {Swiper as SwiperClass} from "swiper/types";
 import {svgIcons} from "../../../assets/svgIcons";
 import {clsx} from "clsx";
+import {backgrounds} from "../../../const/backgrounds";
 
 interface ISlide {
     title: {
@@ -99,8 +100,7 @@ const Card: FC<ISlide> = ({title, text}) => {
         <div className={style.card}>
             <div className={style.dots}>
                 {
-                    ["#F0B6BF", "#C397E6", "#EAB563"]
-                        .map((background, key) => (
+                    backgrounds.map((background, key) => (
                             <div key={key}
                                  className={style.dot}
                                  style={{background}}

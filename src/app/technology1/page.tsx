@@ -6,13 +6,16 @@ import {screenWithCircles} from "./screenWithCircles";
 import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/ScreenWithCircles";
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
 import {screenWithEditor} from "./screenWithEditor";
-import {Scheme} from "../../components/C0_TechnologyPage1/Scheme/Scheme";
+import {Diagram} from "../../components/x_common/Diagram/Diagram";
 
 const TechnologyPage1 = () => {
     return (
         <div>
             <Screen {...screen}/>
-            <Scheme/>
+            <Diagram src={{
+                mobile: "/png/scheme_mobile.png",
+                desktop: "/png/scheme_desktop.png"
+            }}/>
             <ScreenWithCircles {...screenWithCircles}/>
             <Slider slides={slides}/>
             <ScreenWithEditor {...screenWithEditor}/>

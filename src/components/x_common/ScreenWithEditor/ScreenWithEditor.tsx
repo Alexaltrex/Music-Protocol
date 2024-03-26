@@ -5,6 +5,7 @@ import {Editor} from "../Editor/Editor";
 import {FC} from "react";
 import {ButtonCustom, ButtonVariantEnum} from "../ButtonCustom/ButtonCustom";
 import {WaveText} from "../WaveText/WaveText";
+import {useRouter} from 'next/navigation'
 
 interface ICard {
     cardTitle: string
@@ -26,7 +27,6 @@ export interface IScreenWithEditor {
         desktop: string[]
     }[]
     cards: ICard[],
-
 }
 
 export const ScreenWithEditor: FC<IScreenWithEditor> = ({
@@ -84,15 +84,15 @@ export const ScreenWithEditor: FC<IScreenWithEditor> = ({
                         <div className={style.cardsMobile}>
                             {
                                 cards.map((card, key) => (
-                                    <Card key={key} {...card}/>
+                                    <Card index={key} key={key} {...card}/>
                                 ))
                             }
                         </div>
                         <div className={style.cardsDesktop}>
-                            <Card {...cards[0]}/>
+                            <Card index={0} {...cards[0]}/>
                             <div className={style.row}>
-                                <Card {...cards[1]}/>
-                                <Card {...cards[2]}/>
+                                <Card index={1} {...cards[1]}/>
+                                <Card index={2} {...cards[2]}/>
                             </div>
                         </div>
                     </div>
@@ -106,11 +106,19 @@ export const ScreenWithEditor: FC<IScreenWithEditor> = ({
 }
 
 //========= CARD =========//
-const Card: FC<ICard> = ({
-                             cardTitle,
-                             step,
-                             button
-                         }) => {
+interface ICardComponent extends ICard {
+    index: number
+}
+
+
+const Card: FC<ICardComponent> = ({
+                                      cardTitle,
+                                      step,
+                                      index,
+                                      button
+                                  }) => {
+    const router = useRouter()
+
     return (
         <div className={style.card}>
             <div className={style.top}>
@@ -118,9 +126,9 @@ const Card: FC<ICard> = ({
                 <p className={style.cardTitle}>{cardTitle}</p>
             </div>
             <ButtonCustom variant={ButtonVariantEnum.black}
-                          {...button}
+                          onClick={() => router.push(button.href as string)}
+                          label={button.label}
             />
         </div>
     )
-
 }

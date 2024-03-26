@@ -1,0 +1,93 @@
+@import "../../../../assets/styles/app";
+
+.fieldText {
+
+  .label {
+    color: rgba(0, 0, 0, 0.30);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  .inputWrapper {
+    position: relative;
+    padding: 14px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background: #F5F5F5;
+    transition: 0.3s;
+    margin-top: 12px;
+
+    @include desktop {
+      padding: 20px;
+    }
+
+    &:hover {
+      @include desktop {
+        border: 1px solid #000;
+      }
+    }
+
+    &_focus {
+      border: 1px solid #000;
+      background: #FFF;
+    }
+
+    &_error {
+      border: 1px solid #C10000;
+      background: #FFF;
+
+      &:hover {
+        border: 1px solid #C10000;
+        background: #FFF;
+      }
+    }
+
+    input {
+      width: 100%;
+      background: none!important;
+      border: none!important;
+      outline: none!important;
+
+      color: #000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+
+      @include desktop {
+        font-size: 18px;
+      }
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.30);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+
+        @include desktop {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .error {
+      position: absolute;
+      left: 8px;
+      bottom: -2px;
+      color: #C10000;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 135%;
+      transform: translateY(100%);
+    }
+
+  }
+}

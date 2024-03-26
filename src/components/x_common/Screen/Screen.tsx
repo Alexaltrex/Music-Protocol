@@ -18,7 +18,7 @@ export interface IScreen {
         desktop: string[]
     },
     orangeButton?: boolean
-    button: {
+    button?: {
         label: string
         onClick?: () => void
         href?: string
@@ -120,15 +120,17 @@ export const Screen: FC<IScreen> = ({
                     )
 
                 }
-
-                <ButtonCustom {...button}
-                              className={clsx({
-                                  [style.btn]: true,
-                                  [style.btn_withOrangeButton]: true,
-                              })}
-                              variant={ButtonVariantEnum.outlined}
-                />
-
+                {
+                    button && (
+                        <ButtonCustom {...button}
+                                      className={clsx({
+                                          [style.btn]: true,
+                                          [style.btn_withOrangeButton]: true,
+                                      })}
+                                      variant={ButtonVariantEnum.outlined}
+                        />
+                    )
+                }
 
             </div>
         </div>

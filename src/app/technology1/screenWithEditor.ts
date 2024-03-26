@@ -1,6 +1,5 @@
 import {IScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
 
-
 export const screenWithEditor: IScreenWithEditor = {
     title: {
         mobile: [
@@ -16,7 +15,7 @@ export const screenWithEditor: IScreenWithEditor = {
             step: "01",
             button: {
                 label: "Apply to join",
-                href: "#",
+                href: "/developers",
             },
         },
         {
@@ -24,7 +23,7 @@ export const screenWithEditor: IScreenWithEditor = {
             step: "02",
             button: {
                 label: "Apply to join",
-                href: "#",
+                href: "/startups",
             },
         },
         {
@@ -32,8 +31,10 @@ export const screenWithEditor: IScreenWithEditor = {
             step: "03",
             button: {
                 label: "Apply to join",
-                href: "#",
+                href: "/partners",
             },
         },
     ],
 }
+
+

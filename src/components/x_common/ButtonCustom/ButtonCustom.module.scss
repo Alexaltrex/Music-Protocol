@@ -25,7 +25,9 @@
     }
 
     &:hover {
-      background: #DAA56C;
+      @include desktop {
+        background: #DAA56C;
+      }
     }
   }
 
@@ -36,7 +38,9 @@
     transition: 0.3s;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.10);
+      @include desktop {
+        background: rgba(255, 255, 255, 0.10);
+      }
     }
 
   }
@@ -46,7 +50,11 @@
     backdrop-filter: blur(5px);
 
     &:hover {
-      background: #212121;
+
+      @include desktop {
+        background: #212121;
+      }
+
     }
   }
 }

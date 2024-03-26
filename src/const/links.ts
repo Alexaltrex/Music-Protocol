@@ -91,7 +91,7 @@ export const linksFooter = [
         subRoutes: [
             {
                 label: "$RECORD Token",
-                href: "/",
+                href: "/token",
             },
         ]
     },
