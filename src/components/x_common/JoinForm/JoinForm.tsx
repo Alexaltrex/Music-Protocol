@@ -9,8 +9,6 @@ import {useState} from "react";
 import timezones from 'timezones-list';
 import {FieldPhone} from "./FieldPhone/FieldPhone";
 import codes from 'country-calling-code';
-import {useMask} from '@react-input/mask';
-
 
 export interface IValues {
     name: string
@@ -78,13 +76,6 @@ export const JoinForm = () => {
     const [timeZoneIndex, setTimeZoneIndex] = useState(0);
     const [phoneIndex, setPhoneIndex] = useState(0);
 
-    const inputRef = useMask(
-        {
-            mask: '+0 (___) ___-__-__',
-            replacement: {_: /\d/}
-        }
-    );
-
     return (
         <div className={style.joinForm}>
             <p className={style.cardTitle}>
@@ -98,9 +89,6 @@ export const JoinForm = () => {
                 >
                     {(props: FormikProps<IValues>) => (
                         <Form autoComplete="off">
-
-                            <input ref={inputRef} className={style.maskinput}/>
-
 
                             <FieldText name="name" label="Name, Surname" className={style.field} placeholder="Enter"/>
                             <FieldText name="email" label="Email" className={style.field} placeholder="Enter"/>
