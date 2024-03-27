@@ -1,6 +1,5 @@
 import style from "./TransformingMusic.module.scss"
 import {WaveText} from "../../x_common/WaveText/WaveText";
-import {Fragment} from "react";
 import {clsx} from "clsx";
 import {TextUp} from "../../x_common/TextUp/TextUp";
 import {ButtonCustom} from "../../x_common/ButtonCustom/ButtonCustom";

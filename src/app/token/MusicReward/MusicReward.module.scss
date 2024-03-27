@@ -76,4 +76,17 @@
     }
   }
 
+  .lottieWrapper {
+    position: absolute;
+    width: 446px;
+    bottom: 32px;
+    right: -50px;
+
+    @include desktop {
+      width: 876px;
+      bottom: 155px;
+      right: calc(0.5 * (100vw - 1316px));
+    }
+  }
+
 }

@@ -7,15 +7,13 @@ import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/Scr
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
 import {screenWithEditor} from "./screenWithEditor";
 import {Diagram} from "../../components/x_common/Diagram/Diagram";
+import lottie from "../../../public/lottie/IP_Core.json"
 
 const TechnologyPage1 = () => {
     return (
         <div>
             <Screen {...screen}/>
-            <Diagram src={{
-                mobile: "/png/scheme_mobile.png",
-                desktop: "/png/scheme_desktop.png"
-            }}/>
+            <Diagram lottie={lottie}/>
             <ScreenWithCircles {...screenWithCircles}/>
             <Slider slides={slides}/>
             <ScreenWithEditor {...screenWithEditor}/>

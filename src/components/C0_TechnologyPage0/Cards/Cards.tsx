@@ -7,14 +7,20 @@ import 'swiper/css';
 import {Swiper as SwiperClass} from "swiper/types";
 import {FC, useState} from "react";
 import {svgIcons} from "../../../assets/svgIcons";
-import {clsx} from "clsx";
+import Lottie from "lottie-react";
+import card0_lottie from "../../../../public/lottie/card0.json";
+import card1_lottie from "../../../../public/lottie/card1.json";
+import card2_lottie from "../../../../public/lottie/card2.json";
+import card3_lottie from "../../../../public/lottie/card3.json";
 
 interface ICard {
     step: string
     title: string
     text: string
     href: string
+    lottie: string
 }
+
 
 const cards: ICard[] = [
     {
@@ -22,24 +28,32 @@ const cards: ICard[] = [
         title: "IP Inter-Chain Distribution Gateway",
         text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape, strengthening application adaptability and promoting various creative and commercial opportunities.",
         href: "#",
+        // @ts-ignore
+        lottie: card0_lottie,
     },
     {
         step: "02",
         title: "IP Core Asset Library",
         text: "The Music Protocol's core is a data repository for IP. The architecture has been built to accommodate intellectual property and licensing structures. Find out more about how to contribute towards these new frameworks.",
         href: "#",
+        // @ts-ignore
+        lottie: card1_lottie,
     },
     {
         step: "03",
         title: "IP Licencing Core Engine",
         text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licencing Core Engine expedites a seamless data flow between Music Protocol and ecosystem applications, ensuring our network efficiently manages all music IP permissions.",
         href: "#",
+        // @ts-ignore
+        lottie: card2_lottie,
     },
     {
         step: "04",
         title: "IP Settlement Gateway",
         text: "Music Protocol creates the link between the technological and regulatory landscapes. We bridge the gap between music IP and the industry's extensive counterparties by connecting key content distributors and management networks, simplifying financial and licensing transactions.",
         href: "#",
+        // @ts-ignore
+        lottie: card3_lottie,
     },
 ]
 
@@ -100,7 +114,7 @@ export const Cards = () => {
     )
 }
 
-const Card: FC<ICard> = ({step, title, text, href}) => {
+const Card: FC<ICard> = ({step, title, text, href, lottie}) => {
     return (
         <div className={style.card}>
             <div className={style.topWrapper}>
@@ -109,7 +123,15 @@ const Card: FC<ICard> = ({step, title, text, href}) => {
                     <div className={style.blackCard}>
                         <p className={style.step}>{step}</p>
                         <p className={style.title}>{title}</p>
-                        {/*{svgIcons[key]}*/}
+
+                        <div className={style.lottieWrapper}>
+                            <Lottie animationData={lottie}
+                                    style={{
+                                        width: "100%"
+                                    }}
+                            />
+                        </div>
+
                     </div>
                 </div>
 

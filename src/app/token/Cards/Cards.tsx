@@ -1,8 +1,11 @@
+"use client";
+
 import style from "./Cards.module.scss";
 import {WaveText} from "../../../components/x_common/WaveText/WaveText";
 import {cards, text, title} from "./const";
 import {clsx} from "clsx";
 import {TextUp} from "../../../components/x_common/TextUp/TextUp";
+import Lottie from "lottie-react";
 
 export const Cards = () => {
     return (
@@ -55,7 +58,7 @@ export const Cards = () => {
 
                 <div className={style.cardItems}>
                     {
-                        cards.map(({label, src, text}, key) => (
+                        cards.map(({label, src, text, lottie}, key) => (
                             <div key={key}
                                  className={style.cardItem}
                             >
@@ -63,7 +66,15 @@ export const Cards = () => {
                                     {label}
                                 </p>
 
-                                <img src={src} alt=""/>
+                                <div className={style.lottieWrapper}>
+                                    <Lottie animationData={lottie}
+                                            style={{
+                                                width: "100%", height: "100%"
+                                            }}
+                                    />
+                                </div>
+
+                                {/*<img src={src} alt=""/>*/}
 
                                 <p className={style.text}>{text}</p>
 

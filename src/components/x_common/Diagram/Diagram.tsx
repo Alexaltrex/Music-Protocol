@@ -1,21 +1,17 @@
+"use client";
 import {FC} from "react";
 import style from "./Diagram.module.scss";
 import {clsx} from "clsx";
+import Lottie from "lottie-react";
 
 export interface IDiagram {
     black?: boolean
-    src: {
-        mobile: string
-        desktop: string
-    }
+    lottie: any
 }
 
 export const Diagram: FC<IDiagram> = ({
                                           black = true,
-                                          src: {
-                                              mobile,
-                                              desktop
-                                          },
+                                          lottie
                                       }) => {
     return (
         <div className={clsx({
@@ -23,8 +19,13 @@ export const Diagram: FC<IDiagram> = ({
             [style.diagram_white]: !black,
         })}>
             <div className={style.inner}>
-                <img src={mobile} alt=""/>
-                <img src={desktop} alt=""/>
+                <div className={style.lottieWrapper}>
+                    <Lottie animationData={lottie}
+                            style={{
+                                width: "100%", height: "100%"
+                            }}
+                    />
+                </div>
             </div>
         </div>
     )

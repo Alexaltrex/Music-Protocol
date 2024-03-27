@@ -78,6 +78,7 @@
       }
 
       .cardItem {
+        @include rotateOnHover;
         position: relative;
         width: 312px;
         border-radius: 10px;
@@ -107,16 +108,21 @@
           }
         }
 
-        img {
-          display: block;
+        .lottieWrapper {
           height: 225px;
-          width: auto;
           margin: 24px auto 0;
 
           @include desktop {
             height: 270px;
             margin: 124px auto 0;
+          }
+        }
 
+        img {
+          display: block;
+          width: auto;
+
+          @include desktop {
           }
         }
 

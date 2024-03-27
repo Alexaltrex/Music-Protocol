@@ -118,6 +118,27 @@
     }
   }
 
+  &:nth-child(1) .blackCard .lottieWrapper {
+    width: 271px;
+    bottom: 16px;
+  }
+
+  &:nth-child(2) .blackCard .lottieWrapper {
+    width: 271px;
+    bottom: 55px;
+  }
+
+  &:nth-child(3) .blackCard .lottieWrapper {
+    width: 150px;
+    bottom: 41px;
+  }
+
+  &:nth-child(4) .blackCard .lottieWrapper {
+    width: 271px;
+    bottom: 67px;
+  }
+
+
   &:nth-child(1) .blackCard svg {
     bottom: 20px;
   }
@@ -151,7 +172,13 @@
         height: 296px;
       }
 
-      svg {
+      //svg {
+      //  position: absolute;
+      //  left: 50%;
+      //  transform: translateX(-50%);
+      //}
+
+      .lottieWrapper {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);

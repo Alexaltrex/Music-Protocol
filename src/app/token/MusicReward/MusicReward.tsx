@@ -1,8 +1,12 @@
-import style from "./MusicReward.module.scss"
-import {text, title} from "../Cards/const";
+"use client";
+
+import style from "./MusicReward.module.scss";
 import {WaveText} from "../../../components/x_common/WaveText/WaveText";
 import {clsx} from "clsx";
 import {TextUp} from "../../../components/x_common/TextUp/TextUp";
+import {title, text} from "./const";
+import Lottie from "lottie-react";
+import lottie from "../../../../public/lottie/Music_Reward_Inflation.json";
 
 export const MusicReward = () => {
     return (
@@ -53,7 +57,15 @@ export const MusicReward = () => {
 
             </div>
 
-            <img src="/png/music_reward.png" alt=""/>
+            <div className={style.lottieWrapper}>
+                <Lottie animationData={lottie}
+                        style={{
+                            width: "100%", height: "100%"
+                        }}
+                />
+            </div>
+
+            {/*<img src="/png/music_reward.png" alt=""/>*/}
         </div>
     )
 }
