@@ -8,6 +8,8 @@ import {svgIcons} from "../../../../assets/svgIcons";
 import style from "./FieldPhone.module.scss";
 import {hasFlag} from 'country-flag-icons'
 import codes from 'country-calling-code';
+import {phoneMasks} from "../../../../const/phoneMasks";
+import {useMask} from '@react-input/mask';
 
 interface IFieldPhone extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
     phoneIndex: number,
@@ -74,6 +76,18 @@ export const FieldPhone: FC<IFieldPhone> = ({
     useOutsideButNotOnTargetClick(dropdownRef, targetRef, () => setOpen(false));
 
 
+    // const inputRef = useMask(
+    //     {
+    //         // @ts-ignore
+    //         mask: phoneMasks.hasOwnProperty(codes[phoneIndex].isoCode2)
+    //             // @ts-ignore
+    //             ? phoneMasks[codes[phoneIndex].isoCode2]
+    //             : "##-###-####",
+    //         replacement: {"#": /\d/}
+    //     }
+    // );
+
+
     return (
         <div className={style.fieldPhone}
              ref={ref}
@@ -108,8 +122,29 @@ export const FieldPhone: FC<IFieldPhone> = ({
                 </div>
 
                 <div className={style.right}>
+
+                    {/*<input className={style.maskinput}/>*/}
+
                     <input {...props}
-                           placeholder="000-000-00-00"
+                           ref={
+                               useMask(
+                                   {
+                                       // @ts-ignore
+                                       mask: phoneMasks.hasOwnProperty(codes[phoneIndex].isoCode2)
+                                           // @ts-ignore
+                                           ? phoneMasks[codes[phoneIndex].isoCode2]
+                                           : "##-###-####",
+                                       replacement: {"#": /\d/}
+                                   }
+                               )
+                           }
+                           placeholder={
+                               (phoneMasks.hasOwnProperty(codes[phoneIndex].isoCode2)
+                                   // @ts-ignore
+                                   ? phoneMasks[codes[phoneIndex].isoCode2]
+                                   // @ts-ignore
+                                   : "##-###-####").split("").map(el => el === "#" ? "0" : el).join("")
+                           }
                            name={field.name}
                            value={field.value}
                            onChange={field.onChange}
@@ -140,13 +175,14 @@ export const FieldPhone: FC<IFieldPhone> = ({
                             <div className={style.dropdownInner}>
                                 {
                                     codes.map(({isoCode2, countryCodes, country}, key) => {
-                                            if (!hasFlag(isoCode2)) return null
+                                            if (!hasFlag(isoCode2) || !Object.keys(phoneMasks).includes(isoCode2)) return null
                                             return (
                                                 <div key={key}
                                                      className={style.dropdownItem}
                                                      onClick={() => {
                                                          onSelectHandler(key);
                                                          setOpen(false);
+                                                         helpers.setValue("");
                                                      }}
                                                 >
                                                     <img alt={country}

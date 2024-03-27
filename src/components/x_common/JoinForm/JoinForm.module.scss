@@ -28,6 +28,10 @@
   .formik {
     margin-top: 24px;
 
+    .maskinput {
+      color: #000;
+    }
+
     .field {
 
       &:not(:first-child) {
