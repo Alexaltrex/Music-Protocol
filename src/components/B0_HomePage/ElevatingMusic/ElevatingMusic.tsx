@@ -1,7 +1,9 @@
+"use client"
+
 import style from "./ElevatingMusic.module.scss"
 import {WaveText} from "../../x_common/WaveText/WaveText";
 import {TextUp} from "../../x_common/TextUp/TextUp";
-import {ButtonCustom} from "../../x_common/ButtonCustom/ButtonCustom";
+import {ButtonCustom, ButtonVariantEnum} from "../../x_common/ButtonCustom/ButtonCustom";
 import {FC} from "react";
 
 interface ICard {
@@ -73,24 +75,11 @@ export const ElevatingMusic = () => {
                     }
                 </div>
 
-
-                {/*<div className={style.cardsMobile}>*/}
-                {/*    {*/}
-                {/*        cards.map((card, key) => (*/}
-                {/*            <Card key={key} {...card}/>*/}
-                {/*        ))*/}
-                {/*    }*/}
-                {/*</div>*/}
-
-                {/*<div className={style.cardsDesktop}>*/}
-                {/*    <div className={style.left}>*/}
-                {/*        <Card {...cards[0]}/>*/}
-                {/*    </div>*/}
-                {/*    <div className={style.right}>*/}
-                {/*        <Card {...cards[1]}/>*/}
-                {/*        <Card {...cards[2]}/>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
+                <ButtonCustom label="Whitepaper"
+                              variant={ButtonVariantEnum.outlined}
+                              href="/"
+                              className={style.btn}
+                />
 
 
             </div>

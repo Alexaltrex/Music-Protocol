@@ -1,0 +1,111 @@
+@import "../../../assets/styles/app";
+
+.transformingMusic {
+  @include container;
+  padding-top: 20px;
+  padding-bottom: 64px;
+
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 42px;
+    height: 100vh;
+  }
+
+  .inner {
+    @include inner;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      justify-content: space-between;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+
+      .titleMobile {
+        @include onlyMobile();
+      }
+
+      .titleDesktop {
+        @include onlyDesktop();
+      }
+
+      .title {
+        @include h2;
+      }
+
+      .block {
+        margin-top: 32px;
+
+        &_mobile {
+          @include onlyMobile();
+        }
+
+        &_desktop {
+          @include onlyDesktop();
+        }
+
+        .description {
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 115%;
+
+          @include desktop {
+            font-size: 18px;
+          }
+        }
+      }
+
+    }
+
+    .card {
+      width: 312px;
+      height: 304px;
+      border-radius: 10px;
+      border: 1px solid var(--additional-lines-15, rgba(255, 255, 255, 0.15));
+      background: var(--additional-black-15, rgba(0, 0, 0, 0.15));
+      backdrop-filter: blur(10px);
+      padding: 24px;
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      .cardTop {
+        display: flex;
+        justify-content: space-between;
+
+        p:nth-child(1) {
+          color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 135%; /* 24.3px */
+        }
+
+        p:nth-child(2) {
+          color: var(--Additional-Main-White, #FFF);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 135%;
+          width: 147px;
+        }
+      }
+
+
+    }
+
+  }
+
+}
+

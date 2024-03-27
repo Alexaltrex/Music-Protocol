@@ -47,6 +47,15 @@
       margin-top: 32px;
     }
 
+    .btn {
+      margin-top: 40px;
+
+      @include desktop {
+        margin-top: 48px;
+        width: 256px;
+      }
+    }
+
     .cardsDesktop {
       @include onlyDesktop(flex);
       margin-top: 36px;

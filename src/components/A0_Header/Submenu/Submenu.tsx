@@ -16,6 +16,7 @@ export const Submenu: FC<ISubmenu> = ({
                                           onClick,
                                       }) => {
 
+
     return (
         <div className={clsx({
             [style.submenu]: true,
@@ -31,8 +32,15 @@ export const Submenu: FC<ISubmenu> = ({
                               onClick()
                           }}
                     >
-                        <img src="/jpeg/header/submenuItem_mobile.jpg" alt="" className={clsx(style.back, style.back_mobile)}/>
-                        <img src="/jpeg/header/submenuItem.jpg" alt="" className={clsx(style.back, style.back_desktop)}/>
+                        <img src={
+                            subLinks === SubLinksEnum.Technology
+                                ? "/jpeg/header/submenuItem_technology.jpg"
+                                : "/jpeg/header/submenuItem_industry.jpg"
+
+                        }
+                             alt=""
+                             className={clsx(style.back, style.back_desktop)}
+                        />
 
                         <div className={style.item_inner}>
                             <div className={style.top}>
