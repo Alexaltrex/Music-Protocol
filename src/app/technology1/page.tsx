@@ -13,7 +13,7 @@ const TechnologyPage1 = () => {
     return (
         <div>
             <Screen {...screen}/>
-            <Diagram lottie={lottie}/>
+            <Diagram lottie={lottie} src="/jpeg/diagram_black.jpg"/>
             <ScreenWithCircles {...screenWithCircles}/>
             <Slider slides={slides}/>
             <ScreenWithEditor {...screenWithEditor}/>

@@ -70,8 +70,7 @@
       margin-top: 32px;
 
       .slide {
-        //display: flex;
-        //justify-content: space-between;
+
       }
     }
 
@@ -87,9 +86,7 @@
         grid-column-gap: 16px;
       }
     }
-
   }
-
 }
 
 .card {
@@ -118,43 +115,6 @@
     }
   }
 
-  &:nth-child(1) .blackCard .lottieWrapper {
-    width: 271px;
-    bottom: 16px;
-  }
-
-  &:nth-child(2) .blackCard .lottieWrapper {
-    width: 271px;
-    bottom: 55px;
-  }
-
-  &:nth-child(3) .blackCard .lottieWrapper {
-    width: 150px;
-    bottom: 41px;
-  }
-
-  &:nth-child(4) .blackCard .lottieWrapper {
-    width: 271px;
-    bottom: 67px;
-  }
-
-
-  &:nth-child(1) .blackCard svg {
-    bottom: 20px;
-  }
-
-  &:nth-child(2) .blackCard svg {
-    bottom: 55px;
-  }
-
-  &:nth-child(3) .blackCard svg {
-    bottom: 41px;
-  }
-
-  &:nth-child(4) .blackCard svg {
-    bottom: 67px;
-  }
-
 
   .topWrapper {
     padding: 2px 2px 0;
@@ -172,16 +132,31 @@
         height: 296px;
       }
 
-      //svg {
-      //  position: absolute;
-      //  left: 50%;
-      //  transform: translateX(-50%);
-      //}
-
       .lottieWrapper {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+
+        &_0 {
+          width: 271px;
+          bottom: 16px;
+        }
+
+        &_1 {
+          width: 271px;
+          bottom: 55px;
+        }
+
+        &_2 {
+          width: 150px;
+          bottom: 41px;
+        }
+
+        &_3 {
+          width: 271px;
+          bottom: 67px;
+        }
+
       }
 
       .step {

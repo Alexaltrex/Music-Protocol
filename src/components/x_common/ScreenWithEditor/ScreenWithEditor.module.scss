@@ -32,13 +32,11 @@
       color: #000;
     }
 
-
-
     .content {
       margin-top: 24px;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      //align-items: center;
 
       @include desktop {
         margin-top: 0;
@@ -61,7 +59,7 @@
           @include onlyMobile(flex) {
             margin-top: 24px;
             flex-direction: column;
-            align-items: center;
+            //align-items: center;
           }
         }
 

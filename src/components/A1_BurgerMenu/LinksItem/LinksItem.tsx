@@ -8,30 +8,23 @@ import {Collapse} from "@mui/material";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {SubLinksEnum, subLinksHeader} from "../../../const/links";
-import {observer} from "mobx-react-lite";
-import {useStore} from "../../../store/useStore";
 
 interface ILinksItem {
     route: SubLinksEnum
     openedRoutes: SubLinksEnum | null
-    onClick: () => void
+    onTopClick: () => void
+    onLinkClick: () => void
 }
 
-export const LinksItem: FC<ILinksItem> = observer(({
+export const LinksItem: FC<ILinksItem> = ({
                                               route,
                                               openedRoutes,
-                                              onClick,
+                                              onTopClick,
+                                              onLinkClick
                                           }) => {
-    const {
-        appStore: {
-            setBurgerMenu
-        }
-    } = useStore();
-
-
     const subMenu = subLinksHeader[route];
 
-    const pathname  = usePathname();
+    const pathname = usePathname();
 
     return (
         <div className={clsx({
@@ -39,7 +32,7 @@ export const LinksItem: FC<ILinksItem> = observer(({
             [style.linksItem_open]: route === openedRoutes,
         })}>
             <div className={style.top}
-                 onClick={onClick}
+                 onClick={onTopClick}
             >
                 <p className={style.title}>
                     {route}
@@ -59,7 +52,7 @@ export const LinksItem: FC<ILinksItem> = observer(({
                                   [style.item_secected]: false//pathname === href,
                               })}
                               href={href}
-                              onClick={() => setBurgerMenu(false)}
+                              onClick={() => onLinkClick()}
                         >
                             <img src="/jpeg/header/submenuItem.jpg" alt=""/>
                             <div className={style.itemContent}>
@@ -79,4 +72,4 @@ export const LinksItem: FC<ILinksItem> = observer(({
 
         </div>
     )
-})
+}

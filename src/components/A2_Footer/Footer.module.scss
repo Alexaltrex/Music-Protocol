@@ -217,12 +217,19 @@
           display: block;
           width: 20px;
           height: 20px;
+          transition: 0.3s;
 
           &:not(:first-child) {
             @include desktop {
               margin-left: 16px;
             }
 
+          }
+
+          &:hover {
+            @include desktop {
+              opacity: 0.5;
+            }
           }
 
           svg {

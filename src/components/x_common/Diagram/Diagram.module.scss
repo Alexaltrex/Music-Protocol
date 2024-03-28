@@ -3,6 +3,7 @@
 .diagram {
   @include container;
   padding-top: 64px;
+  padding-bottom: 64px;
 
   @include desktop {
     padding-top: 72px;
@@ -17,23 +18,13 @@
     @include inner;
 
     img {
-      display: block;
+      @include onlyMobile();
+      width: 360px - 48px;
       height: auto;
-
-      &:nth-child(1) {
-        @include onlyMobile();
-        width: 360px - 48px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      &:nth-child(2) {
-        @include onlyDesktop();
-        width: 100%;
-      }
     }
 
     .lottieWrapper {
+      @include onlyDesktop();
       width: 100%;
     }
 

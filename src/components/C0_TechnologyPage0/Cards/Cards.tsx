@@ -12,6 +12,7 @@ import card0_lottie from "../../../../public/lottie/card0.json";
 import card1_lottie from "../../../../public/lottie/card1.json";
 import card2_lottie from "../../../../public/lottie/card2.json";
 import card3_lottie from "../../../../public/lottie/card3.json";
+import {clsx} from "clsx";
 
 interface ICard {
     step: string
@@ -95,7 +96,7 @@ export const Cards = () => {
                             <SwiperSlide key={key}
                                          className={style.slide}
                             >
-                                <Card {...card}/>
+                                <Card index={key} {...card}/>
                             </SwiperSlide>
                         ))
                     }
@@ -104,7 +105,7 @@ export const Cards = () => {
                 <div className={style.cardsDesktop}>
                     {
                         cards.map((card, key) => (
-                            <Card key={key} {...card}/>
+                            <Card key={key} index={key} {...card}/>
                         ))
                     }
                 </div>
@@ -114,7 +115,20 @@ export const Cards = () => {
     )
 }
 
-const Card: FC<ICard> = ({step, title, text, href, lottie}) => {
+
+//========= CARD =========//
+interface ICardComponent extends ICard {
+    index: number
+}
+
+const Card: FC<ICardComponent> = ({
+                                      step,
+                                      title,
+                                      text,
+                                      href,
+                                      lottie,
+                                      index,
+                                  }) => {
     return (
         <div className={style.card}>
             <div className={style.topWrapper}>
@@ -124,7 +138,11 @@ const Card: FC<ICard> = ({step, title, text, href, lottie}) => {
                         <p className={style.step}>{step}</p>
                         <p className={style.title}>{title}</p>
 
-                        <div className={style.lottieWrapper}>
+                        <div className={clsx(
+                            style.lottieWrapper,
+                            style[`lottieWrapper_${index}`]
+                        )}
+                        >
                             <Lottie animationData={lottie}
                                     style={{
                                         width: "100%"

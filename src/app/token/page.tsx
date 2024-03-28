@@ -12,11 +12,11 @@ const TokenPage = () => {
             <Screen {...screen}/>
             <Diagram black={false}
                      lottie={lottie}
+                     src="/jpeg/diagram_white.jpg"
             />
             <Cards/>
             <MusicReward/>
             <Faq/>
-
         </div>
     )
 }

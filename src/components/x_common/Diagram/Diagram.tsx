@@ -1,4 +1,5 @@
 "use client";
+
 import {FC} from "react";
 import style from "./Diagram.module.scss";
 import {clsx} from "clsx";
@@ -7,11 +8,13 @@ import Lottie from "lottie-react";
 export interface IDiagram {
     black?: boolean
     lottie: any
+    src: string
 }
 
 export const Diagram: FC<IDiagram> = ({
                                           black = true,
-                                          lottie
+                                          lottie,
+                                          src
                                       }) => {
     return (
         <div className={clsx({
@@ -19,6 +22,7 @@ export const Diagram: FC<IDiagram> = ({
             [style.diagram_white]: !black,
         })}>
             <div className={style.inner}>
+                <img src={src} alt=""/>
                 <div className={style.lottieWrapper}>
                     <Lottie animationData={lottie}
                             style={{

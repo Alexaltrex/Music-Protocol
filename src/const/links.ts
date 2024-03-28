@@ -8,6 +8,7 @@ export interface ISubLinks {
     label: string
     href: string
     description: string
+    src: string
 }
 
 export const subLinksHeader = {
@@ -15,61 +16,72 @@ export const subLinksHeader = {
         {
             label: "Advancing Music Rights and Ownership",
             href: "/technology0",
-            description: "Progressing music rights with secure, streamlined IP management protocol"
+            description: "Progressing music rights with secure, streamlined IP management protocol",
+            src: "/jpeg/header/technology0.jpg",
         },
         {
             label: "IP Core Asset Library",
             href: "/technology1",
-            description: "Music Protocol's core is an IP data repository that supports licensing structures."
+            description: "Music Protocol's core is an IP data repository that supports licensing structures.",
+            src: "/jpeg/header/technology1.jpg",
         },
         {
             label: "IP Licencing Core Engine",
             href: "/technology2",
-            description: "Ensuring efficient music IP permissions management."
+            description: "Ensuring efficient music IP permissions management.",
+            src: "/jpeg/header/submenuItem_technology.jpg",
         },
         {
             label: "IP Settlement Gateway",
             href: "/technology3",
-            description: "Bridges music IP with industry and simplifies financial and licensing transactions."
+            description: "Bridges music IP with industry and simplifies financial and licensing transactions.",
+            src: "/jpeg/header/technology3.jpg",
         },
         {
             label: "IP Inter-Chain Distribution Gateway",
             href: "/technology4",
-            description: "Extends Music Protocol reach, integrates blockchains, and promotes opportunities."
+            description: "Extends Music Protocol reach, integrates blockchains, and promotes opportunities.",
+            src: "/jpeg/header/technology4.jpg",
         },
     ],
     "Industry": [
         {
             label: "Real-world assets",
             href: "/industry0",
-            description: "Music IP attracts investors with royalties, low market correlation, and accessibility."
+            description: "Music IP attracts investors with royalties, low market correlation, and accessibility.",
+            src: "/jpeg/header/submenuItem_industry.jpg",
         },
         {
             label: "AI",
             href: "/industry1",
-            description: "AI innovation meets IP protection."
+            description: "AI innovation meets IP protection.",
+            src: "/jpeg/header/submenuItem_industry.jpg",
         },
         {
             label: "Traditional music Distribution Gateway",
             href: "/industry2",
-            description: "Modernising IP management, boosting distribution and revenue efficiency."
+            description: "Modernising IP management, boosting distribution and revenue efficiency.",
+            src: "/jpeg/header/submenuItem_industry.jpg",
         },
         {
             label: "Gaming and Metaverse",
             href: "/industry3",
-            description: "Immersive experiences redefine music monetisation."
+            description: "Immersive experiences redefine music monetisation.",
+            src: "/jpeg/header/submenuItem_industry.jpg",
         },
     ],
     "Resources": [
         {
             label: "Blogs",
             href: "/resources0",
-            description: ""
+            description: "",
+            src: "/jpeg/header/resources0.jpg",
         },
         {
             label: "Docs",
             href: "/resources1",
-            description: ""
+            description: "",
+            src: "/jpeg/header/resources1.jpg",
         },
     ]
 }

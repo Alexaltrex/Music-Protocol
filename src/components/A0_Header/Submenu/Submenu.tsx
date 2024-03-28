@@ -24,7 +24,12 @@ export const Submenu: FC<ISubmenu> = ({
         })}>
             {
                 // @ts-ignore
-                (subLinksHeader[subLinks] as ISubLinks[])?.map(({label, href, description}, key) => (
+                (subLinksHeader[subLinks] as ISubLinks[])?.map(({
+                                                                    label,
+                                                                    href,
+                                                                    description,
+                                                                    src,
+                                                                }, key) => (
                     <Link key={key}
                           href={href}
                           className={style.item}
@@ -32,15 +37,14 @@ export const Submenu: FC<ISubmenu> = ({
                               onClick()
                           }}
                     >
-                        <img src={
-                            subLinks === SubLinksEnum.Technology
-                                ? "/jpeg/header/submenuItem_technology.jpg"
-                                : "/jpeg/header/submenuItem_industry.jpg"
-
+                        {
+                            src && (
+                                <img src={src}
+                                     alt=""
+                                     className={clsx(style.back, style.back_desktop)}
+                                />
+                            )
                         }
-                             alt=""
-                             className={clsx(style.back, style.back_desktop)}
-                        />
 
                         <div className={style.item_inner}>
                             <div className={style.top}>

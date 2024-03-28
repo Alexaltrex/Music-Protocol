@@ -49,21 +49,30 @@ export const BurgerMenu = observer(() => {
 
                     <LinksItem route={SubLinksEnum.Technology}
                                openedRoutes={openedRoutes}
-                               onClick={() => {
+                               onTopClick={() => {
                                    setOpenedRoutes(openedRoutes !== SubLinksEnum.Technology
                                        ? SubLinksEnum.Technology
                                        : null
                                    );
                                }}
+                               onLinkClick={() => {
+                                   setBurgerMenu(false);
+                                   setOpenedRoutes(null);
+                               }}
+
                     />
 
                     <LinksItem route={SubLinksEnum.Industry}
                                openedRoutes={openedRoutes}
-                               onClick={() => {
+                               onTopClick={() => {
                                    setOpenedRoutes(openedRoutes !== SubLinksEnum.Industry
                                        ? SubLinksEnum.Industry
                                        : null
                                    );
+                               }}
+                               onLinkClick={() => {
+                                   setBurgerMenu(false);
+                                   setOpenedRoutes(null);
                                }}
                     />
 
@@ -76,11 +85,15 @@ export const BurgerMenu = observer(() => {
 
                     <LinksItem route={SubLinksEnum.Resources}
                                openedRoutes={openedRoutes}
-                               onClick={() => {
+                               onTopClick={() => {
                                    setOpenedRoutes(openedRoutes !== SubLinksEnum.Resources
                                        ? SubLinksEnum.Resources
                                        : null
                                    );
+                               }}
+                               onLinkClick={() => {
+                                   setBurgerMenu(false);
+                                   setOpenedRoutes(null);
                                }}
                     />
 
