@@ -125,7 +125,7 @@ export const Screen: FC<IScreen> = ({
                         <ButtonCustom {...button}
                                       className={clsx({
                                           [style.btn]: true,
-                                          [style.btn_withOrangeButton]: true,
+                                          [style.btn_withOrangeButton]: orangeButton,
                                       })}
                                       variant={ButtonVariantEnum.outlined}
                         />

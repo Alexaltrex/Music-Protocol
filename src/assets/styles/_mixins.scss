@@ -87,13 +87,13 @@
 }
 
 @mixin rotateOnHover {
-  cursor: pointer;
-  transition: 0.5s;
-  perspective-origin: center;
-
-  &:hover {
-    @include desktop {
-      transform: perspective(600px) rotateY(-10deg);
-    }
-  }
+  //cursor: pointer;
+  //transition: 0.5s;
+  //perspective-origin: center;
+  //
+  //&:hover {
+  //  @include desktop {
+  //    transform: perspective(600px) rotateY(-10deg);
+  //  }
+  //}
 }

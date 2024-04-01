@@ -108,10 +108,9 @@
     .orangeButton {
       @include onlyMobile();
       margin-top: 32px;
-      width: auto;
-      //align-self: flex-start;
       padding-left: 24px;
       padding-right: 24px;
+      width: 180px;
     }
 
     .btn {
@@ -120,17 +119,22 @@
       padding-left: 24px;
       padding-right: 24px;
       width: auto;
+      min-width: 235px;
 
       @include desktop {
         padding-left: 40px;
         padding-right: 40px;
+        min-width: auto;
       }
 
       &_withOrangeButton {
         margin-top: 12px;
+        min-width: auto;
+        width: 180px;
 
         @include desktop {
           margin-top: 32px;
+          width: auto;
         }
       }
     }

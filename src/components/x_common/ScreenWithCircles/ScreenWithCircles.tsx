@@ -45,7 +45,7 @@ const ballColors = [
     "#EAB563",
 ]
 
-const duration = 3;
+const duration = 24;
 
 export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                                                               title,
@@ -66,7 +66,7 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                 repeat: -1,
                 ease: "linear",
                 duration,
-                delay: index * duration / 3
+                //delay: index * duration / 3
             })
         })
 
@@ -196,7 +196,7 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                                          className={clsx(style.ballWrapper, "ballWrapper")}
                                          style={{
                                              top: "50%",
-                                             transform: `translate(0%, -50%)`,
+                                             transform: `translate(0%, -50%) rotate(${key * 120 - 180}deg)`,
                                              left: `${100 * (key + 1) / 6}%`,
                                              width: `${100 * (key + 1) / 6}%`
                                          }}

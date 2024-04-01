@@ -27,18 +27,18 @@ export const WaveText: FC<IWaveText> = ({
 
     useGSAP((self) => {
 
-        gsap.from(".letter", {
-            yPercent: 100,
-            stagger: 8 * factor,
-            duration: label.length * factor,
-            scrollTrigger: {
-                trigger: ".text",
-                //markers: true,
-                start: "top bottom-=10%",
-                end: "top bottom-=10%",
-                toggleActions: "play none reverse none",
-            }
-        })
+        // gsap.from(".letter", {
+        //     yPercent: 100,
+        //     stagger: 8 * factor,
+        //     duration: label.length * factor,
+        //     scrollTrigger: {
+        //         trigger: ".text",
+        //         //markers: true,
+        //         start: "top bottom-=10%",
+        //         end: "top bottom-=10%",
+        //         toggleActions: "play none reverse none",
+        //     }
+        // })
 
     }, {scope: appRef})
 
