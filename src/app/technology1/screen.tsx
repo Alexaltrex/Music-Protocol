@@ -15,4 +15,5 @@ export const screen = {
     button: {
         label: "Sign-up for early access"
     },
+    videoUrl: "/mp4/technology1.mp4"
 }

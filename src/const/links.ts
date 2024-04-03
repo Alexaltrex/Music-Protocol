@@ -29,7 +29,7 @@ export const subLinksHeader = {
             label: "IP Licencing Core Engine",
             href: "/technology2",
             description: "Ensuring efficient music IP permissions management.",
-            src: "/jpeg/header/submenuItem_technology.jpg",
+            src: "/jpeg/header/technology2.jpg",
         },
         {
             label: "IP Settlement Gateway",
@@ -49,25 +49,25 @@ export const subLinksHeader = {
             label: "Real-world assets",
             href: "/industry0",
             description: "Music IP attracts investors with royalties, low market correlation, and accessibility.",
-            src: "/jpeg/header/submenuItem_industry.jpg",
+            src: "/jpeg/header/industry0.jpg",
         },
         {
             label: "AI",
             href: "/industry1",
             description: "AI innovation meets IP protection.",
-            src: "/jpeg/header/submenuItem_industry.jpg",
+            src: "/jpeg/header/industry1.jpg",
         },
         {
             label: "Traditional music Distribution Gateway",
             href: "/industry2",
             description: "Modernising IP management, boosting distribution and revenue efficiency.",
-            src: "/jpeg/header/submenuItem_industry.jpg",
+            src: "/jpeg/header/industry2.jpg",
         },
         {
             label: "Gaming and Metaverse",
             href: "/industry3",
             description: "Immersive experiences redefine music monetisation.",
-            src: "/jpeg/header/submenuItem_industry.jpg",
+            src: "/jpeg/header/industry3.jpg",
         },
     ],
     "Resources": [

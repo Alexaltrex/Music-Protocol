@@ -39,5 +39,5 @@ export const screen: IScreen = {
         label: "Learn more",
         href: "#"
     },
-    videoUrl: "/mp4/home0.mp4"
+    videoUrl: "/mp4/industry2.mp4"
 }
