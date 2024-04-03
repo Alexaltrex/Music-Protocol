@@ -1,4 +1,4 @@
-import {Mulish, Roboto_Mono} from "next/font/google";
+import {Mulish, Roboto_Mono, Outfit} from "next/font/google";
 import localFont from 'next/font/local'
 
 export const mulish = Mulish({
@@ -9,6 +9,13 @@ export const mulish = Mulish({
     //     '700',
     // ],
 });
+
+export const outfit = Outfit({
+    subsets: ["latin"],
+    weight: [
+        '300'
+    ]
+})
 
 export const gilroy = localFont({
     src: "./Gilroy-Light.otf",

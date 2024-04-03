@@ -5,7 +5,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {useGSAP} from "@gsap/react";
 import {FC, useRef} from "react";
 import {clsx} from "clsx";
-import {gilroy} from "../../../assets/fonts/fonts";
+import {outfit} from "../../../assets/fonts/fonts";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +54,7 @@ export const WaveText: FC<IWaveText> = ({
                                   "letter": l !== " ",
                                   [style.empty]: l === " ",
                               },
-                                  gilroy.className,
+                                  outfit.className,
                                   Boolean(textClassName)
                                   && textClassName
                               )}
