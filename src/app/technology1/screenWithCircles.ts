@@ -43,13 +43,11 @@ export const screenWithCircles: IScreenWithCircles = {
             desktop: [
                 "The architecture uses two key elements: the",
                 "IP Core, which records intellectual property",
-                "identity",
-                "with immutable information, and limitless",
-                "attributes that can be combined to add any",
-                "property to",
-                "the IP Core, such as creating a licensing",
-                "contract or notarising aspects of intellectual",
-                "property.",
+                "identity with immutable information, and",
+                "limitless attributes that can be combined to",
+                "add any property to the IP Core, such as",
+                "creating a licensing contract or notarising",
+                "aspects of intellectual property.",
             ],
         },
     ],
@@ -74,11 +72,11 @@ export const screenWithCircles: IScreenWithCircles = {
         {
             mobile: [
                 "Licensing and",
-                "monetization",
+                "monetisation",
             ],
             desktop: [
                 "Licensing and",
-                "monetization",
+                "monetisation",
             ]
         },
     ],

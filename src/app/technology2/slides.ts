@@ -60,8 +60,7 @@ export const slides = [
                 "the Metaverse",
             ],
             desktop: [
-                "Gaming and the",
-                "Metaverse",
+                "Gaming and the Metaverse",
             ]
         },
         text: "We enable users to select music that elevates these experiences, with NFT- based digital tracking ensuring compliance and rights management.",

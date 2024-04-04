@@ -3,6 +3,7 @@ import {WaveText} from "../../x_common/WaveText/WaveText";
 import {clsx} from "clsx";
 import {TextUp} from "../../x_common/TextUp/TextUp";
 import {ButtonCustom} from "../../x_common/ButtonCustom/ButtonCustom";
+import {outfit} from "../../../assets/fonts/fonts";
 
 const title = {
     mobile: [
@@ -39,47 +40,16 @@ export const TransformingMusic = () => {
 
                 <div className={style.top}>
 
-                    {
-                        title.mobile.map((text, key) => (
-                            <WaveText key={key}
-                                      label={text}
-                                      className={style.titleMobile}
-                                      textClassName={style.title}
-                                      size={40}
-                            />
-                        ))
-                    }
+                    <h2 className={clsx(style.title, outfit.className)}>
+                        Transforming Music into a Tradable and Liquid Asset Class
+                    </h2>
 
-                    {
-                        title.desktop.map((text, key) => (
-                            <WaveText key={key}
-                                      label={text}
-                                      className={style.titleDesktop}
-                                      textClassName={style.title}
-                                      size={64}
-                            />
-                        ))
-                    }
+                    <p className={style.description}>
+                        Music Protocol unlocks the full economic potential of the music industry by enabling efficient
+                        tokenisation and capital market integration, fostering a scalable and accessible asset
+                        ecosystem.
+                    </p>
 
-                    <div className={clsx(style.block, style.block_mobile)}>
-                        {
-                            text.mobile.map((text, key) => (
-                                <TextUp key={key}>
-                                    <p className={style.description}>{text}</p>
-                                </TextUp>
-                            ))
-                        }
-                    </div>
-
-                    <div className={clsx(style.block, style.block_desktop)}>
-                        {
-                            text.desktop.map((text, key) => (
-                                <TextUp key={key}>
-                                    <p className={style.description}>{text}</p>
-                                </TextUp>
-                            ))
-                        }
-                    </div>
 
 
                 </div>

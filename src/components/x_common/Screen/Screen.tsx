@@ -32,7 +32,7 @@ export const Screen: FC<IScreen> = ({
                                         description,
                                         orangeButton = false,
                                         button,
-    videoUrl
+                                        videoUrl
                                     }) => {
     return (
         <div className={clsx(style.screen, Boolean(className) && className)}>
@@ -44,7 +44,7 @@ export const Screen: FC<IScreen> = ({
                                loop={true}
                                autoPlay={true}
                                muted={true}
-                               //controls={true}
+                            //controls={true}
                         ></video>
                     </div>
                 )
@@ -85,11 +85,11 @@ export const Screen: FC<IScreen> = ({
 
                 </div>
 
-
                 {
-                description && (
+                    description && (
                         <>
-                            <div className={style.descriptionMobile}>
+                            <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_mobile)}>
+                                <div className={style.blur}/>
                                 {
                                     description.mobile.map((text, key) => (
                                         <TextUp key={key}>
@@ -98,7 +98,8 @@ export const Screen: FC<IScreen> = ({
                                     ))
                                 }
                             </div>
-                            <div className={style.descriptionDesktop}>
+                            <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_desktop)}>
+                                <div className={style.blur}/>
                                 {
                                     description.desktop.map((text, key) => (
                                         <TextUp key={key}>

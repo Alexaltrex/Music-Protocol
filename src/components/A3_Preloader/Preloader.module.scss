@@ -1,0 +1,52 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #000;
+
+  &_end {
+    display: none;
+  }
+
+  .scaleWrapper {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    bottom: 30px;
+    width: 100px;
+    border-left: 2pxd solid rgba(255, 255, 255, 0.15);
+
+    .item {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -1%;
+      background: rgba(0,0,0,0.75);
+    }
+
+  }
+
+  .value {
+    transform: translateY(50%);
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+  }
+
+}

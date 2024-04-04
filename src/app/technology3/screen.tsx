@@ -12,7 +12,7 @@ export const screen: IScreen = {
         ]
     },
     button: {
-        label: "Registration for early access"
+        label: "Sign-up for early access"
     },
     videoUrl: "/mp4/technology3.mp4",
 }

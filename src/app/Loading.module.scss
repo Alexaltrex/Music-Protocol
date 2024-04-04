@@ -1,0 +1,17 @@
+@import "../assets/styles/app";
+
+.loading {
+  @include centerRow;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+
+  p {
+    color: #FFF;
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 36px;
+    }
+  }
+}

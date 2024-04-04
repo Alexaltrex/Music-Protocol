@@ -19,7 +19,7 @@ export const screenWithEditor: IScreenWithEditor = {
             },
         },
         {
-            cardTitle: "Startup",
+            cardTitle: "Startups",
             step: "02",
             button: {
                 label: "Apply to join",

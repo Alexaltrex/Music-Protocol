@@ -3,7 +3,7 @@
 import style from "./Header.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {mulish} from "../../assets/fonts/fonts";
 import {ButtonCustom} from "../x_common/ButtonCustom/ButtonCustom";
 import {DropDown} from "./DropDown/DropDown";

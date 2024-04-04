@@ -11,12 +11,12 @@ export interface ISubLinks {
     src: string
 }
 
-export const subLinksHeader = {
+export const subLinksHeader: {[key: string]: ISubLinks[]} = {
     "Technology": [
         {
             label: "Advancing Music Rights and Ownership",
             href: "/technology0",
-            description: "Progressing music rights with secure, streamlined IP management protocol",
+            description: "Progressing music rights with our secure, streamlined IP management protocol.",
             src: "/jpeg/header/technology0.jpg",
         },
         {
@@ -28,25 +28,25 @@ export const subLinksHeader = {
         {
             label: "IP Licencing Core Engine",
             href: "/technology2",
-            description: "Ensuring efficient music IP permissions management.",
+            description: "Ensuring efficient music IP permission management.",
             src: "/jpeg/header/technology2.jpg",
         },
         {
             label: "IP Settlement Gateway",
             href: "/technology3",
-            description: "Bridges music IP with industry and simplifies financial and licensing transactions.",
+            description: "Bridging music IP with multiple industries and simplifying transactions.",
             src: "/jpeg/header/technology3.jpg",
         },
         {
             label: "IP Inter-Chain Distribution Gateway",
             href: "/technology4",
-            description: "Extends Music Protocol reach, integrates blockchains, and promotes opportunities.",
+            description: "Extending the Music Protocol’s reach by integrating with multiple blockchains.",
             src: "/jpeg/header/technology4.jpg",
         },
     ],
     "Industry": [
         {
-            label: "Real-world assets",
+            label: "Real-World Assets",
             href: "/industry0",
             description: "Music IP attracts investors with royalties, low market correlation, and accessibility.",
             src: "/jpeg/header/industry0.jpg",
@@ -58,13 +58,13 @@ export const subLinksHeader = {
             src: "/jpeg/header/industry1.jpg",
         },
         {
-            label: "Traditional music Distribution Gateway",
+            label: "Traditional Music Distribution Gateway",
             href: "/industry2",
             description: "Modernising IP management, boosting distribution and revenue efficiency.",
             src: "/jpeg/header/industry2.jpg",
         },
         {
-            label: "Gaming and Metaverse",
+            label: "Gaming and the Metaverse",
             href: "/industry3",
             description: "Immersive experiences redefine music monetisation.",
             src: "/jpeg/header/industry3.jpg",
@@ -72,7 +72,7 @@ export const subLinksHeader = {
     ],
     "Resources": [
         {
-            label: "Blogs",
+            label: "Blog",
             href: "/resources0",
             description: "",
             src: "/jpeg/header/resources0.jpg",

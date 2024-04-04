@@ -23,8 +23,7 @@ export const Footer = () => {
                     <div className={style.right}>
                         <p className={style.description}>
                             The Web3 Music Association is the main contributor to the Music Protocol, working with the
-                            music industry to onboard them to advanced technologies. Find out more about the
-                            association.
+                            music industry to help them adopt emerging technologies. Find out more.
                         </p>
                         {svgIcons.logo_footer}
                     </div>

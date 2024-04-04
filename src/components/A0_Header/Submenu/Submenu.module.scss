@@ -16,7 +16,7 @@
   .item {
     position: relative;
     text-decoration: none;
-    height: 214px;
+    //height: 214px;
     border-radius: 5px;
     border: 1px solid var(--Main-Grey, #F5F5F5);
 
@@ -43,7 +43,6 @@
       }
     }
 
-
     .item_inner {
       position: relative;
       z-index: 2;
@@ -52,7 +51,7 @@
       padding: 12px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      //justify-content: space-between;
 
       .top {
         display: flex;
@@ -84,6 +83,8 @@
       }
 
       .description {
+        margin-top: 84px;
+        width: 250px;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;

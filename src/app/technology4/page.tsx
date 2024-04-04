@@ -6,6 +6,11 @@ import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/Scr
 import {screenWithCircles} from "./screenWithCircles";
 import {screenWithEditor} from "../technology1/screenWithEditor";
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "IP Inter-Chain Distribution Gateway",
+};
 
 const TechnologyPage4 = () => {
     return (

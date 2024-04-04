@@ -4,8 +4,12 @@ import {Diagram} from "../../components/x_common/Diagram/Diagram";
 import {Faq} from "./Faq/Faq";
 import {Cards} from "./Cards/Cards";
 import {MusicReward} from "./MusicReward/MusicReward";
-//import lottie from "../../../public/lottie/Music_Protocol.json";
-import lottie from "../../../public/lottie/card0.json";
+import lottie from "../../../public/lottie/Music_Protocol.json";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Token",
+};
 
 const TokenPage = () => {
     return (

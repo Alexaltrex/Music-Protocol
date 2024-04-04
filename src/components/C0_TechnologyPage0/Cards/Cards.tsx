@@ -26,14 +26,6 @@ interface ICard {
 const cards: ICard[] = [
     {
         step: "01",
-        title: "IP Inter-Chain Distribution Gateway",
-        text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape, strengthening application adaptability and promoting various creative and commercial opportunities.",
-        href: "#",
-        // @ts-ignore
-        lottie: card0_lottie,
-    },
-    {
-        step: "02",
         title: "IP Core Asset Library",
         text: "The Music Protocol's core is a data repository for IP. The architecture has been built to accommodate intellectual property and licensing structures. Find out more about how to contribute towards these new frameworks.",
         href: "#",
@@ -41,7 +33,7 @@ const cards: ICard[] = [
         lottie: card1_lottie,
     },
     {
-        step: "03",
+        step: "02",
         title: "IP Licencing Core Engine",
         text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licencing Core Engine expedites a seamless data flow between Music Protocol and ecosystem applications, ensuring our network efficiently manages all music IP permissions.",
         href: "#",
@@ -49,14 +41,22 @@ const cards: ICard[] = [
         lottie: card2_lottie,
     },
     {
-        step: "04",
+        step: "03",
         title: "IP Settlement Gateway",
         text: "Music Protocol creates the link between the technological and regulatory landscapes. We bridge the gap between music IP and the industry's extensive counterparties by connecting key content distributors and management networks, simplifying financial and licensing transactions.",
         href: "#",
         // @ts-ignore
         lottie: card3_lottie,
     },
-]
+    {
+        step: "04",
+        title: "IP Inter-Chain Distribution Gateway",
+        text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape, strengthening application adaptability and promoting various creative and commercial opportunities.",
+        href: "#",
+        // @ts-ignore
+        lottie: card0_lottie,
+    },
+  ]
 
 export const Cards = () => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null)
@@ -160,7 +160,7 @@ const Card: FC<ICardComponent> = ({
             </div>
 
             <div className={style.btnWrapper}>
-                <ButtonCustom label="Read More"
+                <ButtonCustom label="Read more"
                               href={href}
                               className={style.btn}
                               variant={ButtonVariantEnum.black}

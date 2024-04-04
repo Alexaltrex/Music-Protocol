@@ -9,7 +9,7 @@ export const items = [
         step: "01",
         label: "$RECORD Token Utility",
         texts: [
-            "The W3M token model has two features: locking for engagement and governance. These features ensure widespread token distribution and foster active participation, fulfilling the Association's role as a trustworthy orchestrator in the complex music ecosystem.",
+            "The $RECORD token model has two features: locking for engagement and governance. These features ensure widespread token distribution and foster active participation, fulfilling the Association's role as a trustworthy orchestrator in the complex music ecosystem.",
             "Token staking: $RECORD token locking by stakeholders signifies dedication to the ecosystem. This locking allows stakeholders to seamlessly distribute tokens to artists and musicians, facilitating their smooth onboarding. Additionally, token locking empowers artists with governance abilities and ensures their participation in the W3M ecosystem.",
             "Governance: $RECORD's token-locking mechanism provides stakeholders with voting power in return for locking tokens, allowing participation in governance decisions. It lays the groundwork for complete decentralization and serves as a foundation for Blockchain Governance.",
         ],
@@ -37,12 +37,11 @@ export const items = [
 export const title = {
     mobile: [
         "Token Utility and",
-        "Utility and",
         "Regulatory",
         "Considerations"
     ],
     desktop: [
-        "Token Utility and Utility and",
+        "Token Utility and ",
         "Regulatory Considerations",
     ]
 }

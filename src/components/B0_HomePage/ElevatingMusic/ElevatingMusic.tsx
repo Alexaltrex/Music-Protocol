@@ -56,24 +56,11 @@ export const ElevatingMusic = () => {
                           size={48}
                 />
 
-                <div className={style.descriptionWrapper}>
-                    {
-                        [
-                            "Our sovereign layer 1 transforms music IP",
-                            "from a static asset into a dynamic asset.",
-                            "Blockchain will drive the music industry",
-                            "forward through our digital licensing",
-                            "framework that mirrors the evolving",
-                            "digital landscape.",
-                        ].map((text, key) => (
-                            <TextUp key={key}>
-                                <p className={style.description}>
-                                    {text}
-                                </p>
-                            </TextUp>
-                        ))
-                    }
-                </div>
+                <p className={style.description}>
+                    Our sovereign layer one transforms Music IP from a static asset into a dynamic asset. Blockchain and
+                    our digital licensing framework will advance the music industry forward to mirror the evolving
+                    digital landscape.
+                </p>
 
                 <ButtonCustom label="Whitepaper"
                               variant={ButtonVariantEnum.outlined}

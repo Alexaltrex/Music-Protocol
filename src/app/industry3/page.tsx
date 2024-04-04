@@ -2,6 +2,11 @@ import {screen} from "./screen";
 import {Screen} from "../../components/x_common/Screen/Screen";
 import {Slider} from "../../components/x_common/Slider/Slider";
 import {slides} from "./slides";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Gaming and the Metaverse",
+};
 
 const IndustryPage3 = () => {
     return (

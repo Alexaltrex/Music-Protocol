@@ -35,11 +35,11 @@ export const screenWithCircles: IScreenWithCircles = {
     circleLabels: [
         {
             mobile: [
-                "Royalties",
+                "Royalty",
                 "collection",
             ],
             desktop: [
-                "Royalties",
+                "Royalty",
                 "collection",
             ]
         },

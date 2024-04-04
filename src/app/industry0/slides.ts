@@ -22,8 +22,9 @@ export const slides = [
             ],
             desktop: [
                 "Enhancing Market",
-                "Liquidity through Peer-",
-                "to-Peer Transactions"
+                "Liquidity through ",
+                "Peer-to-Peer",
+                "Transactions"
             ]
         },
         text: "Rights holders can now sell or lend their tokenised music IP through regulated platforms. Additionally, they can engage in peer-to-peer transactions to transfer or acquire fractions of tokenised IP rights directly from their wallets, enhancing market liquidity.",
@@ -36,8 +37,9 @@ export const slides = [
                 "Investments"
             ],
             desktop: [
-                "Diversifying with Royalty-",
-                "Linked Investments",
+                "Diversifying with ",
+                "Royalty-Linked",
+                "Investments",
             ]
         },
         text: "Tokenisation can target entire intellectual properties or specific components, such as rights that generate royalties. Breaking down IP into tradable segments offers instant liquidity while allowing owners to maintain long-term control and the overarching value of their IP.",
@@ -80,6 +82,6 @@ export const slides = [
                 "with Transparency"
             ]
         },
-        text: "Blockchain adeptly manages various levels of privacy and transparency, ensuring confidentiality for private transactions and utilising identity data judiciously, maintaining privacy without making such information publicly accessible.",
+        text: "Technological advancements in digitalisation and tokenisation of IP make it easier for everyone to access investment opportunities, opening up the music financial markets to a broader audience.",
     },
 ]

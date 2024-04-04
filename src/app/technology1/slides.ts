@@ -15,10 +15,10 @@ export const slides = [
         title: {
             mobile: [
                 "Immutable Record",
-                "keeping"
+                "Keeping"
             ],
             desktop: [
-                "Immutable Record keeping",
+                "Immutable Record Keeping",
             ],
         },
         text: "We record every transaction, change in ownership, and licensing agreement on the protocol. This creates a ledger of IP rights and transactions, ensuring trust in the handling of digital assets.",
@@ -45,7 +45,7 @@ export const slides = [
                 "Digital IP Experience",
             ],
         },
-        text: "We get rid of the complex and opaque traditional IP management methods. The protocol introduces a solution that promises security and a new level of efficiency in handling music IP.",
+        text: "Removing complex and opaque traditional IP management methods, the protocol introduces a solution that ensures security and efficiency in handling music IP.",
     },
     {
         title: {

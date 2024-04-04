@@ -9,7 +9,7 @@ export const screen: IScreen = {
         ],
         desktop: [
             "Influencing how music",
-            " is consumed",
+            "is consumed",
         ]
     },
     description: {

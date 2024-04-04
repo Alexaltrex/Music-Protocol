@@ -5,6 +5,7 @@
   position: relative;
   height: 100vh;
   padding-bottom: 40px;
+  overflow: hidden;
 
   @include desktop {
     padding-bottom: 80px;
@@ -63,16 +64,19 @@
 
       .blur {
         position: absolute;
-        top: -40px;
-        bottom: -40px;
-        left: -40px;
-        right: -40px;
-        background: rgba(0, 0, 0, 0.5);
-        filter: blur(20px);
+        top: -100px;
+        bottom: -100px;
+        left: -100px;
+        right: -100px;
+        border-radius: 50%;
+        //background: rgba(0, 0, 0, 0.9);
+        background: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+        filter: blur(40px);
       }
 
       .content {
         position: relative;
+        z-index: 3;
         width: 100%;
         height: 100%;
       }
@@ -82,31 +86,54 @@
       @include h1;
     }
 
+    .text {
 
-    .descriptionMobile {
-      @include onlyMobile();
-      margin-top: 24px;
     }
 
-    .descriptionDesktop {
-      @include onlyDesktop();
+    .descriptionWrapper {
+      position: relative;
       margin-top: 24px;
-    }
 
-    .description {
-      color: var(--Additional-Main-White, #FFF);
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 115%;
+      &_mobile {
+        @include onlyMobile();
+      }
 
-      @include desktop {
-        font-size: 18px;
+      &_desktop {
+        @include onlyDesktop();
+      }
+
+      .blur {
+        position: absolute;
+        z-index: 1;
+        top: -100px;
+        bottom: -100px;
+        left: -100px;
+        right: -100px;
+        border-radius: 50%;
+        //background: rgba(0, 0, 0, 0.9);
+        background: radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+        filter: blur(40px);
+      }
+
+      .description {
+        position: relative;
+        z-index: 3;
+        color: var(--Additional-Main-White, #FFF);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+
+        @include desktop {
+          font-size: 18px;
+        }
       }
     }
 
     .orangeButton {
       @include onlyMobile();
+      position: relative;
+      z-index: 3;
       margin-top: 32px;
       padding-left: 24px;
       padding-right: 24px;
@@ -114,6 +141,8 @@
     }
 
     .btn {
+      position: relative;
+      z-index: 3;
       margin-top: 32px;
       //align-self: flex-start;
       padding-left: 24px;

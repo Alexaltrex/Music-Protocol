@@ -57,7 +57,7 @@ export const BurgerMenu = observer(() => {
                                }}
                                onLinkClick={() => {
                                    setBurgerMenu(false);
-                                   setOpenedRoutes(null);
+                                   //setOpenedRoutes(null);
                                }}
 
                     />
@@ -72,7 +72,7 @@ export const BurgerMenu = observer(() => {
                                }}
                                onLinkClick={() => {
                                    setBurgerMenu(false);
-                                   setOpenedRoutes(null);
+                                   //setOpenedRoutes(null);
                                }}
                     />
 
@@ -93,7 +93,7 @@ export const BurgerMenu = observer(() => {
                                }}
                                onLinkClick={() => {
                                    setBurgerMenu(false);
-                                   setOpenedRoutes(null);
+                                   //setOpenedRoutes(null);
                                }}
                     />
 

@@ -45,16 +45,16 @@ export const LinksItem: FC<ILinksItem> = ({
 
             <Collapse in={route === openedRoutes}>
                 {
-                    subMenu.map(({label, href, description}, key) => (
+                    subMenu.map(({label, href, description, src}, key) => (
                         <Link key={key}
                               className={clsx({
                                   [style.item]: true,
-                                  [style.item_secected]: false//pathname === href,
+                                  [style.item_secected]: pathname === href,
                               })}
                               href={href}
                               onClick={() => onLinkClick()}
                         >
-                            <img src="/jpeg/header/submenuItem.jpg" alt=""/>
+                            <img src={src} alt=""/>
                             <div className={style.itemContent}>
                                 <div>
                                     <p className={style.label}>{label}</p>

@@ -14,20 +14,16 @@ export const screen: IScreen = {
     },
     description: {
         mobile: [
-           "We are progressing the rights landscape",
+            "We are progressing the rights landscape",
             "by introducing an IP Management",
             "Protocol to transform the industry's",
-            "foundational infrastructure. We utilise",
-            "advanced technologies to provide a",
-            "secure and streamlined model.",
+            "foundational infrastructure.",
         ],
         desktop: [
             "We are progressing the rights landscape by",
             "introducing an IP Management Protocol to",
             "transform the industry's foundational",
-            "infrastructure. We utilise advanced",
-            "technologies to provide a secure and",
-            "streamlined model.",
+            "infrastructure.",
         ],
     },
     button: {
