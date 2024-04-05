@@ -51,7 +51,15 @@
       }
 
       .title {
-        @include h1;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110%;
+        color: #FFF;
+
+        @include desktop {
+          font-size: 40px;
+        }
       }
 
       .right {
@@ -64,27 +72,40 @@
           flex-direction: column-reverse;
         }
 
-        svg {
-          width: 135px;
-          height: 33.334px;
-          margin-top: 24px;
+        a {
+          transition: 0.3s;
 
-          @include desktop {
-            margin-top: 0;
-            width: 203.301px;
-            height: 48.001px;
+          &:hover {
+            @include desktop {
+              opacity: 0.8;
+            }
+          }
+
+          svg {
+            width: 135px;
+            height: 33.334px;
+            margin-top: 24px;
+
+            @include desktop {
+              margin-top: 0;
+              width: 203.301px;
+              height: 48.001px;
+            }
           }
         }
 
+
+
         .description {
           color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
-          margin-top: 24px;
+
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: 115%; /* 18.4px */
 
           @include desktop {
+            margin-top: 24px;
             width: 365px;
             font-size: 18px;
           }
@@ -159,6 +180,12 @@
         padding-left: 30px;
         display: flex;
         flex-direction: column;
+
+        &_noPaddingLeft {
+          @include desktop {
+            padding-left: 12px;
+          }
+        }
 
         .link {
           text-decoration: none;

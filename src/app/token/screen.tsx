@@ -8,7 +8,8 @@ export const screen: IScreen = {
             "with $RECORD",
         ],
         desktop: [
-            "Enriching the music industry with",
+            "Enriching the music",
+            "industry with",
             "$RECORD",
         ]
     },

@@ -4,9 +4,9 @@ import {Slider} from "../../components/x_common/Slider/Slider";
 import {slides} from "./slides";
 import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/ScreenWithCircles";
 import {screenWithCircles} from "./screenWithCircles";
-import {screenWithEditor} from "../technology1/screenWithEditor";
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
 import type {Metadata} from "next";
+import {screenWithEditor} from "../technology1_ip_core_asset_library/screenWithEditor";
 
 export const metadata: Metadata = {
     title: "IP Inter-Chain Distribution Gateway",

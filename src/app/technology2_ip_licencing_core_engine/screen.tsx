@@ -6,8 +6,8 @@ export const screen = {
             "management",
         ],
         desktop: [
-            "The future of music IP",
-            "management",
+            "The Future of Music IP",
+            "Management",
         ]
     },
     button: {

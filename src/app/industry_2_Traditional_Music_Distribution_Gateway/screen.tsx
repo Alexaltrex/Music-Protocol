@@ -4,13 +4,13 @@ export const screen: IScreen = {
     title: {
         mobile: [
             "A new",
-            "infrastructural",
-            "framework for",
-            "the industry",
+            "Infrastructural",
+            "Grid for the ",
+            "Industry",
         ],
         desktop: [
-            "A new infrastructural",
-            "grid for the industry",
+            "A new Infrastructural",
+            "Grid for the Industry",
         ]
     },
     description: {

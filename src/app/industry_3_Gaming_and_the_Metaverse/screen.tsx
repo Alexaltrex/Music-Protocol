@@ -2,14 +2,15 @@ import {IScreen} from "../../components/x_common/Screen/Screen";
 
 export const screen: IScreen = {
     title: {
+        //Influencing the role of music in virtual worlds
         mobile: [
-            "Influencing how",
-            "music is",
-            "consumed",
+            "Influencing the role",
+            "of music in virtual",
+            "worlds",
         ],
         desktop: [
-            "Influencing how music",
-            "is consumed",
+            "Influencing the role of",
+            "music in virtual worlds",
         ]
     },
     description: {

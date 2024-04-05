@@ -35,7 +35,7 @@ export const LinksItem: FC<ILinksItem> = ({
                  onClick={onTopClick}
             >
                 <p className={style.title}>
-                    {route}
+                    {route === SubLinksEnum.Industry ? 'Industry Use Cases' : route}
                     {/*{route === RouteEnum.Technology ? "Technology" : "Industry use case"}*/}
                 </p>
 

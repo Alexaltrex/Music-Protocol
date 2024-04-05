@@ -3,7 +3,7 @@ import {svgIcons} from "../../assets/svgIcons";
 import Link from "next/link";
 import React, {FC} from "react";
 import {clsx} from "clsx";
-import {gilroy} from "../../assets/fonts/fonts";
+import {outfit} from "../../assets/fonts/fonts";
 import {socialLinks} from "../../const/socialLinks";
 import {linksFooter} from "../../const/links";
 
@@ -16,16 +16,27 @@ export const Footer = () => {
                 <div className={style.logo}>{svgIcons.logo}</div>
 
                 <div className={style.top}>
-                    <p className={clsx(style.title, gilroy.className)}>
+                    <p className={clsx(style.title, outfit.className)}>
                         Dynamic Music IP for Web3
                     </p>
 
                     <div className={style.right}>
                         <p className={style.description}>
                             The Web3 Music Association is the main contributor to the Music Protocol, working with the
-                            music industry to help them adopt emerging technologies. Find out more.
+                            music industry to help them adopt emerging technologies. <a href="www.web3music.org"
+                                                                                        target="_blank"
+                                                                                        rel="nofollow noreferrer noopener">
+                            Find out more.
+                        </a>
                         </p>
-                        {svgIcons.logo_footer}
+
+                        <a href="www.web3music.org"
+                           target="_blank"
+                           rel="nofollow noreferrer noopener"
+                        >
+                            {svgIcons.logo_footer}
+                        </a>
+
                     </div>
 
                 </div>
@@ -156,7 +167,10 @@ const Group: FC<IGroup> = ({
                 <p>{title}</p>
             </div>
 
-            <div className={style.groupLinks}>
+            <div className={clsx({
+                [style.groupLinks]: true,
+                [style.groupLinks_noPaddingLeft]: title === "Home" || title === "Token",
+            })}>
                 {
                     subRoutes.map(({label, href}, key) => (
                         <Link key={key}

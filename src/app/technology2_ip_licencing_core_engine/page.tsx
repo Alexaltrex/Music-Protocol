@@ -5,8 +5,8 @@ import {slides} from "./slides";
 import {ScreenWithCircles} from "../../components/x_common/ScreenWithCircles/ScreenWithCircles";
 import {screenWithCircles} from "./screenWithCircles";
 import {ScreenWithEditor} from "../../components/x_common/ScreenWithEditor/ScreenWithEditor";
-import {screenWithEditor} from "../technology1/screenWithEditor";
 import type {Metadata} from "next";
+import {screenWithEditor} from "../technology1_ip_core_asset_library/screenWithEditor";
 
 export const metadata: Metadata = {
     title: "IP Licencing Core Engine",

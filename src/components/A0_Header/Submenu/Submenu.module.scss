@@ -128,6 +128,27 @@
 
     }
 
+    &_selected {
+      .back {
+        opacity: 1;
+      }
+      .item_inner {
+        .top {
+          .label {
+            color: #FFF;
+          }
+          .icon {
+            background: #FFF;
+            svg {
+              transform: rotate(45deg);
+            }
+          }
+        }
+        .description {
+          color: #FFF;
+        }
+      }
+    }
   }
 
 

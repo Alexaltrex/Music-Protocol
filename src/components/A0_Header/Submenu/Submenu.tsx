@@ -1,10 +1,13 @@
+'use client'
+
 import style from "./Submenu.module.scss"
 import {FC} from "react";
 import {clsx} from "clsx";
 import Link from "next/link";
 import {svgIcons} from "../../../assets/svgIcons";
-import {gilroy} from "../../../assets/fonts/fonts";
+import {outfit} from "../../../assets/fonts/fonts";
 import {ISubLinks, SubLinksEnum, subLinksHeader} from "../../../const/links";
+import {usePathname} from "next/navigation";
 
 interface ISubmenu {
     subLinks: SubLinksEnum
@@ -15,7 +18,7 @@ export const Submenu: FC<ISubmenu> = ({
                                           subLinks,
                                           onClick,
                                       }) => {
-
+    const pathname = usePathname();
 
     return (
         <div className={clsx({
@@ -32,7 +35,10 @@ export const Submenu: FC<ISubmenu> = ({
                                                                 }, key) => (
                     <Link key={key}
                           href={href}
-                          className={style.item}
+                          className={clsx({
+                              [style.item]: true,
+                              [style.item_selected]: pathname === href,
+                          })}
                           onClick={() => {
                               onClick()
                           }}
@@ -53,7 +59,7 @@ export const Submenu: FC<ISubmenu> = ({
                                     {svgIcons.arrow_right}
                                 </div>
                             </div>
-                            <p className={clsx(style.description, gilroy.className)}>
+                            <p className={clsx(style.description, outfit.className)}>
                                 {description}
                             </p>
                         </div>
