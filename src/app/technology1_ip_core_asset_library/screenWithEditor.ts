@@ -11,7 +11,7 @@ export const screenWithEditor: IScreenWithEditor = {
     },
     cards: [
         {
-            cardTitle: "Devs",
+            cardTitle: "Developers",
             step: "01",
             button: {
                 label: "Apply to join",
