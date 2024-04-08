@@ -39,7 +39,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/industry3.mp4",
     urlSegments: [
-        "Home > Industry use cases ",
-        "> Gaming and Metaverse",
+        "Home > Industry Use Cases ",
+        "> Gaming and the Metaverse",
     ]
 }

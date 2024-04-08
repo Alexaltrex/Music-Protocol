@@ -152,7 +152,7 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                                          top: "50%",
                                          transform: `translate(-50%, -50%)`,
                                          left: `${100 * (2 * key + 1) / 6}%`,
-                                         opacity: key === 0 ? 1 : key === 1 ? 0.7 : 0.5,
+                                         //opacity: key === 0 ? 1 : key === 1 ? 0.7 : 0.5,
                                      }}
                                 >
                                     {
@@ -204,8 +204,6 @@ export const ScreenWithCircles: FC<IScreenWithCircles> = ({
                                         <div className={style.ball}
                                              style={{
                                                  background: ballColors[key],
-
-
                                              }}
                                         />
                                     </div>

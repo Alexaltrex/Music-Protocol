@@ -46,6 +46,7 @@ export const Screen: FC<IScreen> = ({
                                loop={true}
                                autoPlay={true}
                                muted={true}
+                               playsInline={true}
                             //controls={true}
                         ></video>
                     </div>

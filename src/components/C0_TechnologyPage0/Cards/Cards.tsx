@@ -9,6 +9,8 @@ import {FC, useState} from "react";
 import {svgIcons} from "../../../assets/svgIcons";
 import Lottie from "lottie-react";
 import card0_lottie from "../../../../public/lottie/card0.json";
+import group_138 from "../../../../public/lottie/Group 138.json";
+import group_481 from "../../../../public/lottie/Group 481.json";
 import card1_lottie from "../../../../public/lottie/card1.json";
 import card2_lottie from "../../../../public/lottie/card2.json";
 import card3_lottie from "../../../../public/lottie/card3.json";
@@ -38,7 +40,7 @@ const cards: ICard[] = [
         text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licencing Core Engine expedites a seamless data flow between Music Protocol and ecosystem applications, ensuring our network efficiently manages all music IP permissions.",
         href: "#",
         // @ts-ignore
-        lottie: card2_lottie,
+        lottie: group_138,
     },
     {
         step: "03",

@@ -64,7 +64,7 @@ export const Header = observer(() => {
                                         subLinks: SubLinksEnum.Technology
                                     },
                                     {
-                                        label: "Industry use case",
+                                        label: "Industry Use Case",
                                         href: "",
                                         subLinks: SubLinksEnum.Industry
                                     },

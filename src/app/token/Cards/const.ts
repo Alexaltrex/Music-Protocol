@@ -1,5 +1,6 @@
 import lottie0 from "../../../../public/lottie/token_card0.json";
 import lottie1 from "../../../../public/lottie/token_card1.json";
+import group_481 from "../../../../public/lottie/Group 481.json";
 
 export const title = {
     mobile: [
@@ -45,7 +46,7 @@ export const cards = [
         label: "Transaction Fees Structure",
         src: "/jpeg/token cards/src0.jpg",
         text: "Unlike traditional systems, Music Protocol's transaction fees are determined not by the transaction's nature but by the data size and the computational resources required. This approach ensures fairness and scalability, accommodating the diverse needs of the music industry within the blockchain environment.",
-        lottie: lottie0,
+        lottie: group_481//lottie0,
     },
     {
         label: "Intellectual Property Object (IPO) and Attribute Standard Templates (SATs)",

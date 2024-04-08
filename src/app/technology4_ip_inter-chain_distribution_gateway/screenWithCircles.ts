@@ -39,11 +39,11 @@ export const screenWithCircles: IScreenWithCircles = {
             mobile: [
                 "Music",
                 "Protocol ",
-                "verifiable IP",
+                "Verifiable IP",
             ],
             desktop: [
                 "Music Protocol",
-                "verifiable IP",
+                "Verifiable IP",
             ]
         },
         {
@@ -58,11 +58,11 @@ export const screenWithCircles: IScreenWithCircles = {
             mobile: [
                 "Web3",
                 "Ecosytem ",
-                "circulation",
+                "Circulation",
             ],
             desktop: [
                 "Web3 Ecosytem",
-                "circulation",
+                "Circulation",
             ]
         },
     ],

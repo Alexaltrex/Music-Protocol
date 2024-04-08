@@ -41,7 +41,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/industry2.mp4",
     urlSegments: [
-        "Home > Industry use cases ",
+        "Home > Industry Use Cases ",
         "> Traditional music distribution",
     ]
 }

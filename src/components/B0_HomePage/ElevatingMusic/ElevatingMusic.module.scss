@@ -67,7 +67,8 @@
           @include desktop {
             margin-left: 0;
             margin-right: 0;
-            width: 892px;
+            //width: 892px;
+            width: 590px;
             position: absolute;
             top: -33px;
             right: 0;
@@ -86,10 +87,14 @@
           @include desktop {
             left: auto;
             transform: none;
-            top: 240px;
-            right: 26px;
-            width: 840px;
+            //top: 240px;
+            //right: 26px;
+            //width: 840px;
             height: auto;
+
+            top: 149px;
+            right: 18px;
+            width: 552px;
           }
 
         }
@@ -101,8 +106,8 @@
           height: 30px;
 
           @include desktop {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
           }
         }
 
@@ -116,10 +121,13 @@
 
           @include desktop {
             left: auto;
-            top: 164px;
-            right: 135px;
-            width: 321px;
+            //top: 164px;
+            //right: 135px;
+            //width: 321px;
             transform: none;
+            top: 104px;
+            right: 111px;
+            width: 211px;
           }
         }
 
@@ -138,7 +146,8 @@
             transform: none;
             width: 374px;
             right: 99px;
-            top: 636px;
+            //top: 636px;
+            top: 500px;
           }
         }
 
@@ -157,7 +166,8 @@
             left: auto;
             transform: none;
             right: 105px;
-            top: 636px;
+            //top: 636px;
+            top: 500px;
           }
         }
 
@@ -179,7 +189,8 @@
           transition: 0.3s;
           width: 634px;
           right: -30px;
-          top: 636px;
+          //top: 636px;
+          top: 500px;
         }
 
         .btnMobile {

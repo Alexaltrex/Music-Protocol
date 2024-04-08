@@ -72,11 +72,11 @@ export const screenWithCircles: IScreenWithCircles = {
         {
             mobile: [
                 "Licensing and",
-                "monetisation",
+                "Monetisation",
             ],
             desktop: [
                 "Licensing and",
-                "monetisation",
+                "Monetisation",
             ]
         },
     ],

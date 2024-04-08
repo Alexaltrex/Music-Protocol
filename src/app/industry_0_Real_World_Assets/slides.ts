@@ -6,8 +6,8 @@ export const slides = [
                 "Asset Potential"
             ],
             desktop: [
-                "Unlocking Digital Asset",
-                "Potential",
+                "Unlocking Digital",
+                "Asset Potential"
             ]
         },
         text: "Tokenisation allows any rights associated with a music asset to be digitised. This process transforms the IP into a digital asset whose ownership can be divided and transferred on the blockchain via direct transactions or smart contracts and even traded on regulated exchanges.",
@@ -21,9 +21,8 @@ export const slides = [
                 "Transactions"
             ],
             desktop: [
-                "Enhancing Market",
-                "Liquidity through ",
-                "Peer-to-Peer",
+                "Enhancing Market Liquidity",
+                "through Peer-to-Peer",
                 "Transactions"
             ]
         },
@@ -54,8 +53,7 @@ export const slides = [
             ],
             desktop: [
                 "Transforming the",
-                "Economics of",
-                "Music Labels"
+                "Economics of Music Labels",
             ]
         },
         text: "Record labels, which invest in artists to secure IP for future profits despite initial asset illiquidity, benefit significantly from increased liquidity. This will drastically improve label economics, accelerating the cycle of monetisation and reinvestment in artist portfolios, thus increasing turnover and profits.",

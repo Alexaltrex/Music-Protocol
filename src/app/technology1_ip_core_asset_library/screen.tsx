@@ -18,6 +18,6 @@ export const screen = {
     videoUrl: "/mp4/technology1.mp4",
     urlSegments: [
         "Home > Tehnology ",
-        "> Advancing Music Rights and Ownership",
+        "> IP Core Asset Library",
     ]
 }

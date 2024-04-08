@@ -36,7 +36,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/industry1.mp4",
     urlSegments: [
-        "Home > Industry use cases ",
+        "Home > Industry Use Cases ",
         "> AI",
     ]
 }
