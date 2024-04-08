@@ -1,7 +1,7 @@
 import style from "./Loading.module.scss";
 import {outfit} from "../assets/fonts/fonts";
 
-const Loading = () => {
+const _disable_loading = () => {
 
     return (
         <div className={style.loading}>
@@ -9,4 +9,4 @@ const Loading = () => {
         </div>
     )
 }
-export default Loading
+export default _disable_loading
