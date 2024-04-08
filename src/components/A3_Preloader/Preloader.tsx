@@ -18,7 +18,7 @@ export const Preloader = () => {
             ease: "none",
             duration: 3,
             onUpdate: () => {
-                console.log(a.progress())
+                //console.log(a.progress())
                 setProgress(a.progress())
             },
             onComplete: () => setEnd(true)

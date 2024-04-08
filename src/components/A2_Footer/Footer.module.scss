@@ -32,11 +32,6 @@
     .logo, & svg {
       width: 202px;
       height: 24px;
-
-      @include desktop {
-        width: 302px;
-        height: 36px;
-      }
     }
 
     .top {
@@ -226,18 +221,20 @@
       }
 
       .socialLinks {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-gap: 16px;
+        display: flex;
+        justify-content: center;
+        //display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        //grid-template-rows: repeat(2, 1fr);
+        //grid-gap: 16px;
         padding-left: 30px;
         //width: 92px;
         //height: 56px;
 
         @include desktop {
           padding-left: 0;
-          display: flex;
-          justify-content: center;
+          //display: flex;
+          //justify-content: center;
         }
 
         a {
@@ -247,6 +244,8 @@
           transition: 0.3s;
 
           &:not(:first-child) {
+            margin-left: 16px;
+
             @include desktop {
               margin-left: 16px;
             }

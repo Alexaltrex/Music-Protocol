@@ -24,6 +24,7 @@ export interface IScreen {
         href?: string
     }
     videoUrl?: string
+    urlSegments?: string[]
 }
 
 export const Screen: FC<IScreen> = ({
@@ -32,7 +33,8 @@ export const Screen: FC<IScreen> = ({
                                         description,
                                         orangeButton = false,
                                         button,
-                                        videoUrl
+                                        videoUrl,
+                                        urlSegments
                                     }) => {
     return (
         <div className={clsx(style.screen, Boolean(className) && className)}>
@@ -51,6 +53,15 @@ export const Screen: FC<IScreen> = ({
             }
 
             <div className={style.inner}>
+
+                {
+                    urlSegments && (
+                        <p className={style.urlSegments}>
+                            <span>{urlSegments[0]}</span><span>{urlSegments[1]}</span>
+                        </p>
+                    )
+                }
+
 
                 <div className={clsx(style.wrapper, style.wrapper_mobile)}>
                     <div className={style.blur}/>

@@ -7,7 +7,6 @@ import {Header} from "../components/A0_Header/Header";
 import {StoreProvider} from "../store/StoreProvider";
 import {BurgerMenu} from "../components/A1_BurgerMenu/BurgerMenu";
 import {Footer} from "../components/A2_Footer/Footer";
-import {Preloader} from "../components/A3_Preloader/Preloader";
 
 export const metadata: Metadata = {
     title: "Music Protocol - Home",
@@ -25,7 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any"/>
         <StoreProvider>
             <>
-                <Preloader/>
+                {/*<Preloader/>*/}
                 <Header/>
                 <BurgerMenu/>
 

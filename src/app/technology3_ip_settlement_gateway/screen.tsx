@@ -15,4 +15,8 @@ export const screen: IScreen = {
         label: "Sign-up for early access"
     },
     videoUrl: "/mp4/technology3.mp4",
+    urlSegments: [
+        "Home > Tehnology ",
+        "> IP Settlement Gateway",
+    ]
 }

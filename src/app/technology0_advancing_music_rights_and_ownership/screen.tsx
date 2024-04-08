@@ -29,5 +29,10 @@ export const screen: IScreen = {
     button: {
         label: "Learn more"
     },
-    videoUrl: "/mp4/technology0.mp4"
+    videoUrl: "/mp4/technology0.mp4",
+    urlSegments: [
+        "Home > Tehnology ",
+        "> Advancing Music Rights and Ownership",
+    ]
+
 }

@@ -15,5 +15,9 @@ export const screen = {
     button: {
         label: "Sign-up for early access"
     },
-    videoUrl: "/mp4/technology1.mp4"
+    videoUrl: "/mp4/technology1.mp4",
+    urlSegments: [
+        "Home > Tehnology ",
+        "> Advancing Music Rights and Ownership",
+    ]
 }

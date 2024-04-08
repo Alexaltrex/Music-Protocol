@@ -37,11 +37,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    //align-items: center;
-
-    //@include desktop {
-    //  align-items: flex-start;
-    //}
 
     .titleMobile, {
       @include onlyMobile();
@@ -49,6 +44,30 @@
 
     .titleDesktop {
       @include onlyDesktop();
+    }
+
+    .urlSegments {
+      position: absolute;
+      top: 96px;
+      left: 24px;
+
+      @include desktop {
+        top: 156px;
+        left: 0;
+      }
+
+      span {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135%;
+        color: #FFF;
+
+        &:nth-child(1) {
+          opacity: 0.3;
+        }
+
+      }
     }
 
     .wrapper {

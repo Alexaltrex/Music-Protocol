@@ -104,10 +104,6 @@ export const Footer = () => {
                         }
                     </div>
 
-                    {/*<p className={style.designed}>*/}
-                    {/*    Designed by <a href="https://demyanchukart.com/" target="_blank"*/}
-                    {/*                   rel="nofollow noreferrer noopener">Demyanchuk Art </a>*/}
-                    {/*</p>*/}
                 </div>
 
                 <div className={style.bottom}>

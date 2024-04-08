@@ -37,5 +37,9 @@ export const screen: IScreen = {
         label: "Learn more",
         href: "#"
     },
-    videoUrl: "/mp4/industry3.mp4"
+    videoUrl: "/mp4/industry3.mp4",
+    urlSegments: [
+        "Home > Industry use cases ",
+        "> Gaming and Metaverse",
+    ]
 }

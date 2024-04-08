@@ -22,6 +22,9 @@ export const screen: IScreen = {
         label: "Sign-up for early access",
         href: "#"
     },
-    videoUrl: "/mp4/technology4.mp4"
-
+    videoUrl: "/mp4/technology4.mp4",
+    urlSegments: [
+        "Home > Tehnology ",
+        "> IP Inter-Chain Distribution Gateway",
+    ]
 }
