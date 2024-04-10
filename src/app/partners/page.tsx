@@ -47,7 +47,7 @@ const PartnersPage = () => {
                     <FormLinks/>
 
                     <p className={style.text}>
-                        If you're working in the music industry and would like to find out how to get involved, fill out the form and we'll be in touch soon
+                        {`If you're working in the music industry and would like to find out how to get involved, fill out the form and we'll be in touch soon`}
                     </p>
 
 
