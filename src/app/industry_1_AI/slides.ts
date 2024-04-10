@@ -3,11 +3,11 @@ export const slides = [
         title: {
             mobile: [
                 "Protecting Music IP",
-                "in AI applications"
+                "in AI Applications"
             ],
             desktop: [
                 "Protecting Music IP in",
-                "AI applications",
+                "AI Applications",
             ]
         },
         text: "Leveraging blockchain ensures the creation of transparent and immutable records of music IP usage, facilitating straightforward verification and tracking within AI applications. This approach provides a robust framework for protecting intellectual property in the age of AI-driven music production.",

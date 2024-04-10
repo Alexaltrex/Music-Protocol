@@ -7,7 +7,7 @@ import {TransformingMusic} from "../components/B0_HomePage/TransformingMusic/Tra
 const HomePage = () => {
     return (
         <div className={style.homePage}>
-            <Screen {...screen}/>
+            <Screen {...screen} className={style.screen}/>
             <ElevatingMusic/>
             <TransformingMusic/>
         </div>

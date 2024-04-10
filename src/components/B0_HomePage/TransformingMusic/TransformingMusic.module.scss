@@ -70,17 +70,9 @@
 
       .cardTop {
         display: flex;
-        justify-content: space-between;
 
-        p:nth-child(1) {
-          color: var(--Text-Secondary, rgba(255, 255, 255, 0.40));
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 135%; /* 24.3px */
-        }
 
-        p:nth-child(2) {
+        p {
           color: var(--Additional-Main-White, #FFF);
           font-size: 20px;
           font-style: normal;

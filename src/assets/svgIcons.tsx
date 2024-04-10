@@ -236,5 +236,23 @@ export const svgIcons = {
                   stroke="white" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
 
+    ),
+    planetPointer: (
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <g filter="url(#filter0_b_1448_6209)">
+                <circle cx="14" cy="14" r="14" fill="#D9D9D9" fillOpacity="0.05"/>
+                <circle cx="14" cy="14" r="13.6278" stroke="white" strokeOpacity="0.4" stroke-width="0.744435"/>
+            </g>
+            <circle cx="13.7395" cy="14" r="4" fill="white"/>
+            <defs>
+                <filter id="filter0_b_1448_6209" x="-7.44435" y="-7.44435" width="42.8887" height="42.8887"
+                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="3.72217"/>
+                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1448_6209"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1448_6209" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
     )
 }

@@ -17,7 +17,7 @@ export const screen = {
     },
     videoUrl: "/mp4/technology1.mp4",
     urlSegments: [
-        "Home > Tehnology ",
+        "Home > Technology ",
         "> IP Core Asset Library",
     ]
 }

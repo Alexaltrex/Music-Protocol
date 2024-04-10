@@ -5,6 +5,7 @@ import {WaveText} from "../../components/x_common/WaveText/WaveText";
 import {backgrounds} from "../../const/backgrounds";
 import {JoinForm} from "../../components/x_common/JoinForm/JoinForm";
 import {ButtonCustom, ButtonVariantEnum} from "../../components/x_common/ButtonCustom/ButtonCustom";
+import {FormLinks} from "../../components/x_common/FormLinks/FormLinks";
 
 const title = {
     mobile: [
@@ -20,7 +21,8 @@ const title = {
 
 const items = [
     "Stay up to date about the Music Protocol grants programme",
-    "Develop apps on top of music protocol and access the music protocol ecosystem",
+    "Discover the ecosystem and develop dApp",
+    //"Develop apps on top of music protocol and access the music protocol ecosystem",
 ]
 
 const StartupsPage = () => {
@@ -51,6 +53,8 @@ const StartupsPage = () => {
                         ))
                     }
 
+                    <FormLinks/>
+
                     <div className={style.items}>
                         {
                             items.map((item, key) => (
@@ -66,11 +70,11 @@ const StartupsPage = () => {
                         }
                     </div>
 
-                    <ButtonCustom label="Go to W3M"
-                                  href="#"
-                                  className={style.btn}
-                                  variant={ButtonVariantEnum.outlined}
-                    />
+                    {/*<ButtonCustom label="Go to W3M"*/}
+                    {/*              href="#"*/}
+                    {/*              className={style.btn}*/}
+                    {/*              variant={ButtonVariantEnum.outlined}*/}
+                    {/*/>*/}
                 </div>
 
                 <JoinForm/>

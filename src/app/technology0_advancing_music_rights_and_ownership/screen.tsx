@@ -31,7 +31,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/technology0.mp4",
     urlSegments: [
-        "Home > Tehnology ",
+        "Home > Technology ",
         "> Advancing Music Rights and Ownership",
     ]
 

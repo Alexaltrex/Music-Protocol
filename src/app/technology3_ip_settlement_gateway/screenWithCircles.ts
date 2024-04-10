@@ -56,11 +56,11 @@ export const screenWithCircles: IScreenWithCircles = {
             mobile: [
                 "Music",
                 "Protocol",
-                "Distribution"
+                "distribution"
             ],
             desktop: [
                 "Music Protocol",
-                "Distribution",
+                "distribution",
             ]
         },
     ],

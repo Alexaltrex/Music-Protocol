@@ -51,7 +51,10 @@ export const DropDown: FC<IDropDown> = ({
                 {svgIcons.link_arrow}
             </button>
 
-            <div className={clsx(style.modal, "modal")}>
+            <div className={clsx({
+                [style.modal]: true,
+                [style.modal_resources]: subLinks === SubLinksEnum.Resources,
+            }, "modal")}>
                 <Submenu subLinks={subLinks}
                          onClick={() => setOpen(false)}
                 />

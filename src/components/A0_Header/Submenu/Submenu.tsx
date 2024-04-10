@@ -18,12 +18,15 @@ export const Submenu: FC<ISubmenu> = ({
                                           subLinks,
                                           onClick,
                                       }) => {
+    //console.log(subLinks)
+
     const pathname = usePathname();
 
     return (
         <div className={clsx({
             [style.submenu]: true,
-            [style.submenu_twoRow]: subLinks === SubLinksEnum.Technology,
+            [style.submenu_technology]: subLinks === SubLinksEnum.Technology,
+            [style.submenu_resources]: subLinks === SubLinksEnum.Resources,
         })}>
             {
                 // @ts-ignore

@@ -63,10 +63,10 @@ export const screenWithCircles: IScreenWithCircles = {
         {
             mobile: [
                 "IP",
-                "Management",
+                "management",
             ],
             desktop: [
-                "IP Management",
+                "IP management",
             ]
         },
         {

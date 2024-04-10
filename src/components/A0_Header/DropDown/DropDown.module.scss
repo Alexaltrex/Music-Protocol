@@ -17,11 +17,12 @@
     }
 
     span {
-      font-size: 16px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 115%;
       transition: 0.3s;
+      white-space: nowrap;
     }
 
     svg {
@@ -64,6 +65,11 @@
     padding-top: 10px;
     transform-origin: top left;
     display: none;
+
+    &_resources {
+      transform-origin: top right;
+      left: auto;
+    }
 
     .card {
       border-radius: 10px;

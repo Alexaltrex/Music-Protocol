@@ -100,7 +100,6 @@
         }
 
         .planet {
-          display: block;
           position: absolute;
           width: 30px;
           height: 30px;
@@ -108,6 +107,27 @@
           @include desktop {
             width: 60px;
             height: 60px;
+          }
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          svg {
+            opacity: 0;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            bottom: 0;
+            right: -4px;
+
+            @include desktop {
+              width: 28px;
+              height: 28px;
+              right: -8px;
+            }
           }
         }
 
@@ -136,7 +156,7 @@
           top: 260px;
           left: 50%;
           transform: translateX(-50%);
-          transition: 0.3s;
+          transition: 0.1s;
           display: block;
           width: 312px;
           height: auto;
@@ -151,12 +171,34 @@
           }
         }
 
-        .step2 {
+        .step2_mobile {
+          @include onlyMobile();
           position: absolute;
           top: 260px;
           left: 50%;
           transform: translateX(-50%);
+          transition: 0.1s;
+          display: block;
+          width: 400px;
+          height: auto;
+        }
+
+        .step2_desktop {
+          @include onlyDesktop();
+          position: absolute;
           transition: 0.3s;
+          width: 634px;
+          right: -30px;
+          //top: 636px;
+          top: 500px;
+        }
+
+        .step3 {
+          position: absolute;
+          top: 260px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: 0.1s;
           display: block;
           width: 312px;
           height: auto;
@@ -166,32 +208,36 @@
             left: auto;
             transform: none;
             right: 105px;
-            //top: 636px;
             top: 500px;
+          }
+
+          .back {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+
+          .stringWrapper {
+            position: absolute;
+            left: 0;
+            bottom: 7px;
+            right: 0;
+            height: 32px;
+            //background: red;
+
+            @include desktop {
+              bottom: 10px;
+            }
+
+            .item {
+              img {
+                display: block;
+                height: 32px;
+              }
+            }
           }
         }
 
-        .step3_mobile {
-          @include onlyMobile();
-          position: absolute;
-          top: 260px;
-          left: 50%;
-          transform: translateX(-50%);
-          transition: 0.3s;
-          display: block;
-          width: 400px;
-          height: auto;
-        }
-
-        .step3_desktop {
-          @include onlyDesktop();
-          position: absolute;
-          transition: 0.3s;
-          width: 634px;
-          right: -30px;
-          //top: 636px;
-          top: 500px;
-        }
 
         .btnMobile {
           @include onlyMobile(flex);

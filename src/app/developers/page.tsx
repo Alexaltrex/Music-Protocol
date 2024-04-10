@@ -4,6 +4,7 @@ import style from "./DevelopersPage.module.scss"
 import {WaveText} from "../../components/x_common/WaveText/WaveText";
 import {backgrounds} from "../../const/backgrounds";
 import {JoinForm} from "../../components/x_common/JoinForm/JoinForm";
+import {FormLinks} from "../../components/x_common/FormLinks/FormLinks";
 
 const title = {
     mobile: [
@@ -20,7 +21,7 @@ const title = {
 
 const items = [
     "Receive updates and participate in the testnet phase",
-    "Join in the protocol development, creating music IP code building blocks and getting rewarded",
+    "Contribute to the protocol development",//, creating music IP code building blocks and getting rewarded",
     "Stay up to date about the Music Protocol grants programme",
 ]
 
@@ -52,6 +53,8 @@ const DevelopersPage = () => {
                             />
                         ))
                     }
+
+                    <FormLinks/>
 
                     <div className={style.items}>
                         {

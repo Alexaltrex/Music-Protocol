@@ -1,5 +1,13 @@
 @import "../assets/styles/app";
 
 .homePage {
+  .screen {
+    .inner {
+      @include desktop {
+        //justify-content: flex-end;
+        align-items: flex-start!important;
+      }
 
+    }
+  }
 }

@@ -3,19 +3,15 @@ import {IScreen} from "../../components/x_common/Screen/Screen";
 export const screen: IScreen = {
     title: {
         mobile: [
-            "A sovereign",
-            "blockchain for",
-            "distributing",
-            "verifiable,",
-            "programmable",
-            "music IP across",
-            "the Internet",
+            "Transforming",
+            "music IP from",
+            "a static to a",
+            "dynamic asset",
         ],
         desktop: [
-            "A sovereign blockchain",
-            "for distributing verifiable,",
-            "programmable music IP",
-            "across the Internet",
+            "Transforming music IP",
+            "from a static to a",
+            "dynamic asset",
         ]
     },
     button: {
@@ -24,7 +20,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/technology4.mp4",
     urlSegments: [
-        "Home > Tehnology ",
+        "Home > Technology ",
         "> IP Inter-Chain Distribution Gateway",
     ]
 }

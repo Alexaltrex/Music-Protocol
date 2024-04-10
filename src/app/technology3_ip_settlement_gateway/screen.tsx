@@ -16,7 +16,7 @@ export const screen: IScreen = {
     },
     videoUrl: "/mp4/technology3.mp4",
     urlSegments: [
-        "Home > Tehnology ",
+        "Home > Technology ",
         "> IP Settlement Gateway",
     ]
 }

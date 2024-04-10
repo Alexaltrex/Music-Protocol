@@ -137,29 +137,57 @@
         left: 50%;
         transform: translateX(-50%);
 
-        //0 -> 3
-        &_3 {
-          width: 271px;
-          bottom: 16px;
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
         }
 
-        //1 -> 0
         &_0 {
-          width: 271px;
+          width: 225px;
           bottom: 55px;
         }
 
-        //2 -> 1
         &_1 {
-          width: 150px;
-          bottom: 41px;
+            width: 150px;
+            bottom: 41px;
         }
 
-        //3 -> 2
         &_2 {
-          width: 271px;
+          width: 308px;
           bottom: 67px;
         }
+
+        &_3 {
+          width: 271px;
+          bottom: 15px;
+        }
+
+        ////0 -> 3
+        //&_3 {
+        //  width: 271px;
+        //  bottom: 16px;
+        //
+        //
+        //}
+        //
+        ////1 -> 0
+        //&_0 {
+        //  width: 271px;
+        //  bottom: 55px;
+        //}
+        //
+        ////2 -> 1
+        //&_1 {
+        //  width: 150px;
+        //  bottom: 41px;
+        //}
+        //
+        ////3 -> 2
+        //&_2 {
+        //  width: 271px;
+        //  bottom: 67px;
+        //}
 
       }
 

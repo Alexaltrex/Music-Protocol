@@ -56,7 +56,6 @@ export const TransformingMusic = () => {
 
                 <div className={style.card}>
                     <div className={style.cardTop}>
-                        <p>01</p>
                         <p>Capital Market Industry Report</p>
                     </div>
 

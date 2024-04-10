@@ -64,7 +64,7 @@ export const Header = observer(() => {
                                         subLinks: SubLinksEnum.Technology
                                     },
                                     {
-                                        label: "Industry Use Case",
+                                        label: "Industry Use Cases",
                                         href: "",
                                         subLinks: SubLinksEnum.Industry
                                     },
@@ -100,12 +100,10 @@ export const Header = observer(() => {
                         </div>
 
                     </nav>
-
-
                 </div>
 
                 <div className={style.right}>
-                    <ButtonCustom label="Get started"
+                    <ButtonCustom label="$RECORD Token"
                                   className={style.getStartedBtn}
                     />
 

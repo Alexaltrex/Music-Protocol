@@ -3,28 +3,32 @@ import {IScreen} from "../components/x_common/Screen/Screen";
 export const screen: IScreen = {
     title: {
         mobile: [
-            "Dynamic Music",
-            "IP for Web3",
+            "Dynamic Music IP",
+            "for Web3",
 
         ],
         desktop: [
-            "Dynamic Music IP",
-            "for Web3",
+            "Dynamic Music",
+            "IP for Web3",
         ]
     },
     description: {
         mobile: [
-            "Transforming licensing for the full digital",
-            "landscape.",
+            "A sovereign blockchain for",
+            "distributing verifiable,",
+            "programmable music IP across",
+            "the Internet.",
         ],
         desktop: [
-            "Transforming licensing for the",
-            "full digital landscape.",
+            "A sovereign blockchain for",
+            "distributing verifiable,",
+            "programmable music IP across",
+            "the Internet.",
         ],
     },
     orangeButton: true,
     button: {
-        label: "Resources",
+        label: "Sign up for early access",
         href: "#",
     },
     videoUrl: "/mp4/home0.mp4"

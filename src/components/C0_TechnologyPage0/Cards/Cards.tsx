@@ -6,7 +6,6 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import {Swiper as SwiperClass} from "swiper/types";
 import {FC, useState} from "react";
-import {svgIcons} from "../../../assets/svgIcons";
 import Lottie from "lottie-react";
 import card0_lottie from "../../../../public/lottie/card0.json";
 import group_138 from "../../../../public/lottie/Group 138.json";
@@ -15,8 +14,10 @@ import card1_lottie from "../../../../public/lottie/card1.json";
 import card2_lottie from "../../../../public/lottie/card2.json";
 import card3_lottie from "../../../../public/lottie/card3.json";
 import {clsx} from "clsx";
+import {svgIcons} from "../../../assets/svgIcons";
 
 interface ICard {
+    src: string
     step: string
     title: string
     text: string
@@ -27,6 +28,7 @@ interface ICard {
 
 const cards: ICard[] = [
     {
+        src: "/png/technology_0_cards/0.png",
         step: "01",
         title: "IP Core Asset Library",
         text: "The Music Protocol's core is a data repository for IP. The architecture has been built to accommodate intellectual property and licensing structures. Find out more about how to contribute towards these new frameworks.",
@@ -35,6 +37,7 @@ const cards: ICard[] = [
         lottie: card1_lottie,
     },
     {
+        src: "/png/technology_0_cards/1.png",
         step: "02",
         title: "IP Licencing Core Engine",
         text: "The digital landscape is constantly evolving, and so is how we create and consume music. Our IP Licencing Core Engine expedites a seamless data flow between Music Protocol and ecosystem applications, ensuring our network efficiently manages all music IP permissions.",
@@ -43,6 +46,7 @@ const cards: ICard[] = [
         lottie: group_138,
     },
     {
+        src: "/png/technology_0_cards/2.png",
         step: "03",
         title: "IP Settlement Gateway",
         text: "Music Protocol creates the link between the technological and regulatory landscapes. We bridge the gap between music IP and the industry's extensive counterparties by connecting key content distributors and management networks, simplifying financial and licensing transactions.",
@@ -51,6 +55,7 @@ const cards: ICard[] = [
         lottie: card3_lottie,
     },
     {
+        src: "/png/technology_0_cards/3.png",
         step: "04",
         title: "IP Inter-Chain Distribution Gateway",
         text: "Our infrastructure extends the reach of Music Protocol, enabling easy integrations with other blockchain ecosystems. We supply verifiable music IP rights across the Web3 landscape, strengthening application adaptability and promoting various creative and commercial opportunities.",
@@ -58,7 +63,7 @@ const cards: ICard[] = [
         // @ts-ignore
         lottie: card0_lottie,
     },
-  ]
+]
 
 export const Cards = () => {
     const [swiper, setSwiper] = useState<SwiperClass | null>(null)
@@ -67,6 +72,7 @@ export const Cards = () => {
 
     return (
         <div className={style.cards}>
+
             <div className={style.inner}>
 
                 <div className={style.control}>
@@ -124,6 +130,7 @@ interface ICardComponent extends ICard {
 }
 
 const Card: FC<ICardComponent> = ({
+                                      src,
                                       step,
                                       title,
                                       text,
@@ -145,11 +152,14 @@ const Card: FC<ICardComponent> = ({
                             style[`lottieWrapper_${index}`]
                         )}
                         >
-                            <Lottie animationData={lottie}
-                                    style={{
-                                        width: "100%"
-                                    }}
-                            />
+                            {/*@ts-ignore*/}
+                            {/*{icons[index]}*/}
+                            <img src={src} alt=""/>
+                            {/*<Lottie animationData={lottie}*/}
+                            {/*        style={{*/}
+                            {/*            width: "100%"*/}
+                            {/*        }}*/}
+                            {/*/>*/}
                         </div>
 
                     </div>

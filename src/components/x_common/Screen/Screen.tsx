@@ -37,23 +37,32 @@ export const Screen: FC<IScreen> = ({
                                         urlSegments
                                     }) => {
     return (
-        <div className={clsx(style.screen, Boolean(className) && className)}>
+        <div className={clsx({
+            [style.screen]: true,
+            [style.screen_orangeButton]: orangeButton,
+        }, Boolean(className) && className)}>
 
             {
                 videoUrl && (
-                    <div className={style.videoWrapper}>
+                    <div className={clsx({
+                        [style.videoWrapper]: true,
+                        [style.videoWrapper_orangeButton]: orangeButton,
+                    })}>
                         <video src={videoUrl}
                                loop={true}
                                autoPlay={true}
                                muted={true}
                                playsInline={true}
-                            //controls={true}
-                        ></video>
+                                //controls={true}
+                        />
                     </div>
                 )
             }
 
-            <div className={style.inner}>
+            <div className={clsx({
+                [style.inner]: true,
+                [style.inner_orangeButton]: orangeButton,
+            })}>
 
                 {
                     urlSegments && (
@@ -63,87 +72,89 @@ export const Screen: FC<IScreen> = ({
                     )
                 }
 
-
-                <div className={clsx(style.wrapper, style.wrapper_mobile)}>
-                    <div className={style.blur}/>
-                    <div className={style.content}>
-                        {
-                            title.mobile.map((text, key) => (
-                                <WaveText key={key}
-                                          label={text}
-                                          className={style.titleMobile}
-                                          textClassName={style.title}
-                                          size={40}
-                                />
-                            ))
-                        }
-                    </div>
-                </div>
-
-                <div className={clsx(style.wrapper, style.wrapper_desktop)}>
-                    <div className={style.blur}/>
-                    <div className={style.content}>
-                        {
-                            title.desktop.map((text, key) => (
-                                <WaveText key={key}
-                                          label={text}
-                                          className={style.titleDesktop}
-                                          textClassName={style.title}
-                                          size={64}
-                                />
-                            ))
-                        }
+                <div className={style.content}>
+                    <div className={clsx(style.wrapper, style.wrapper_mobile)}>
+                        <div className={style.blur}/>
+                        <div className={style.content}>
+                            {
+                                title.mobile.map((text, key) => (
+                                    <WaveText key={key}
+                                              label={text}
+                                              className={style.titleMobile}
+                                              textClassName={style.title}
+                                              size={40}
+                                    />
+                                ))
+                            }
+                        </div>
                     </div>
 
+                    <div className={clsx(style.wrapper, style.wrapper_desktop)}>
+                        <div className={style.blur}/>
+                        <div className={style.content}>
+                            {
+                                title.desktop.map((text, key) => (
+                                    <WaveText key={key}
+                                              label={text}
+                                              className={style.titleDesktop}
+                                              textClassName={style.title}
+                                              size={64}
+                                    />
+                                ))
+                            }
+                        </div>
+
+                    </div>
+
+                    {
+                        description && (
+                            <>
+                                <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_mobile)}>
+                                    <div className={style.blur}/>
+                                    {
+                                        description.mobile.map((text, key) => (
+                                            <TextUp key={key}>
+                                                <p className={style.description}>{text}</p>
+                                            </TextUp>
+                                        ))
+                                    }
+                                </div>
+                                <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_desktop)}>
+                                    <div className={style.blur}/>
+                                    {
+                                        description.desktop.map((text, key) => (
+                                            <TextUp key={key}>
+                                                <p className={style.description}>{text}</p>
+                                            </TextUp>
+                                        ))
+                                    }
+                                </div>
+                            </>
+
+                        )
+                    }
+
+                    {
+                        orangeButton && (
+                            <ButtonCustom label="Get started"
+                                          className={style.orangeButton}
+                            />
+                        )
+
+                    }
+                    {
+                        button && (
+                            <ButtonCustom {...button}
+                                          className={clsx({
+                                              [style.btn]: true,
+                                              [style.btn_withOrangeButton]: orangeButton,
+                                          })}
+                                          variant={ButtonVariantEnum.outlined}
+                            />
+                        )
+                    }
                 </div>
 
-                {
-                    description && (
-                        <>
-                            <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_mobile)}>
-                                <div className={style.blur}/>
-                                {
-                                    description.mobile.map((text, key) => (
-                                        <TextUp key={key}>
-                                            <p className={style.description}>{text}</p>
-                                        </TextUp>
-                                    ))
-                                }
-                            </div>
-                            <div className={clsx(style.descriptionWrapper, style.descriptionWrapper_desktop)}>
-                                <div className={style.blur}/>
-                                {
-                                    description.desktop.map((text, key) => (
-                                        <TextUp key={key}>
-                                            <p className={style.description}>{text}</p>
-                                        </TextUp>
-                                    ))
-                                }
-                            </div>
-                        </>
-
-                    )
-                }
-
-                {
-                    orangeButton && (
-                        <ButtonCustom label="Get started"
-                                      className={style.orangeButton}
-                        />
-                    )
-
-                }
-                {
-                    button && (
-                        <ButtonCustom {...button}
-                                      className={clsx({
-                                          [style.btn]: true,
-                                          [style.btn_withOrangeButton]: orangeButton,
-                                      })}
-                                      variant={ButtonVariantEnum.outlined}
-                        />
-                    )
-                }
 
             </div>
         </div>

@@ -1,8 +1,7 @@
 import style from "./PartnersPage.module.scss"
 import {WaveText} from "../../components/x_common/WaveText/WaveText";
-import {backgrounds} from "../../const/backgrounds";
-import {ButtonCustom, ButtonVariantEnum} from "../../components/x_common/ButtonCustom/ButtonCustom";
 import {JoinForm} from "../../components/x_common/JoinForm/JoinForm";
+import {FormLinks} from "../../components/x_common/FormLinks/FormLinks";
 
 const title = {
     mobile: [
@@ -45,8 +44,10 @@ const PartnersPage = () => {
                         ))
                     }
 
+                    <FormLinks/>
+
                     <p className={style.text}>
-                        Are you involved in the music industry and you want to interact with us to build something new related to the wide filed of music IP digitisation?
+                        If you're working in the music industry and would like to find out how to get involved, fill out the form and we'll be in touch soon
                     </p>
 
 

@@ -113,7 +113,7 @@ export const linksFooter = [
         subRoutes: subLinksHeader["Technology"]
     },
     {
-        title: "Use Cases",
+        title: "Industry Use Cases",
         icon: true,
         subRoutes: subLinksHeader["Industry"]
     },

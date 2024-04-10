@@ -13,47 +13,59 @@ export const Footer = () => {
         <footer className={style.footer}>
             <div className={style.inner}>
 
-                <div className={style.logo}>{svgIcons.logo}</div>
-
-                <div className={style.top}>
-                    <p className={clsx(style.title, outfit.className)}>
-                        Dynamic Music IP for Web3
-                    </p>
-
-                    <div className={style.right}>
-                        <p className={style.description}>
-                            The Web3 Music Association is the main contributor to the Music Protocol, working with the
-                            music industry to help them adopt emerging technologies. <a href="www.web3music.org"
-                                                                                        target="_blank"
-                                                                                        rel="nofollow noreferrer noopener">
-                            Find out more.
-                        </a>
-                        </p>
-
-                        <a href="www.web3music.org"
-                           target="_blank"
-                           rel="nofollow noreferrer noopener"
-                        >
-                            {svgIcons.logo_footer}
-                        </a>
-
-                    </div>
-
+                <div className={style.logo}>
+                    {svgIcons.logo}
                 </div>
 
+                {/*<div className={style.top}>*/}
+                {/*    <p className={clsx(style.title, outfit.className)}>*/}
+                {/*        Dynamic Music IP for Web3*/}
+                {/*    </p>*/}
+
+                {/*    <div className={style.right}>*/}
+                {/*        <p className={style.description}>*/}
+                {/*            The Web3 Music Association is the main contributor to the Music Protocol, working with the*/}
+                {/*            music industry to help them adopt emerging technologies. <a href="www.web3music.org"*/}
+                {/*                                                                        target="_blank"*/}
+                {/*                                                                        rel="nofollow noreferrer noopener">*/}
+                {/*            Find out more.*/}
+                {/*        </a>*/}
+                {/*        </p>*/}
+
+                    {/*    <a href="www.web3music.org"*/}
+                    {/*       target="_blank"*/}
+                    {/*       rel="nofollow noreferrer noopener"*/}
+                    {/*    >*/}
+                    {/*        {svgIcons.logo_footer}*/}
+                    {/*    </a>*/}
+
+                    {/*</div>*/}
+
+                {/*</div>*/}
+
                 <div className={clsx(style.linksMobile)}>
-                    <div className={style.row}>
+                    <div className={style.column}>
                         <Group {...linksFooter[0]}/>
+                        <Group {...linksFooter[3]}/>
                         <Group {...linksFooter[1]}/>
                     </div>
-                    <div className={style.row}>
+                    <div className={style.column}>
                         <Group {...linksFooter[2]}/>
-                        <div className={style.column}>
-                            <Group {...linksFooter[3]}/>
-                            <Group {...linksFooter[4]}/>
-                        </div>
-
+                        <Group {...linksFooter[4]}/>
                     </div>
+
+                    {/*<div className={style.row}>*/}
+                    {/*    <Group {...linksFooter[0]}/>*/}
+                    {/*    <Group {...linksFooter[1]}/>*/}
+                    {/*</div>*/}
+                    {/*<div className={style.row}>*/}
+                    {/*    <Group {...linksFooter[2]}/>*/}
+                    {/*    <div className={style.column}>*/}
+                    {/*        <Group {...linksFooter[3]}/>*/}
+                    {/*        <Group {...linksFooter[4]}/>*/}
+                    {/*    </div>*/}
+
+                    {/*</div>*/}
                     {/*{*/}
                     {/*    [*/}
                     {/*        [routes[0], routes[1]],*/}
@@ -104,6 +116,14 @@ export const Footer = () => {
                         }
                     </div>
 
+                    <a href="www.web3music.org"
+                       target="_blank"
+                       rel="nofollow noreferrer noopener"
+                       className={style.web3music}
+                    >
+                        {svgIcons.logo_footer}
+                    </a>
+
                 </div>
 
                 <div className={style.bottom}>
@@ -131,7 +151,7 @@ export const Footer = () => {
                     </div>
 
                     <p className={style.rights}>
-                        © 2023 Music Protocol All rights reserved
+                        © 2024 Music Protocol All rights reserved
                     </p>
                 </div>
 
@@ -158,14 +178,17 @@ const Group: FC<IGroup> = ({
     return (
         <div className={style.group}>
 
-            <div className={style.groupTitle}>
+            <div className={clsx({
+                [style.groupTitle]: true,
+                [style.groupTitle_noPadding]: !icon,
+            })}>
                 {icon && svgIcons.link_arrow}
                 <p>{title}</p>
             </div>
 
             <div className={clsx({
                 [style.groupLinks]: true,
-                [style.groupLinks_noPaddingLeft]: title === "Home" || title === "Token",
+                [style.groupLinks_noPaddingLeft]: !icon,
             })}>
                 {
                     subRoutes.map(({label, href}, key) => (
