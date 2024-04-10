@@ -28,8 +28,8 @@ export const screen: IScreen = {
     },
     orangeButton: true,
     button: {
-        label: "Sign up for early access",
-        href: "#",
+        label: "Sign-up for early access",
+        innerHref: "/developers",
     },
     videoUrl: "/mp4/home0.mp4"
 

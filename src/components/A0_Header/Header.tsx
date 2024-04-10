@@ -103,7 +103,7 @@ export const Header = observer(() => {
                 </div>
 
                 <div className={style.right}>
-                    <ButtonCustom label="$RECORD Token"
+                    <ButtonCustom label="$RECORD"
                                   className={style.getStartedBtn}
                     />
 

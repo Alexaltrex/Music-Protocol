@@ -9,12 +9,15 @@ import {screenWithEditor} from "./screenWithEditor";
 import {Diagram} from "../../components/x_common/Diagram/Diagram";
 import lottie from "../../../public/lottie/IP_Core.json"
 import type {Metadata} from "next";
+import {useRouter} from "next/navigation";
 
 export const metadata: Metadata = {
     title: "IP Core Asset Library",
 };
 
 const TechnologyPage1 = () => {
+    //const router = useRouter();
+
     return (
         <div>
             <Screen {...screen}/>

@@ -12,7 +12,8 @@ export const screen: IScreen = {
         ]
     },
     button: {
-        label: "Sign-up for early access"
+        label: "Sign-up for early access",
+        innerHref: "/developers",
     },
     videoUrl: "/mp4/technology3.mp4",
     urlSegments: [

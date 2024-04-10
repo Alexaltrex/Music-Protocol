@@ -3,6 +3,7 @@
 import {FC} from "react";
 import style from "./ButtonCustom.module.scss";
 import {clsx} from "clsx";
+import {useRouter} from "next/navigation";
 
 export enum ButtonVariantEnum {
     outlined = "outlined",
@@ -16,6 +17,7 @@ interface IButtonCustom {
     onClick?: () => void
     variant?: ButtonVariantEnum
     href?: string
+    innerHref?: string
 }
 
 export const ButtonCustom: FC<IButtonCustom> = ({
@@ -24,7 +26,10 @@ export const ButtonCustom: FC<IButtonCustom> = ({
                                                     onClick,
                                                     variant = ButtonVariantEnum.orange,
                                                     href,
+                                                    innerHref
                                                 }) => {
+    const router = useRouter();
+
     return (
         <>
             {
@@ -55,6 +60,9 @@ export const ButtonCustom: FC<IButtonCustom> = ({
 
                     }, Boolean(className) && className)}
                             onClick={() => {
+                                if (innerHref) {
+                                    router.push(innerHref)
+                                }
                                 if (onClick) {
                                     onClick();
                                 }

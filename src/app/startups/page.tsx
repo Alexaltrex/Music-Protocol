@@ -21,7 +21,7 @@ const title = {
 
 const items = [
     "Stay up to date about the Music Protocol grants programme",
-    "Discover the ecosystem and develop dApp",
+    "Discover the ecosystem and develop dApps",
     //"Develop apps on top of music protocol and access the music protocol ecosystem",
 ]
 

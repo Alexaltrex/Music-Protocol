@@ -4,7 +4,8 @@
   @include container;
   position: relative;
   overflow: hidden;
-  padding-bottom: 350px;
+  //padding-bottom: 350px;
+  padding-bottom: 280px;
 
   @include desktop {
     padding-bottom: 560px;
@@ -78,9 +79,11 @@
 
   .lottieWrapper {
     position: absolute;
-    width: 446px;
+    //width: 446px;
+    width: 368px;
     bottom: 32px;
-    right: -50px;
+    //right: -50px;
+    right: 0;
 
     @include desktop {
       width: 876px;

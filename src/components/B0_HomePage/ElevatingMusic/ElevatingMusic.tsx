@@ -198,7 +198,7 @@ export const ElevatingMusic = () => {
                             music industry to mirror the evolving digital landscape.
                         </p>
 
-                        <ButtonCustom label="Whitepaper"
+                        <ButtonCustom label="Docs"
                                       variant={ButtonVariantEnum.outlined}
                                       href="/"
                                       className={style.btnDesktop}

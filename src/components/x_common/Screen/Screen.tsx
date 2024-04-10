@@ -22,6 +22,7 @@ export interface IScreen {
         label: string
         onClick?: () => void
         href?: string
+        innerHref?: string
     }
     videoUrl?: string
     urlSegments?: string[]

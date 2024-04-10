@@ -151,7 +151,7 @@ export const Footer = () => {
                     </div>
 
                     <p className={style.rights}>
-                        © 2024 Music Protocol All rights reserved
+                        ©2024 Web3 Music Association - All rights reserved
                     </p>
                 </div>
 

@@ -11,11 +11,12 @@ export const screen = {
         ]
     },
     button: {
-        label: "Sign-up for early access"
+        label: "Sign-up for early access",
+        innerHref: "/developers",
     },
     videoUrl: "/mp4/technology2.mp4",
     urlSegments: [
         "Home > Technology > ",
-        "IP Licensing Core Engine",
+        "IP Licencing Core Engine",
     ]
 }

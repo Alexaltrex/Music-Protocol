@@ -69,6 +69,7 @@
     &_resources {
       transform-origin: top right;
       left: auto;
+      right: calc((100vw - 1316px) / 2);
     }
 
     .card {
