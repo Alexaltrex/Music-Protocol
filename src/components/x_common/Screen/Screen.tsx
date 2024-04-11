@@ -137,7 +137,7 @@ export const Screen: FC<IScreen> = ({
 
                     {
                         orangeButton && (
-                            <ButtonCustom label="Get started"
+                            <ButtonCustom label="$RECORD"
                                           className={style.orangeButton}
                             />
                         )

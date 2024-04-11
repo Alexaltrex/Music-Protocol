@@ -86,7 +86,7 @@ export const ElevatingMusic = () => {
                 start: "top top",
                 end: "bottom bottom",
                 scrub: true,
-                //pinSpacing,
+                pinSpacing,
             }
         })
 

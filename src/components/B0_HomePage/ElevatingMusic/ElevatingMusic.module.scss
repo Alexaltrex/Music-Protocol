@@ -28,7 +28,7 @@
         }
 
         .description {
-          margin-top: 67px;
+          margin-top: 32px;
           color: var(--Additional-Main-White, #FFF);
           font-size: 16px;
           font-style: normal;
@@ -132,6 +132,7 @@
         }
 
         .center {
+          user-select: none;
           display: block;
           position: absolute;
           top: 68px;
@@ -153,7 +154,7 @@
 
         .step1 {
           position: absolute;
-          top: 260px;
+          top: 240px;
           left: 50%;
           transform: translateX(-50%);
           transition: 0.1s;
@@ -167,14 +168,14 @@
             width: 374px;
             right: 99px;
             //top: 636px;
-            top: 500px;
+            top: 412px;
           }
         }
 
         .step2_mobile {
           @include onlyMobile();
           position: absolute;
-          top: 260px;
+          top: 240px;
           left: 50%;
           transform: translateX(-50%);
           transition: 0.1s;
@@ -190,12 +191,12 @@
           width: 634px;
           right: -30px;
           //top: 636px;
-          top: 500px;
+          top: 412px;
         }
 
         .step3 {
           position: absolute;
-          top: 260px;
+          top: 240px;
           left: 50%;
           transform: translateX(-50%);
           transition: 0.1s;
@@ -208,7 +209,7 @@
             left: auto;
             transform: none;
             right: 105px;
-            top: 500px;
+            top: 412px;
           }
 
           .back {
@@ -244,7 +245,7 @@
 
         .btnMobile {
           @include onlyMobile(flex);
-          margin-top: 226px;
+          margin-top: 184px + 16px;
           width: 264px;
           margin-left: auto;
           margin-right: auto;
