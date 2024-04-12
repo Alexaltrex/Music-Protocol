@@ -1,6 +1,7 @@
 @import "../../../assets/styles/app";
 
 .transformingMusic {
+  position: relative;
   @include container;
   padding-top: 20px;
   padding-bottom: 64px;
@@ -9,6 +10,13 @@
     padding-top: 80px;
     padding-bottom: 42px;
     height: 100vh;
+  }
+
+  .lottieWrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   .inner {

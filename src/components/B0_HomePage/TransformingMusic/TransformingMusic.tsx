@@ -1,13 +1,26 @@
+'use client'
+
 import style from "./TransformingMusic.module.scss"
 import {WaveText} from "../../x_common/WaveText/WaveText";
 import {clsx} from "clsx";
 import {TextUp} from "../../x_common/TextUp/TextUp";
 import {ButtonCustom} from "../../x_common/ButtonCustom/ButtonCustom";
 import {outfit} from "../../../assets/fonts/fonts";
+//import Lottie from "lottie-react";
 
 export const TransformingMusic = () => {
     return (
         <div className={style.transformingMusic}>
+
+            {/*<div className={style.lottieWrapper}>*/}
+            {/*    <Lottie animationData={lottie}*/}
+            {/*            style={{*/}
+            {/*                width: "100%", height: "100%"*/}
+            {/*            }}*/}
+            {/*    />*/}
+            {/*</div>*/}
+
+
             <div className={style.inner}>
 
                 <div className={style.top}>
@@ -21,7 +34,6 @@ export const TransformingMusic = () => {
                         tokenisation and capital market integration, fostering a scalable and accessible asset
                         ecosystem.
                     </p>
-
 
 
                 </div>

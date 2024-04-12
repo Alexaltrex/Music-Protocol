@@ -38,6 +38,6 @@ export const screen: IScreen = {
         ],
     },
     orangeButton: false,
-    videoUrl: "/mp4/home0.mp4"
+    videoUrl: "/mp4/token.mp4"
 
 }

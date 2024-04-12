@@ -1,6 +1,12 @@
 //========= BREAK POINTS =========//
+@mixin tablet {
+  @media all and (min-width: 1024px) {//1440
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media all and (min-width: 1440px) {
+  @media all and (min-width: 1440px) {//1440
     @content;
   }
 }
@@ -13,6 +19,8 @@
     display: none;
   }
 }
+
+
 
 @mixin onlyDesktop($displayType: block) {
   display: none;
@@ -61,7 +69,7 @@
 
 @mixin inner() {
   @include desktop() {
-    width: 1316px;
+    width: 1316px; //1316
     margin: 0 auto;
   }
 }
