@@ -174,12 +174,12 @@
       }
 
       .orangeButton {
-        @include onlyMobile();
+        @include onlyMobile(flex);
         position: relative;
         z-index: 3;
         margin-top: 32px;
-        padding-left: 24px;
-        padding-right: 24px;
+        //padding-left: 24px;
+        //padding-right: 24px;
         width: 180px;
       }
 

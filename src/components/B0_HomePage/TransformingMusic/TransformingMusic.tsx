@@ -5,34 +5,6 @@ import {TextUp} from "../../x_common/TextUp/TextUp";
 import {ButtonCustom} from "../../x_common/ButtonCustom/ButtonCustom";
 import {outfit} from "../../../assets/fonts/fonts";
 
-const title = {
-    mobile: [
-        "Transforming Music",
-        "into a Tradable Asset",
-        "Class",
-    ],
-    desktop: [
-        "Transforming Music into a",
-        " Tradable Asset Class"
-    ]
-}
-
-const text = {
-    mobile: [
-        "Music Protocol unlocks the potential of the",
-        "music industry by enabling efficient",
-        "tokenisation and capital market",
-        "integration, fostering a scalable and",
-        "accessible asset ecosystem.",
-    ],
-    desktop: [
-        "Music Protocol unlocks the industry's",
-        "potential by enabling efficient tokenisation",
-        "and financial integration, creating a",
-        "scalable and accessible asset ecosystem.",
-    ]
-}
-
 export const TransformingMusic = () => {
     return (
         <div className={style.transformingMusic}>
@@ -60,6 +32,7 @@ export const TransformingMusic = () => {
                     </div>
 
                     <ButtonCustom label="Discover"
+                                  href="https://insights.web3music.org/real-world-asset-tokenisation-promises-to-transform-ip-management-and-open-new-investment-horizons"
                     />
                 </div>
 

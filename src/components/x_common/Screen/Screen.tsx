@@ -138,6 +138,7 @@ export const Screen: FC<IScreen> = ({
                     {
                         orangeButton && (
                             <ButtonCustom label="$RECORD"
+                                          href="https://docs.musicprotocol.io/record-token/usdrecord-token-overview"
                                           className={style.orangeButton}
                             />
                         )

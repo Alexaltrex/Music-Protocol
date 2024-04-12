@@ -104,9 +104,9 @@ export const BurgerMenu = observer(() => {
 
                     <div className={style.bottom_top}>
 
-                        <ButtonCustom label="Get started"
-                                      href="#"
-                                      className={style.getStatredBtn}
+                        <ButtonCustom label="$RECORD"
+                                      href="https://docs.musicprotocol.io/record-token/usdrecord-token-overview"
+                                      className={style.getStartedBtn}
                         />
 
                         <div className={style.socialLinks}>

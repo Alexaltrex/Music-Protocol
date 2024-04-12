@@ -7,6 +7,7 @@ export enum SubLinksEnum {
 export interface ISubLinks {
     label: string
     href: string
+    outer?: boolean
     description: string
     src: string
 }
@@ -73,15 +74,17 @@ export const subLinksHeader: {[key: string]: ISubLinks[]} = {
     "Resources": [
         {
             label: "Blog",
-            href: "/resources0",
+            href: "https://insights.web3music.org/",
             description: "",
             src: "/jpeg/header/resources0.jpg",
+            outer: true,
         },
         {
             label: "Docs",
-            href: "/resources1",
+            href: "https://docs.musicprotocol.io/",
             description: "",
             src: "/jpeg/header/resources1.jpg",
+            outer: true,
         },
     ]
 }

@@ -35,7 +35,7 @@ export const screen: IScreen = {
     },
     button: {
         label: "Learn more",
-        href: "#"
+        href: "https://insights.web3music.org/the-role-of-dynamic-music-ip-in-gaming-and-the-metaverse"
     },
     videoUrl: "/mp4/industry3.mp4",
     urlSegments: [

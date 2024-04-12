@@ -27,7 +27,8 @@ export const screen: IScreen = {
         ],
     },
     button: {
-        label: "Learn more"
+        label: "Learn more",
+        href: "https://docs.musicprotocol.io/music-protocol-technology/music-protocol-technology-architecture",
     },
     videoUrl: "/mp4/technology0.mp4",
     urlSegments: [

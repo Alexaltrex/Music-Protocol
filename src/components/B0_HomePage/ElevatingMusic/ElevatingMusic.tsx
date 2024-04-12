@@ -200,7 +200,7 @@ export const ElevatingMusic = () => {
 
                         <ButtonCustom label="Docs"
                                       variant={ButtonVariantEnum.outlined}
-                                      href="/"
+                                      href="https://docs.musicprotocol.io/"
                                       className={style.btnDesktop}
                         />
                     </div>
@@ -291,7 +291,7 @@ export const ElevatingMusic = () => {
 
                         <ButtonCustom label="Docs"
                                       variant={ButtonVariantEnum.outlined}
-                                      href="/"
+                                      href="https://docs.musicprotocol.io/"
                                       className={style.btnMobile}
                         />
 

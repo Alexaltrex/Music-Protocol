@@ -32,7 +32,7 @@ export const screen: IScreen = {
     },
     button: {
         label: "Learn more",
-        href: "#"
+        href: "https://insights.web3music.org/empowering-ai-development-while-protecting-intellectual-property-with-blockchain"
     },
     videoUrl: "/mp4/industry1.mp4",
     urlSegments: [

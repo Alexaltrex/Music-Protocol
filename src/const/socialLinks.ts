@@ -3,23 +3,23 @@ import {svgIcons} from "../assets/svgIcons";
 
 export const socialLinks = [
     {
-        href: "#",
+        href: "https://twitter.com/dynamicmusicip",
         icon: svgIcons.twitter
     },
     {
-        href: "#",
+        href: "https://www.linkedin.com/company/music-protocol",
         icon: "/png/in.png"
     },
     {
-        href: "#",
+        href: "https://warpcast.com/musicprotocol",
         icon: svgIcons.black_white
     },
     {
-        href: "#",
+        href: "https://t.me/dynamicmusicip",
         icon: svgIcons.telegram
     },
     {
-        href: "#",
+        href: "https://discord.gg/FVua29ud",
         icon: svgIcons.discord
     },
 ]

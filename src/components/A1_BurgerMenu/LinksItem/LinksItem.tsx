@@ -1,7 +1,7 @@
 "use client";
 
 import style from "./LinksItem.module.scss"
-import {FC} from "react";
+import {FC, Fragment} from "react";
 import {clsx} from "clsx";
 import {svgIcons} from "../../../assets/svgIcons";
 import {Collapse} from "@mui/material";
@@ -45,27 +45,56 @@ export const LinksItem: FC<ILinksItem> = ({
 
             <Collapse in={route === openedRoutes}>
                 {
-                    subMenu.map(({label, href, description, src}, key) => (
-                        <Link key={key}
-                              className={clsx({
-                                  [style.item]: true,
-                                  [style.item_secected]: pathname === href,
-                              })}
-                              href={href}
-                              onClick={() => onLinkClick()}
-                        >
-                            <img src={src} alt=""/>
-                            <div className={style.itemContent}>
-                                <div>
-                                    <p className={style.label}>{label}</p>
-                                    <p className={style.description}>{description}</p>
-                                </div>
+                    subMenu.map(({label, href, description, src, outer}, key) => (
+                        <Fragment>
+                            {
+                                outer ? (
+                                    <a className={clsx({
+                                        [style.item]: true,
+                                        [style.item_secected]: pathname === href,
+                                    })}
+                                       href={href}
+                                       target="_blank"
+                                       rel="nofollow noreferrer noopener"
+                                       onClick={() => onLinkClick()}
+                                    >
+                                        <img src={src} alt=""/>
+                                        <div className={style.itemContent}>
+                                            <div>
+                                                <p className={style.label}>{label}</p>
+                                                <p className={style.description}>{description}</p>
+                                            </div>
 
-                                <div className={style.icon}>
-                                    {svgIcons.arrow_right}
-                                </div>
-                            </div>
-                        </Link>
+                                            <div className={style.icon}>
+                                                {svgIcons.arrow_right}
+                                            </div>
+                                        </div>
+                                    </a>
+                                ) : (
+                                    <Link className={clsx({
+                                              [style.item]: true,
+                                              [style.item_secected]: pathname === href,
+                                          })}
+                                          href={href}
+                                          onClick={() => onLinkClick()}
+                                    >
+                                        <img src={src} alt=""/>
+                                        <div className={style.itemContent}>
+                                            <div>
+                                                <p className={style.label}>{label}</p>
+                                                <p className={style.description}>{description}</p>
+                                            </div>
+
+                                            <div className={style.icon}>
+                                                {svgIcons.arrow_right}
+                                            </div>
+                                        </div>
+                                    </Link>
+                                )
+                            }
+
+                        </Fragment>
+
                     ))
                 }
             </Collapse>

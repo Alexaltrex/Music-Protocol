@@ -82,6 +82,6 @@ export const screenWithCircles: IScreenWithCircles = {
     ],
     button: {
         label: "Learn more",
-        href: "#"
+        href: "https://docs.musicprotocol.io/music-protocol-technology/ip-core-asset-library"
     },
 }

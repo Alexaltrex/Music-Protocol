@@ -37,7 +37,7 @@ export const screen: IScreen = {
     },
     button: {
         label: "Learn more",
-        href: "#"
+        href: "https://insights.web3music.org/real-world-asset-tokenisation-promises-to-transform-ip-management-and-open-new-investment-horizons"
     },
     videoUrl: "/mp4/industry0.mp4",
     urlSegments: [

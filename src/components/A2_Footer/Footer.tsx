@@ -1,7 +1,7 @@
 import style from "./Footer.module.scss";
 import {svgIcons} from "../../assets/svgIcons";
 import Link from "next/link";
-import React, {FC} from "react";
+import React, {FC, Fragment} from "react";
 import {clsx} from "clsx";
 import {outfit} from "../../assets/fonts/fonts";
 import {socialLinks} from "../../const/socialLinks";
@@ -32,14 +32,14 @@ export const Footer = () => {
                 {/*        </a>*/}
                 {/*        </p>*/}
 
-                    {/*    <a href="www.web3music.org"*/}
-                    {/*       target="_blank"*/}
-                    {/*       rel="nofollow noreferrer noopener"*/}
-                    {/*    >*/}
-                    {/*        {svgIcons.logo_footer}*/}
-                    {/*    </a>*/}
+                {/*    <a href="www.web3music.org"*/}
+                {/*       target="_blank"*/}
+                {/*       rel="nofollow noreferrer noopener"*/}
+                {/*    >*/}
+                {/*        {svgIcons.logo_footer}*/}
+                {/*    </a>*/}
 
-                    {/*</div>*/}
+                {/*</div>*/}
 
                 {/*</div>*/}
 
@@ -116,7 +116,7 @@ export const Footer = () => {
                         }
                     </div>
 
-                    <a href="www.web3music.org"
+                    <a href="https://www.web3music.org/"
                        target="_blank"
                        rel="nofollow noreferrer noopener"
                        className={style.web3music}
@@ -133,19 +133,21 @@ export const Footer = () => {
                             [
                                 {
                                     label: "Privacy Policy",
-                                    href: "/policy"
+                                    href: "https://docs.musicprotocol.io/legal/privacy-policy"
                                 },
                                 {
-                                    label: "Terms of use",
-                                    href: "/terms"
+                                    label: "Cookie Policy",
+                                    href: "https://docs.musicprotocol.io/legal/cookie-policy"
                                 },
                             ].map(({label, href}, key) => (
-                                <Link key={key}
-                                      href={href}
-                                      className={style.link}
+                                <a key={key}
+                                   href={href}
+                                   target="_blank"
+                                   rel="nofollow noreferrer noopener"
+                                   className={style.link}
                                 >
                                     {label}
-                                </Link>
+                                </a>
                             ))
                         }
                     </div>
@@ -167,6 +169,7 @@ export interface IGroup {
     subRoutes: {
         label: string
         href: string
+        outer?: boolean
     }[]
 }
 
@@ -191,13 +194,27 @@ const Group: FC<IGroup> = ({
                 [style.groupLinks_noPaddingLeft]: !icon,
             })}>
                 {
-                    subRoutes.map(({label, href}, key) => (
-                        <Link key={key}
-                              href={href}
-                              className={style.link}
-                        >
-                            {label}
-                        </Link>
+                    subRoutes.map(({label, href, outer}, key) => (
+                        <Fragment key={key}>
+                            {
+                                outer ? (
+                                    <a target="_blank"
+                                       rel="nofollow noreferrer noopener"
+                                       href={href}
+                                       className={style.link}
+                                    >
+                                        {label}
+                                    </a>
+                                ) : (
+                                    <Link href={href}
+                                          className={style.link}
+                                    >
+                                        {label}
+                                    </Link>
+                                )
+                            }
+                        </Fragment>
+
                     ))
                 }
             </div>

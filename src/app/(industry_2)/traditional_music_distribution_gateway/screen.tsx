@@ -37,7 +37,7 @@ export const screen: IScreen = {
     },
     button: {
         label: "Learn more",
-        href: "#"
+        href: "https://insights.web3music.org/a-dynamic-ip-model-for-the-music-industry"
     },
     videoUrl: "/mp4/industry2.mp4",
     urlSegments: [

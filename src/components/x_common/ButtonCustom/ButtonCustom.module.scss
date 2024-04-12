@@ -3,7 +3,7 @@
 .buttonCustom {
   @include button;
   text-decoration: none;
-  display: block;
+  //display: block;
   width: 100%;
   @include centerRow;
   padding: 12px 0;

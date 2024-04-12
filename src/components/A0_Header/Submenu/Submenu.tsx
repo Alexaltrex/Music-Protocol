@@ -1,7 +1,7 @@
 'use client'
 
 import style from "./Submenu.module.scss"
-import {FC} from "react";
+import {FC, Fragment} from "react";
 import {clsx} from "clsx";
 import Link from "next/link";
 import {svgIcons} from "../../../assets/svgIcons";
@@ -35,38 +35,79 @@ export const Submenu: FC<ISubmenu> = ({
                                                                     href,
                                                                     description,
                                                                     src,
+                                                                    outer,
                                                                 }, key) => (
-                    <Link key={key}
-                          href={href}
-                          className={clsx({
-                              [style.item]: true,
-                              [style.item_selected]: pathname === href,
-                          })}
-                          onClick={() => {
-                              onClick()
-                          }}
-                    >
+                    <Fragment key={key}>
                         {
-                            src && (
-                                <img src={src}
-                                     alt=""
-                                     className={clsx(style.back, style.back_desktop)}
-                                />
+                            outer ? (
+                                <a href={href}
+                                   target="_blank"
+                                   rel="nofollow noreferrer noopener"
+                                   className={clsx({
+                                       [style.item]: true,
+                                       [style.item_selected]: pathname === href,
+                                   })}
+                                   onClick={() => {
+                                       onClick()
+                                   }}
+                                >
+                                    {
+                                        src && (
+                                            <img src={src}
+                                                 alt=""
+                                                 className={clsx(style.back, style.back_desktop)}
+                                            />
+                                        )
+                                    }
+
+                                    <div className={style.item_inner}>
+                                        <div className={style.top}>
+                                            <p className={style.label}>{label}</p>
+                                            <div className={style.icon}>
+                                                {svgIcons.arrow_right}
+                                            </div>
+                                        </div>
+                                        <p className={clsx(style.description, outfit.className)}>
+                                            {description}
+                                        </p>
+                                    </div>
+                                </a>
+                            ) : (
+                                <Link href={href}
+                                      className={clsx({
+                                          [style.item]: true,
+                                          [style.item_selected]: pathname === href,
+                                      })}
+                                      onClick={() => {
+                                          onClick()
+                                      }}
+                                >
+                                    {
+                                        src && (
+                                            <img src={src}
+                                                 alt=""
+                                                 className={clsx(style.back, style.back_desktop)}
+                                            />
+                                        )
+                                    }
+
+                                    <div className={style.item_inner}>
+                                        <div className={style.top}>
+                                            <p className={style.label}>{label}</p>
+                                            <div className={style.icon}>
+                                                {svgIcons.arrow_right}
+                                            </div>
+                                        </div>
+                                        <p className={clsx(style.description, outfit.className)}>
+                                            {description}
+                                        </p>
+                                    </div>
+                                </Link>
                             )
                         }
 
-                        <div className={style.item_inner}>
-                            <div className={style.top}>
-                                <p className={style.label}>{label}</p>
-                                <div className={style.icon}>
-                                    {svgIcons.arrow_right}
-                                </div>
-                            </div>
-                            <p className={clsx(style.description, outfit.className)}>
-                                {description}
-                            </p>
-                        </div>
-                    </Link>
+                    </Fragment>
+
                 ))
             }
         </div>

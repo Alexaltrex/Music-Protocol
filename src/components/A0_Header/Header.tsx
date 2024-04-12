@@ -104,6 +104,7 @@ export const Header = observer(() => {
 
                 <div className={style.right}>
                     <ButtonCustom label="$RECORD"
+                                  href="https://docs.musicprotocol.io/record-token/usdrecord-token-overview"
                                   className={style.getStartedBtn}
                     />
 
