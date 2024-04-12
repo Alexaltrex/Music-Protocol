@@ -46,7 +46,7 @@ export const LinksItem: FC<ILinksItem> = ({
             <Collapse in={route === openedRoutes}>
                 {
                     subMenu.map(({label, href, description, src, outer}, key) => (
-                        <Fragment>
+                        <Fragment key={key}>
                             {
                                 outer ? (
                                     <a className={clsx({
